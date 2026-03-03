@@ -498,14 +498,12 @@ p {
 
 /* LAYOUT SECTIONS */
 section {
-    min-height: 100vh;
     padding: 10vh 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    /* Added containment */
 }
 
 .hero-section {
@@ -1470,7 +1468,7 @@ section {
 /* THE CLUBHOUSE (CHAPTER XI) */
 .clubhouse-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     background: #000;
     gap: 1px;
     border: 1px solid #000;
@@ -1581,7 +1579,7 @@ section {
 /* BLOG GRID (CHAPTER VII) */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     background: #000;
     gap: 1px;
     border-top: 1px solid #000;
