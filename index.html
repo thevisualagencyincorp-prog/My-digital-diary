@@ -3284,6 +3284,8 @@
 
         // Handle Walking Movement
         if (state === "walking") {
+          const delay = 150 + Math.random() * 250;
+          setTimeout(runNextStep, delay);
           const moveX = (Math.random() - 0.5) * 80; // Walk up to 40px either way
           frankWrap.style.transition = "transform 4s ease-in-out";
           frankWrap.style.transform = `translateX(${moveX}px)`;
@@ -3482,23 +3484,28 @@
       });
     }
 
-    // Mobile Folder Interactivity
+    // Unified Case Study Interactivity (Click to Open)
     document.querySelectorAll('.desktop-folder-icon').forEach(icon => {
       icon.addEventListener('click', function (e) {
-        if (window.innerWidth <= 900) {
-          const content = this.nextElementSibling;
-          content.style.display = 'block';
-          content.style.pointerEvents = 'auto';
+        e.preventDefault();
+        const content = this.nextElementSibling;
+        const overlay = document.getElementById('oracleOverlay'); // Reuse the dark overlay
+
+        if (content && content.classList.contains('desktop-folder-content')) {
+          content.classList.add('active');
+          if (overlay) overlay.classList.add('active');
         }
       });
     });
 
-    // Close button logic for mobile handled by inline onclick, 
-    // but redundant JS here for event capturing if needed.
+    // Close button logic for Case Study Modals
     document.querySelectorAll('.case-card-close').forEach(btn => {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
-        this.closest('.desktop-folder-content').style.display = 'none';
+        const content = this.closest('.desktop-folder-content');
+        if (content) content.classList.remove('active');
+        const overlay = document.getElementById('oracleOverlay');
+        if (overlay) overlay.classList.remove('active');
       });
     });
 
