@@ -590,7 +590,7 @@
               style="background: #fff; padding: 15px 15px 60px 15px; transform: rotate(-1.5deg); box-shadow: 30px 30px 0 rgba(0,0,0,0.08); border: 1px solid #000;">
               <img src="images/ash_and_brittany_portrait.jpg"
                 alt="Ash and Brittany, founders of The Agency — Bakersfield branding studio" loading="lazy" width="600"
-                height="750" style="width: 100%; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
+                height="750" style="width: 100%; height: auto; display: block; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
               <div class="handwritten"
                 style="position: absolute; bottom: 20px; text-align: center; width: 100%; left: 0; color: #000; font-weight: 900; font-size: 1.8rem; transform: rotate(1deg);">
                 xo, Ash & Brittany</div>
@@ -1601,8 +1601,8 @@
 
     <!-- SECTION 03: THE PHILOSOPHY -->
     <section class="bg-grid-holo" style="padding: 10vh 10vw; border-top: 1px solid #000;">
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(2rem, 5vw, 10vw); align-items: start; position: relative;">
+      <div class="philosophy-grid"
+        style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 8vw); align-items: start; position: relative;">
         <!-- DECORATIVE ARROW -->
         <div class="annotation-graphic" style="top: -50px; right: 10%;">
           <svg class="arrow-vector" viewBox="0 0 100 100">
@@ -1641,7 +1641,7 @@
           </div>
         </div>
         <div class="parallax-layer window-modal"
-          style="margin-top: 15vh; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 10;">
+          style="margin-top: 4rem; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 10;">
           <div
             style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
             <span><span style="font-size: 1.1rem; vertical-align: middle; margin-right: 4px;">📝</span>
@@ -2118,6 +2118,115 @@
 
       <div style="padding: 0 5vw 4vh; text-align: left; position: relative; z-index: 100;">
         <span class="chapter-mark">CHAPTER IX: THE COSMIC HUB</span>
+
+        <!-- MOTIVATIONAL WIN95 POPUPS — animated over section header -->
+        <style>
+          @keyframes winPopIn {
+            0%   { opacity: 0; transform: scale(0.85) rotate(var(--win-rot, -2deg)); }
+            12%  { opacity: 1; transform: scale(1)    rotate(var(--win-rot, -2deg)); }
+            78%  { opacity: 1; transform: scale(1)    rotate(var(--win-rot, -2deg)); }
+            95%  { opacity: 0; transform: scale(0.95) rotate(var(--win-rot, -2deg)); }
+            100% { opacity: 0; transform: scale(0.85) rotate(var(--win-rot, -2deg)); }
+          }
+          .win-motivational {
+            position: absolute;
+            width: 240px;
+            background: silver;
+            border: 2px solid;
+            border-color: #fff #000 #000 #fff;
+            box-shadow: 6px 6px 0 rgba(0,0,0,0.6);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            animation: winPopIn 7s ease-in-out infinite;
+            animation-fill-mode: both;
+            opacity: 0;
+            z-index: 300;
+          }
+          .win-motivational .wm-title {
+            background: darkblue;
+            color: #fff;
+            padding: 2px 6px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+          }
+          .win-motivational .wm-x {
+            background: silver;
+            color: #000;
+            border: 1px solid;
+            border-color: #fff #000 #000 #fff;
+            padding: 0 4px;
+            line-height: 1.4;
+          }
+          .win-motivational .wm-body {
+            padding: 10px 12px;
+            color: #000;
+            line-height: 1.6;
+          }
+          .win-motivational .wm-footer {
+            padding: 5px;
+            text-align: center;
+            border-top: 1px solid #aaa;
+          }
+          .win-motivational .wm-btn {
+            background: silver;
+            border: 2px solid;
+            border-color: #fff #000 #000 #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            padding: 2px 16px;
+            cursor: default;
+          }
+          @media (max-width: 768px) { .cosmic-popup-layer { display: none; } }
+          @media (prefers-reduced-motion: reduce) { .win-motivational { display: none; } }
+        </style>
+
+        <div class="cosmic-popup-layer" style="position: absolute; inset: 0; overflow: visible; pointer-events: none; height: 0;">
+
+          <!-- Popup 1: Frequency Check -->
+          <div class="win-motivational" style="top: 20px; right: 6%; --win-rot: -3deg; animation-delay: 0.5s; pointer-events: auto;">
+            <div class="wm-title">
+              <span>✦ FREQUENCY_CHECK.EXE</span>
+              <span class="wm-x">X</span>
+            </div>
+            <div class="wm-body">
+              You are operating at<br>peak frequency.<br><br>
+              <b>Status:</b> ELEVATED ✓<br>
+              <b>Vibe:</b> 888 Hz confirmed
+            </div>
+            <div class="wm-footer"><button class="wm-btn">OK</button></div>
+          </div>
+
+          <!-- Popup 2: Brand Loader -->
+          <div class="win-motivational" style="top: 10px; left: 3%; --win-rot: 2deg; animation-delay: 2.8s; pointer-events: auto;">
+            <div class="wm-title">
+              <span>💫 BRAND_LOADER.EXE</span>
+              <span class="wm-x">X</span>
+            </div>
+            <div class="wm-body">
+              Your brand is loading...<br>
+              ████████░░ 88%<br><br>
+              <span style="color: darkgreen; font-weight: bold;">Almost legendary.</span>
+            </div>
+            <div class="wm-footer"><button class="wm-btn">CONTINUE</button></div>
+          </div>
+
+          <!-- Popup 3: Oracle Message -->
+          <div class="win-motivational" style="top: 40px; right: 32%; --win-rot: 1deg; animation-delay: 5s; pointer-events: auto;">
+            <div class="wm-title">
+              <span>🌙 ORACLE_MSG.EXE</span>
+              <span class="wm-x">X</span>
+            </div>
+            <div class="wm-body">
+              Bestie. The algorithm<br>sees you.<br><br>
+              <span style="font-family: 'Comic Sans MS', cursive; color: #cc0000;">Your era has loaded. ✌</span>
+            </div>
+            <div class="wm-footer"><button class="wm-btn">UNDERSTOOD</button></div>
+          </div>
+
+        </div>
       </div>
 
       <div class="fun-addons-container" style="display: block; padding: 0 5vw 10vh;">
@@ -3190,7 +3299,7 @@
           style="display: none; text-align: center; padding: 10vh 0; transition: opacity 0.5s ease; position: relative; z-index: 10;">
           <div class="halftone-text"
             style="font-size: clamp(1.8rem, 4vw, 3rem); color: var(--pop-lime); margin-bottom: 2rem; text-shadow: 2px 2px 0px #000;">
-            Signal
+            Brief
             Received.</div>
           <div class="mono-label"
             style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.6; font-weight: 700; color: #fff;">
@@ -4391,6 +4500,35 @@
       <p>*** Physical memory dump complete.</p>
       <p style="margin-top: 3rem; color: #aaa;">Contact your system administrator or technical support group for further
         assistance (aka us). Press any key to escape this reality...</p>
+    </div>
+  </div>
+
+  <!-- ARCHIVE ACCESS DENIED MODAL -->
+  <div id="archive-access-modal"
+    style="display:none; position:fixed; inset:0; z-index:999999; background:rgba(0,0,0,0.6); align-items:center; justify-content:center;">
+    <div
+      style="background:silver; border:2px solid; border-color:#fff #000 #000 #fff; width:320px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; box-shadow:10px 10px 0 rgba(0,0,0,0.7);">
+      <div
+        style="background:darkblue; color:#fff; padding:3px 8px; font-weight:bold; display:flex; justify-content:space-between; align-items:center;">
+        <span>🔒 ACCESS_DENIED.EXE</span>
+        <span id="archiveModalClose"
+          style="background:silver; color:#000; border:1px solid; border-color:#fff #000 #000 #fff; padding:0 5px; cursor:pointer; font-size:0.85rem; line-height:1.4;">X</span>
+      </div>
+      <div style="padding:1.2rem 1.2rem 0.8rem; display:flex; gap:1rem; align-items:flex-start; background:silver;">
+        <div style="font-size:2.8rem; line-height:1; flex-shrink:0;">⚠️</div>
+        <div style="color:#000; line-height:1.6;">
+          <div style="font-weight:bold; margin-bottom:0.5rem; font-size:0.8rem;">CLASSIFIED ARCHIVE</div>
+          <div>This dispatch is protected intel.<br>Contact The Agency for clearance.</div>
+          <div style="margin-top:0.8rem;">
+            <a href="#contact-brief" id="archiveModalContact"
+              style="color:darkblue; font-weight:bold; text-decoration:underline;">REQUEST ACCESS →</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0.5rem; text-align:center; border-top:1px solid #aaa; background:silver; margin-top:0.2rem;">
+        <button id="archiveModalOk"
+          style="background:silver; border:2px solid; border-color:#fff #000 #000 #fff; font-family:'JetBrains Mono',monospace; font-size:0.7rem; padding:3px 24px; cursor:pointer; min-width:72px;">OK</button>
+      </div>
     </div>
   </div>
 

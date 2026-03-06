@@ -73,7 +73,7 @@ function updateMagazineTime() {
 
     // Premium editorial line formatting
     topEl.textContent = `VOL. 1 // ISSUE: 001 // BAKERSFIELD, CA // LIMITED EDITION`;
-    clockEl.textContent = `${dateStr} // ${timeStr} // SIGNAL: STABLE`;
+    clockEl.textContent = `${dateStr} // ${timeStr} // STATUS: STABLE`;
 }
 
 const init = () => {
@@ -590,7 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = f.querySelector('button[type="submit"]') || f.querySelector('button');
             const originalText = btn.textContent;
-            btn.textContent = "SENDING_SIGNAL...";
+            btn.textContent = "SENDING_BRIEF...";
             btn.disabled = true;
 
             fetch(f.action, {
@@ -605,7 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         destructMini.style.display = "block";
                         startMiniDestruct(destructMini, f);
                     } else {
-                        btn.textContent = "SIGNAL_SENT_✓";
+                        btn.textContent = "BRIEF_SENT_✓";
                         f.reset();
                         setTimeout(() => {
                             btn.textContent = originalText;
@@ -613,11 +613,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 3000);
                     }
                 } else {
-                    btn.textContent = "SIGNAL_ERROR";
+                    btn.textContent = "ERROR_RETRY";
                     btn.disabled = false;
                 }
             }).catch(() => {
-                btn.textContent = "SIGNAL_ERROR";
+                btn.textContent = "ERROR_RETRY";
                 btn.disabled = false;
             });
         });
@@ -637,7 +637,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.reset();
                 const btn = form.querySelector('button');
                 if (btn) {
-                    btn.textContent = "SIGNAL_SENT_✓";
+                    btn.textContent = "BRIEF_SENT_✓";
                     btn.disabled = false;
                 }
             }
@@ -1026,5 +1026,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const igContainer = document.getElementById('curator-feed-default-feed-layout');
     if (igContainer) {
         igObserver.observe(igContainer, { childList: true, subtree: true });
+    }
+
+    // ═══════════════════════════════════════════════════════════
+    // ✦ ARCHIVE PROTECTION — "CLASSIFIED" popup on archive links
+    // ═══════════════════════════════════════════════════════════
+    const archiveModal = document.getElementById('archive-access-modal');
+
+    function openArchiveModal() {
+        if (archiveModal) archiveModal.style.display = 'flex';
+    }
+    function closeArchiveModal() {
+        if (archiveModal) archiveModal.style.display = 'none';
+    }
+
+    document.querySelectorAll('.archive-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            openArchiveModal();
+        });
+    });
+
+    const archiveClose = document.getElementById('archiveModalClose');
+    const archiveOk = document.getElementById('archiveModalOk');
+    const archiveContact = document.getElementById('archiveModalContact');
+
+    if (archiveClose) archiveClose.addEventListener('click', closeArchiveModal);
+    if (archiveOk) archiveOk.addEventListener('click', closeArchiveModal);
+    if (archiveContact) archiveContact.addEventListener('click', closeArchiveModal);
+
+    // Close on backdrop click
+    if (archiveModal) {
+        archiveModal.addEventListener('click', function (e) {
+            if (e.target === archiveModal) closeArchiveModal();
+        });
     }
 });

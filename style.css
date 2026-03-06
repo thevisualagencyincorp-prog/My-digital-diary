@@ -1013,6 +1013,17 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    /* Philosophy section: stack to single column on tablet */
+    .philosophy-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    /* Notepad window: remove pushed-down offset on tablet/mobile */
+    .philosophy-grid .window-modal {
+        margin-top: 0 !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -4219,6 +4230,18 @@ summary:focus-visible {
     .editor-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
+    }
+
+    /* Philosophy grid */
+    .philosophy-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .philosophy-grid .window-modal {
+        margin-top: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     /* Case study modal width */
