@@ -736,7 +736,6 @@ h3.halftone-text,
     font-size: clamp(3rem, 5vw, 6rem) !important;
     line-height: 0.85 !important;
 }
-}
 
 .animated-gradient {
     background: linear-gradient(90deg, #008080, #000080, #C0C0C0, #008080);
@@ -3878,4 +3877,91 @@ section {
 
 .btn-retro-magazine:hover::before {
     left: 0;
+}
+
+/* ── RESPONSIVE REFINEMENTS ── */
+@media (max-width: 768px) {
+
+    /* Prevent nav button wrap */
+    .btn-retro-magazine {
+        padding: 0.8rem 0.4rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Fix Editor Note overlap */
+    #protocol .reveal h2.halftone-text {
+        margin-top: 4rem !important;
+    }
+
+    /* Adjust community chat for mobile - target the grid container */
+    #feedback div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Hide status monitor on mobile to save space */
+    .retro-sidebar {
+        display: none !important;
+    }
+
+    /* Adjust floating stickers and handwritten notes for mobile flow */
+    .drifts-right.sticker,
+    .drifts-left.handwritten,
+    .drifts-up.star-icon {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin: 1.5rem auto !important;
+        display: block !important;
+        transform: rotate(-2deg) !important;
+        animation: none !important;
+        width: fit-content;
+        text-align: center;
+    }
+
+    /* Ensure massive headers don't cause overflow */
+    h1.halftone-text {
+        font-size: clamp(3rem, 12vw, 15rem) !important;
+        line-height: 0.8 !important;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    h2.halftone-text {
+        font-size: clamp(2.5rem, 10vw, 8rem) !important;
+        line-height: 0.85 !important;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    /* Success Grid and Cosmic Hub fixes */
+    .horoscopes-col>div[style*="display: grid"],
+    .fun-addons-container>div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .crystal-ball-container img {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+
+    .horoscope-reading-wrap {
+        padding: 2rem !important;
+    }
+
+    .horoscope-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        /* Better fit for mobile */
+    }
+
+    /* Adjust letter-spacing for massive headers to prevent overflow */
+    .halftone-text {
+        letter-spacing: -2px !important;
+    }
 }
