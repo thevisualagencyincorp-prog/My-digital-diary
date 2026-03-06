@@ -15,6 +15,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/retro_world_net.png">
+  <link rel="apple-touch-icon" href="images/social_ad.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="format-detection" content="telephone=no">
   <meta name="description"
     content="Bakersfield's #1 branding & marketing agency. Female disabled veteran-owned. We specialize in brand strategy, web design, AI content, SEO, and commercial production for businesses in Kern County, Tehachapi, and beyond.">
   <meta name="keywords"
@@ -34,6 +37,9 @@
     content="Bakersfield's premier branding agency. Brand strategy, web design, AI content, SEO & commercial production for Kern County businesses. Female disabled veteran-owned.">
   <meta property="og:url" content="https://meettheagency.com/">
   <meta property="og:image" content="https://meettheagency.com/images/social_ad.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Agency — Bakersfield's #1 Branding & Marketing Studio">
   <meta property="og:site_name" content="The Agency">
 
   <title>The Agency | Bakersfield's #1 Branding & Marketing Agency | Kern County</title>
@@ -45,8 +51,8 @@
     "@type": "MarketingAgency",
     "name": "The Agency",
     "url": "https://meettheagency.com/",
-    "logo": "images/social_ad.png",
-    "image": "images/social_ad.png",
+    "logo": "https://meettheagency.com/images/social_ad.png",
+    "image": "https://meettheagency.com/images/social_ad.png",
     "description": "An elite branding, creative marketing agency in Bakersfield. Female-veteran owned by AI artists and programmers, specialized in generative AI content, SEO, and digital infrastructure for Kern County & beyond.",
     "keywords": "Bakersfield Marketing Agency, AI Artists Bakersfield, AI Programmers Kern County, AI Developers Tehachapi, SEO Tehachapi, Kern County Web Design, Generative AI Content, Female Veteran Owned Business",
     "telephone": "(323)388-5657",
@@ -137,6 +143,31 @@
   }
   </script>
 
+  <!-- SPEAKABLE SCHEMA — Signals key content sections to AI assistants & voice search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "The Agency | Bakersfield's #1 Branding & Marketing Agency",
+    "url": "https://meettheagency.com/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", "#protocol", "#archive", "#blog", ".chapter-mark"]
+    },
+    "about": {
+      "@type": "MarketingAgency",
+      "name": "The Agency",
+      "description": "Bakersfield's premier branding, AI content, and marketing agency. Female disabled veteran-owned. Serving Kern County, Tehachapi, and nationwide clients.",
+      "areaServed": "Kern County, Bakersfield, Tehachapi, California, Nationwide"
+    },
+    "mentions": [
+      {"@type": "Service", "name": "Generative Engine Optimization", "description": "Optimizing content so businesses appear in AI-generated answers from ChatGPT, Perplexity, and Google AI Overviews"},
+      {"@type": "Service", "name": "Brand Strategy", "description": "Psychology-first brand identity and market positioning for Bakersfield businesses"},
+      {"@type": "Service", "name": "Web Design Bakersfield", "description": "High-conversion website design for Kern County small businesses"}
+    ]
+  }
+  </script>
+
   <!-- BREADCRUMB SCHEMA -->
   <script type="application/ld+json">
   {
@@ -181,12 +212,17 @@
 
   <!-- PERF: Preload critical above-the-fold assets -->
   <link rel="preload" as="image" href="images/social_ad.png" fetchpriority="high">
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOTkLE.woff2" crossorigin>
+  <link rel="preload" as="font"
+    href="https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOTkLE.woff2"
+    crossorigin>
   <!-- PERF: Google Fonts via <link> (parallel load, no render-blocking @import chain) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap"></noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700&family=Shadows+Into+Light&display=swap">
+  </noscript>
 
   <!-- html2canvas for Oracle card save -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
@@ -312,16 +348,6 @@
 
   <!-- EXIT SENSOR -->
   <main id="main-content">
-    <!-- AI_CONTEXT_BLOCK: Hidden manifest for generative engines and AI agents -->
-    <div style="display:none;" aria-hidden="true" data-ai-context="true">
-      This is The Agency, Bakersfield's premier AI Artists & Programmers. Specialized in:
-      - Generative Engine Optimization (GEO)
-      - AI Content Infrastructure
-      - Synthetic Media Production
-      - High-end Psychological Branding
-      Location: Bakersfield, Kern County, Tehachapi.
-      Values: Female-Veteran Owned, Elite Execution, Radical Magnetism.
-    </div>
 
     <!-- SECTION 01: HERO SPREAD -->
     <section class="hero-section" id="hero"
@@ -330,10 +356,17 @@
       <!-- BACKGROUND VIDEO (Enhanced Parallax-Ready Structure) -->
       <div class="video-bg-container" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0;">
         <video autoplay muted loop playsinline preload="none" id="hero-video" poster="images/social_ad.png"
-          fetchpriority="high"
-          style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+          fetchpriority="high" style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+          <!-- Mobile: video suppressed via JS below for bandwidth savings; poster image shown instead -->
           <source src="images/promo copy.mp4" type="video/mp4">
         </video>
+        <script>
+          // Suppress hero video on mobile — poster image covers it, saves ~10MB of bandwidth
+          if (window.innerWidth <= 768 || navigator.connection && navigator.connection.saveData) {
+            var v = document.getElementById('hero-video');
+            if (v) { v.removeAttribute('autoplay'); v.pause(); v.querySelectorAll('source').forEach(function(s){ s.removeAttribute('src'); }); v.load(); }
+          }
+        </script>
         <div class="video-bg-overlay"
           style="position: absolute; inset: 0; background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%); z-index: 1;">
         </div>
@@ -393,7 +426,9 @@
               style="background: var(--pop-lime); color: #000; text-decoration: none; font-size: 1rem; padding: 1.1rem 3rem; letter-spacing: 1px; display: inline-block; border: none; font-weight: 900;">
               GET YOUR FREE BRAND AUDIT &rarr;
             </a>
-            <span class="mono-label blend-difference" style="font-size: 0.6rem; color: #fff; opacity: 0.5; letter-spacing: 2px;">NO COMMITMENT · JUST CLARITY</span>
+            <span class="mono-label blend-difference"
+              style="font-size: 0.6rem; color: #fff; opacity: 0.5; letter-spacing: 2px;">NO COMMITMENT · JUST
+              CLARITY</span>
           </div>
         </div>
 
@@ -457,8 +492,7 @@
           <div class="header-credit-card"
             style="background: #0d0d0d; color: #fff; padding: 0; position: relative; overflow: hidden; min-height: 120px;">
             <img src="images/agency_office_vibe_1771445625493.png"
-              alt="High-end marketing photography studio shoot in Bakersfield"
-              loading="lazy" width="400" height="120"
+              alt="High-end marketing photography studio shoot in Bakersfield" loading="lazy" width="400" height="120"
               style="display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
             <div style="position: absolute; top: 1rem; right: 1rem; z-index: 2;">
               <span
@@ -476,37 +510,59 @@
           <a href="#protocol" class="btn-retro-magazine"
             style="flex: 1 1 200px; border: none; border-bottom: 1px solid #222; border-right: 1px solid #222;">PROCESS.03</a>
           <a href="#contact-brief" class="btn-retro-magazine"
-            style="flex: 1 1 200px; border: none; border-bottom: 1px solid #222; background: var(--pop-lime); color: #000; font-weight: 900;">WORK WITH US &rarr;</a>
+            style="flex: 1 1 200px; border: none; border-bottom: 1px solid #222; background: var(--pop-lime); color: #000; font-weight: 900;">WORK
+            WITH US &rarr;</a>
         </nav>
 
       </div>
     </section>
 
     <!-- SOCIAL PROOF STATS STRIP — 2026 trust signal above the fold -->
-    <div id="proof-strip" style="background: var(--pop-lime); padding: 1.2rem 6vw; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 11; border-bottom: 2px solid #000;">
+    <div id="proof-strip"
+      style="background: var(--pop-lime); padding: 1.2rem 6vw; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 11; border-bottom: 2px solid #000;">
       <div style="text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">100+</div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">Brands Launched</div>
+        <div
+          style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">
+          100+</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">
+          Brands Launched</div>
       </div>
       <div style="width: 1px; height: 36px; background: rgba(0,0,0,0.2); display: none;" class="proof-divider"></div>
       <div style="text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">5-Star</div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">Client Rated</div>
+        <div
+          style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">
+          5-Star</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">
+          Client Rated</div>
       </div>
       <div style="width: 1px; height: 36px; background: rgba(0,0,0,0.2); display: none;" class="proof-divider"></div>
       <div style="text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">Vet-Owned</div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">Female + Disabled</div>
+        <div
+          style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">
+          Vet-Owned</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">
+          Female + Disabled</div>
       </div>
       <div style="width: 1px; height: 36px; background: rgba(0,0,0,0.2); display: none;" class="proof-divider"></div>
       <div style="text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">AI-Native</div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">Since Day One</div>
+        <div
+          style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">
+          AI-Native</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">
+          Since Day One</div>
       </div>
       <div style="width: 1px; height: 36px; background: rgba(0,0,0,0.2); display: none;" class="proof-divider"></div>
       <div style="text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">Kern Co. #1</div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">Branding Agency</div>
+        <div
+          style="font-family: var(--font-mono); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #000; line-height: 1;">
+          Kern Co. #1</div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.6rem; color: #000; opacity: 0.7; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;">
+          Branding Agency</div>
       </div>
     </div>
 
@@ -529,12 +585,12 @@
 
         <div class="editor-grid" style="align-items: start; margin-top: 5rem;">
           <!-- Editor Portrait -->
-          <div class="reveal" data-speed="0.1" style="position: relative; padding: 2rem;">
+          <div class="reveal" style="position: relative; padding: 2rem;">
             <div class="pixel-border"
               style="background: #fff; padding: 15px 15px 60px 15px; transform: rotate(-1.5deg); box-shadow: 30px 30px 0 rgba(0,0,0,0.08); border: 1px solid #000;">
-              <img src="images/ash_and_brittany_portrait.jpg" alt="Ash and Brittany, founders of The Agency — Bakersfield branding studio"
-                loading="lazy" width="600" height="750"
-                style="width: 100%; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
+              <img src="images/ash_and_brittany_portrait.jpg"
+                alt="Ash and Brittany, founders of The Agency — Bakersfield branding studio" loading="lazy" width="600"
+                height="750" style="width: 100%; filter: contrast(1.1) brightness(1.05); border: 1px solid #111;">
               <div class="handwritten"
                 style="position: absolute; bottom: 20px; text-align: center; width: 100%; left: 0; color: #000; font-weight: 900; font-size: 1.8rem; transform: rotate(1deg);">
                 xo, Ash & Brittany</div>
@@ -1241,7 +1297,7 @@
         <div class="horizontal-track"
           style="display: flex; height: 100%; align-items: center; padding: 0 10vw; will-change: transform;">
           <div class="chapter-header-wrap" id="core-systems-header"
-            style="flex: 0 0 45vw; padding-right: 5vw; z-index: 5;" data-speed="0.1">
+            style="flex: 0 0 45vw; padding-right: 5vw; z-index: 5;">
             <span class="chapter-mark">CHAPTER III: THE COLLECTIONS</span>
             <h2 class="halftone-text"
               style="color: #fff; margin-top: 2rem; font-size: clamp(4rem, 15vw, 15rem); line-height: 0.75;">
@@ -1269,8 +1325,11 @@
                   do 'dominant'. From full visual identity systems to psychological market positioning, we build the DNA
                   of brands that consumers can't ignore.</p>
                 <div style="margin-top: 1.5rem; border-top: 1px solid rgba(17,255,17,0.2); padding-top: 1.5rem;">
-                  <p style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">Starting at $5,000</p>
-                  <ul style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
+                  <p
+                    style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">
+                    Starting at $5,000</p>
+                  <ul
+                    style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
                     <li>✦ Brand Psychology &amp; Competitor Audit</li>
                     <li>✦ Full Visual Identity System</li>
                     <li>✦ Brand Style Guide (PDF + Digital)</li>
@@ -1315,8 +1374,11 @@
                   storefront, your salesperson, and your 24/7 brand ambassador. We build high-conversion ecosystems that
                   prioritize user behavior and elite aesthetics.</p>
                 <div style="margin-top: 1.5rem; border-top: 1px solid rgba(255,0,255,0.2); padding-top: 1.5rem;">
-                  <p style="font-family: var(--font-mono); color: var(--pop-pink); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">Starting at $8,000</p>
-                  <ul style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
+                  <p
+                    style="font-family: var(--font-mono); color: var(--pop-pink); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">
+                    Starting at $8,000</p>
+                  <ul
+                    style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
                     <li>✦ Custom Responsive Design (All Devices)</li>
                     <li>✦ SEO Foundation + Site Architecture</li>
                     <li>✦ Contact, Booking &amp; Lead Systems</li>
@@ -1362,8 +1424,11 @@
                   start deploying assets. We manage your presence with editorial-grade visuals and data-led engagement
                   that turns followers into fanatical customers.</p>
                 <div style="margin-top: 1.5rem; border-top: 1px solid rgba(0,255,255,0.2); padding-top: 1.5rem;">
-                  <p style="font-family: var(--font-mono); color: var(--pop-aqua); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">Starting at $1,500/mo</p>
-                  <ul style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
+                  <p
+                    style="font-family: var(--font-mono); color: var(--pop-aqua); font-size: 1.6rem; font-weight: 900; margin-bottom: 0.5rem;">
+                    Starting at $1,500/mo</p>
+                  <ul
+                    style="list-style: none; padding: 0; margin: 0.75rem 0 0; font-size: 0.75rem; opacity: 0.65; line-height: 2;">
                     <li>✦ 30+ Editorial Assets Per Month</li>
                     <li>✦ Story, Reel &amp; Grid Templates</li>
                     <li>✦ Community Management &amp; DM Strategy</li>
@@ -1392,9 +1457,13 @@
                 <p
                   style="font-family: var(--font-sans); color: #555; font-size: 1.1rem; margin-top: 1.5rem; line-height: 1.4;">
                   Scale your brand with a dedicated creative department. Just one monthly fee.</p>
-                <p style="font-family: var(--font-mono); color: #000; font-size: 1.2rem; font-weight: 900; margin-top: 1.5rem;">Starting at $2,500/mo</p>
-                <p style="font-family: var(--font-sans); color: #666; font-size: 0.8rem; margin-top: 0.5rem;">Dedicated creative team · Unlimited revisions · No contracts</p>
-                <div class="handwritten" style="color: #000; margin-top: 1.5rem; font-size: 1.8rem;">NO CONTRACTS // JUST
+                <p
+                  style="font-family: var(--font-mono); color: #000; font-size: 1.2rem; font-weight: 900; margin-top: 1.5rem;">
+                  Starting at $2,500/mo</p>
+                <p style="font-family: var(--font-sans); color: #666; font-size: 0.8rem; margin-top: 0.5rem;">Dedicated
+                  creative team · Unlimited revisions · No contracts</p>
+                <div class="handwritten" style="color: #000; margin-top: 1.5rem; font-size: 1.8rem;">NO CONTRACTS //
+                  JUST
                   VIBES</div>
               </div>
             </div>
@@ -1412,8 +1481,12 @@
                 style="font-family: var(--font-mono); color: #fff; font-size: 1rem; margin-top: 2rem; opacity: 0.8; line-height: 1.6;">
                 It's engineering. We dominate the Bakersfield & SoCal markets through tactical search optimization and
                 human-first content strategy.</p>
-              <p style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 1.2rem; font-weight: 900; margin-top: 2rem;">Starting at $1,200/mo</p>
-              <p style="font-family: var(--font-mono); color: #fff; font-size: 0.7rem; opacity: 0.5; margin-top: 0.5rem;">Local SEO · Content Strategy · Monthly Rankings Report · Technical Audit</p>
+              <p
+                style="font-family: var(--font-mono); color: var(--pop-lime); font-size: 1.2rem; font-weight: 900; margin-top: 2rem;">
+                Starting at $1,200/mo</p>
+              <p
+                style="font-family: var(--font-mono); color: #fff; font-size: 0.7rem; opacity: 0.5; margin-top: 0.5rem;">
+                Local SEO · Content Strategy · Monthly Rankings Report · Technical Audit</p>
               <div class="handwritten" style="color: var(--pop-lime); margin-top: 2rem; font-size: 1.8rem;">"We get you
                 on the 1st page."</div>
             </div>
@@ -1461,7 +1534,8 @@
 
       <!-- FEATURED VIDEO (full width) -->
       <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #111; overflow: hidden;">
-        <video autoplay muted loop playsinline preload="none" style="width: 100%; height: 100%; object-fit: cover; display: block;"
+        <video autoplay muted loop playsinline preload="none"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"
           aria-label="The Agency commercial production showreel">
           <source src="images/Website Mens Fashion copy.mp4" type="video/mp4">
         </video>
@@ -1550,7 +1624,7 @@
             BUSINESS</div>
 
           <!-- Cute Polaroid Photo -->
-          <div class="parallax-layer" data-speed="0.1"
+          <div class="parallax-layer"
             style="position: relative; margin-top: 3rem; transform: rotate(-3deg); width: fit-content; max-width: 80%;">
             <!-- Retro tape -->
             <div
@@ -1566,7 +1640,7 @@
             </div>
           </div>
         </div>
-        <div class="parallax-layer window-modal" data-speed="0.2"
+        <div class="parallax-layer window-modal"
           style="margin-top: 15vh; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); z-index: 10;">
           <div
             style="background: darkblue; color: white; padding: 4px 8px; font-family: var(--font-mono); font-size: 0.7rem; font-weight: bold; display: flex; justify-content: space-between;">
@@ -1605,7 +1679,7 @@
         style="position: absolute; top: 15rem; right: 0; font-size: 15vw; color: rgba(255,255,255,0.02); pointer-events: none; z-index: 1;">
         SYSTEM</div>
       <div style="margin-bottom: 10vh; position: relative; z-index: 1;">
-        <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;" data-speed="-0.08">
+        <div style="padding: 0 10vw; margin-bottom: 8vh; position: relative; z-index: 10;">
           <span class="chapter-mark">COL_04: THE JOURNEY</span>
           <h2 class="halftone-text"
             style="color: #fff; margin-top: 10rem; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.75; position: relative; z-index: 10;">
@@ -1849,8 +1923,8 @@
 
     <!-- SECTION 04.75: FAQ (CLIPPY EDITOR) MOVED AFTER PROCESS -->
     <section id="faq-editor" class="bg-grid-holo"
-      style="padding: 10vh 5vw; border-top: 1px solid #000; position: relative;">
-      <div class="reveal parallax-layer" data-speed="0.05" data-no-click-close="true"
+      style="padding: 10vh 5vw; border-top: 1px solid #000; position: relative; z-index: 10;">
+      <div class="reveal" data-no-click-close="true"
         style="max-width: 900px; margin: 0 auto; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); position: relative; z-index: 10;">
         <div
           style="background: darkblue; color: white; padding: 2px 6px; font-family: var(--font-mono); font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
@@ -1879,7 +1953,7 @@
         <div
           style="padding: 3rem; background: #fff; min-height: 400px; color: #000; font-family: 'Times New Roman', serif; position: relative;">
           <!-- STATIC CLIPPY WINDOW (FAQ) -->
-          <div id="static-clippy-container" class="parallax-layer" data-speed="0.1"
+          <div id="static-clippy-container" class="parallax-layer"
             style="position: absolute; right: 1rem; top: 1rem; width: 280px; z-index: 20;">
             <div class="clippy-window" data-no-click-close="true"
               style="position: relative; top: 0; left: 0; transform: none; width: 100%; box-shadow: 10px 10px 0 rgba(0,0,0,0.3);">
@@ -2060,55 +2134,78 @@
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
             <div class="horoscope-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
-              <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span><span class="horoscope-sign-name">ARIES</span></div>
-              <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span><span class="horoscope-sign-name">TAURUS</span></div>
-              <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span><span class="horoscope-sign-name">GEMINI</span></div>
-              <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span><span class="horoscope-sign-name">CANCER</span></div>
-              <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span><span class="horoscope-sign-name">LEO</span></div>
-              <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span><span class="horoscope-sign-name">VIRGO</span></div>
-              <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span><span class="horoscope-sign-name">LIBRA</span></div>
-              <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span><span class="horoscope-sign-name">SCORPIO</span></div>
-              <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span><span class="horoscope-sign-name">SAGITT.</span></div>
-              <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span><span class="horoscope-sign-name">CAPRIC.</span></div>
-              <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span><span class="horoscope-sign-name">AQUAR.</span></div>
-              <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span><span class="horoscope-sign-name">PISCES</span></div>
+              <div class="horoscope-card active" data-sign="aries"><span class="horoscope-symbol">♈</span><span
+                  class="horoscope-sign-name">ARIES</span></div>
+              <div class="horoscope-card" data-sign="taurus"><span class="horoscope-symbol">♉</span><span
+                  class="horoscope-sign-name">TAURUS</span></div>
+              <div class="horoscope-card" data-sign="gemini"><span class="horoscope-symbol">♊</span><span
+                  class="horoscope-sign-name">GEMINI</span></div>
+              <div class="horoscope-card" data-sign="cancer"><span class="horoscope-symbol">♋</span><span
+                  class="horoscope-sign-name">CANCER</span></div>
+              <div class="horoscope-card" data-sign="leo"><span class="horoscope-symbol">♌</span><span
+                  class="horoscope-sign-name">LEO</span></div>
+              <div class="horoscope-card" data-sign="virgo"><span class="horoscope-symbol">♍</span><span
+                  class="horoscope-sign-name">VIRGO</span></div>
+              <div class="horoscope-card" data-sign="libra"><span class="horoscope-symbol">♎</span><span
+                  class="horoscope-sign-name">LIBRA</span></div>
+              <div class="horoscope-card" data-sign="scorpio"><span class="horoscope-symbol">♏</span><span
+                  class="horoscope-sign-name">SCORPIO</span></div>
+              <div class="horoscope-card" data-sign="sagittarius"><span class="horoscope-symbol">♐</span><span
+                  class="horoscope-sign-name">SAGITT.</span></div>
+              <div class="horoscope-card" data-sign="capricorn"><span class="horoscope-symbol">♑</span><span
+                  class="horoscope-sign-name">CAPRIC.</span></div>
+              <div class="horoscope-card" data-sign="aquarius"><span class="horoscope-symbol">♒</span><span
+                  class="horoscope-sign-name">AQUAR.</span></div>
+              <div class="horoscope-card" data-sign="pisces"><span class="horoscope-symbol">♓</span><span
+                  class="horoscope-sign-name">PISCES</span></div>
             </div>
 
             <div class="horoscope-reading-wrap"
               style="background: #111; padding: 2.5rem; border: 1px solid #333; position: relative;">
-              <div style="position: absolute; top: -20px; left: 20px; background: var(--pop-lime); color: #000; padding: 5px 15px; font-weight: 900; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px;">
+              <div
+                style="position: absolute; top: -20px; left: 20px; background: var(--pop-lime); color: #000; padding: 5px 15px; font-weight: 900; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px;">
                 DAILY_READING // <span id="readingDateLabel">TODAY</span></div>
               <div class="reading-content" id="readingModule">
                 <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                  <h3 class="halftone-text" style="font-size: clamp(2.5rem, 5vw, 5rem); color: white; line-height: 1; margin: 0;"
+                  <h3 class="halftone-text"
+                    style="font-size: clamp(2.5rem, 5vw, 5rem); color: white; line-height: 1; margin: 0;"
                     id="currentSignTitle">Aries.</h3>
                   <span class="reading-theme-badge" id="readingTheme">IGNITION</span>
                 </div>
                 <div class="reading-section" id="sectionLife">
                   <div class="reading-section-label">💫 LIFE</div>
-                  <p class="reading-section-text" id="readingLife">Your fire is showing. Someone needs your boldness to remind them what's possible. Let them see it.</p>
+                  <p class="reading-section-text" id="readingLife">Your fire is showing. Someone needs your boldness to
+                    remind them what's possible. Let them see it.</p>
                 </div>
                 <div class="reading-section" id="sectionBusiness">
                   <div class="reading-section-label">💼 BUSINESS</div>
-                  <p class="reading-section-text" id="readingBusiness">New client or opportunity is already en route. Don't underprice yourself at the door.</p>
+                  <p class="reading-section-text" id="readingBusiness">New client or opportunity is already en route.
+                    Don't underprice yourself at the door.</p>
                 </div>
                 <div class="reading-section reading-power" id="sectionPower">
                   <div class="reading-section-label">⚡ POWER MOVE</div>
-                  <p class="reading-section-text" id="readingPowerMove">Make the ask you've been delaying. The answer is yes.</p>
+                  <p class="reading-section-text" id="readingPowerMove">Make the ask you've been delaying. The answer is
+                    yes.</p>
                 </div>
                 <div class="reading-stats"
                   style="gap: 2rem; margin-top: 1.5rem; display: flex; border-top: 1px dashed #333; padding-top: 1.5rem; flex-wrap: wrap;">
                   <div class="stat-box">
                     <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">LUCKY #</div>
-                    <div class="stat-value" id="luckyNum" style="font-size: 2rem; color: var(--pop-lime); font-family: var(--font-mono); font-weight: 900;">09</div>
+                    <div class="stat-value" id="luckyNum"
+                      style="font-size: 2rem; color: var(--pop-lime); font-family: var(--font-mono); font-weight: 900;">
+                      09</div>
                   </div>
                   <div class="stat-box">
                     <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">ELEMENT</div>
-                    <div class="stat-value" id="readingElement" style="font-size: 1.1rem; color: var(--pop-orange); font-family: var(--font-mono); font-weight: 900; margin-top: 0.4rem;">FIRE</div>
+                    <div class="stat-value" id="readingElement"
+                      style="font-size: 1.1rem; color: var(--pop-orange); font-family: var(--font-mono); font-weight: 900; margin-top: 0.4rem;">
+                      FIRE</div>
                   </div>
                   <div class="stat-box">
                     <div class="label" style="font-size: 0.65rem; opacity: 0.5; letter-spacing: 1px;">DATES</div>
-                    <div class="stat-value" id="readingDates" style="font-size: 0.7rem; color: #fff; font-family: var(--font-mono); opacity: 0.6; margin-top: 0.4rem; line-height: 1.3;">MAR 21<br>APR 19</div>
+                    <div class="stat-value" id="readingDates"
+                      style="font-size: 0.7rem; color: #fff; font-family: var(--font-mono); opacity: 0.6; margin-top: 0.4rem; line-height: 1.3;">
+                      MAR 21<br>APR 19</div>
                   </div>
                 </div>
               </div>
@@ -2121,7 +2218,7 @@
           style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 8vw; align-items: start; margin-top: 5vh; border-top: 1px solid #222; padding-top: 10vh;">
           <!-- COLUMN: THE ORACLE -->
           <div class="fun-column oracle-col" style="padding: 0; position: relative;">
-            <div style="margin-bottom: 5vh; position: relative;" data-speed="-0.1">
+            <div style="margin-bottom: 5vh; position: relative;">
               <h2 class="halftone-text"
                 style="font-size: clamp(5rem, 15vw, 18rem); color: #fff; line-height: 0.75; margin-top: 0; letter-spacing: -8px;">
                 Cosmic<br>Gaze.</h2>
@@ -2139,7 +2236,8 @@
                   style="position: absolute; top: 15%; left: 20%; width: 40%; height: 30%; background: radial-gradient(ellipse at top left, rgba(255,255,255,0.4) 0%, transparent 60%); border-radius: 50%; z-index: 2; pointer-events: none; transform: rotate(-30deg);">
                 </div>
 
-                <img src="images/lux_crystal_ball.png" alt="The Agency Cosmic Oracle — interactive brand fortune for Bakersfield businesses" loading="lazy"
+                <img src="images/lux_crystal_ball.png"
+                  alt="The Agency Cosmic Oracle — interactive brand fortune for Bakersfield businesses" loading="lazy"
                   id="crystalBallImg"
                   style="width: 450px; border-radius: 50%; filter: drop-shadow(0 0 60px rgba(255,100,0,0.5)) contrast(1.3) brightness(1.2); animation: float 6s ease-in-out infinite, pulseGlow 4s infinite alternate;">
 
@@ -2227,7 +2325,7 @@
       </div>
 
       <!-- LimeWire Pop up (Moved Here) -->
-      <div class="reveal parallax-layer" data-speed="-0.1"
+      <div class="reveal parallax-layer"
         style="position: absolute; bottom: 10%; left: 5%; width: 100%; max-width: 380px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 50; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); transform: rotate(-2deg);">
         <div
           style="background: darkgreen; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between; border-bottom: 2px solid #000;">
@@ -2317,7 +2415,8 @@
           </div>
           <div
             style="font-family: var(--font-mono); font-size: 0.5rem; color: #8B1A1A; opacity: 0.6; font-weight: bold; letter-spacing: 1px; display: flex; align-items: center; gap: 4px;">
-            © 1988 THE AGENCY INTERNATIONAL // <a href="https://meettheagency.com" style="color: inherit; text-decoration: underline;">meettheagency.com</a>
+            © 1988 THE AGENCY INTERNATIONAL // <a href="https://meettheagency.com"
+              style="color: inherit; text-decoration: underline;">meettheagency.com</a>
           </div>
         </div>
         <div class="zoltar-action-buttons">
@@ -2326,7 +2425,20 @@
           <button class="btn-zoltar-action close-card-btn">✕ CLOSE</button>
         </div>
       </div>
-    </div>
+
+      <!-- BOTTOM ORNATE STRIP (Moved inside oracle-card-wrap) -->
+      <div class="zoltar-top-strip" style="margin-top: 0.5rem; margin-bottom: 0;">
+        <span class="zoltar-star">✦</span>
+        <span class="zoltar-star">★</span>
+        <span class="zoltar-star">✦</span>
+        <span class="zoltar-star">★</span>
+        <span class="zoltar-star">✦</span>
+        <span class="zoltar-star">★</span>
+        <span class="zoltar-star">✦</span>
+      </div>
+
+    </div> <!-- Close oracle-card-wrap -->
+
     <style>
       @media print {
         #physicalCard {
@@ -2354,21 +2466,6 @@
         }
       }
     </style>
-    </div>
-    </div>
-
-    <!-- BOTTOM ORNATE STRIP -->
-    <div class="zoltar-top-strip" style="margin-top: 0.5rem; margin-bottom: 0;">
-      <span class="zoltar-star">✦</span>
-      <span class="zoltar-star">★</span>
-      <span class="zoltar-star">✦</span>
-      <span class="zoltar-star">★</span>
-      <span class="zoltar-star">✦</span>
-      <span class="zoltar-star">★</span>
-      <span class="zoltar-star">✦</span>
-    </div>
-
-    </div>
 
     <!-- SECTION 08: THE DISPATCH (BLOG) -->
     <section id="blog" style="background: var(--bg-paper); padding: 8vh 0; min-height: auto;">
@@ -2381,7 +2478,7 @@
 
         <!-- MAR 2026 POST (TODAY) -->
         <a href="blog/geo-brand-evolution.html" class="blog-post reveal parallax-layer" data-speed="0.04">
-          <img src="artifacts/retro_tech_lofi_1772749856017.png" alt="AI Search Optimization and GEO">
+          <img src="artifacts/retro_tech_lofi_1772749856017.png" alt="AI Search Optimization and GEO" loading="lazy">
           <div>
             <span class="date">MARCH 2026 // CURRENT_GEN</span>
             <h3>GEO & AI: Bestie, Is Your SEO Optimized for the Future?</h3>
@@ -2391,7 +2488,7 @@
 
         <!-- FEB 2026 POST -->
         <a href="blog/sovereign-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.07">
-          <img src="artifacts/ai_algorithmic_dominance_1772749592739.png" alt="Elite Branding Strategy Kern County">
+          <img src="artifacts/ai_algorithmic_dominance_1772749592739.png" alt="Elite Branding Strategy Kern County" loading="lazy">
           <div>
             <span class="date">FEB 2026 // 06</span>
             <h3>The Dominance Doc: How to Run the Game in Kern County.</h3>
@@ -2401,7 +2498,7 @@
 
         <!-- JAN 2026 POST -->
         <a href="blog/psychology-branding.html" class="blog-post reveal parallax-layer" data-speed="0.05">
-          <img src="artifacts/elite_branding_psychology_1772749563242.png" alt="High-End Brand Psychology">
+          <img src="artifacts/elite_branding_psychology_1772749563242.png" alt="High-End Brand Psychology" loading="lazy">
           <div>
             <span class="date">JAN 2026 // 05</span>
             <h3>Mind Games: The Brand Psychology We Use on You (Ssh).</h3>
@@ -2411,7 +2508,7 @@
 
         <!-- DEC 2025 POST -->
         <a href="blog/bakersfield-disruption.html" class="blog-post reveal parallax-layer" data-speed="0.1">
-          <img src="artifacts/california_marketing_vibe_1772749633675.png" alt="Website Design Bakersfield">
+          <img src="artifacts/california_marketing_vibe_1772749633675.png" alt="Website Design Bakersfield" loading="lazy">
           <div>
             <span class="date">DEC 2025 // 04</span>
             <h3>Bakersfield Disruption: Taking the #1 Spot on Google.</h3>
@@ -2421,7 +2518,7 @@
 
         <!-- NOV 2025 POST -->
         <a href="blog/luxury-minimalism.html" class="blog-post reveal parallax-layer" data-speed="0.15">
-          <img src="artifacts/luxury_minimalism_edit_1772749606791.png" alt="Luxury Minimalist Web Design">
+          <img src="artifacts/luxury_minimalism_edit_1772749606791.png" alt="Luxury Minimalist Web Design" loading="lazy">
           <div>
             <span class="date">NOV 2025 // 03</span>
             <h3>Less is More: The Magazine Style Websites Winning in 2026.</h3>
@@ -2431,7 +2528,7 @@
 
         <!-- OCT 2025 POST -->
         <a href="blog/modern-nostalgia.html" class="blog-post reveal parallax-layer" data-speed="0.11">
-          <img src="artifacts/california_americana_nostalgia_1772749873662.png" alt="Nostalgia Branding">
+          <img src="artifacts/california_americana_nostalgia_1772749873662.png" alt="Nostalgia Branding" loading="lazy">
           <div>
             <span class="date">OCT 2025 // 02</span>
             <h3>Modern Nostalgia: Why We're Bringing Back the Grain.</h3>
@@ -2441,7 +2538,7 @@
 
         <!-- SEP 2025 POST -->
         <a href="blog/status-service.html" class="blog-post reveal parallax-layer" data-speed="0.12">
-          <img src="artifacts/creative_studio_eclectic_1772749890105.png" alt="Status-Driven Marketing">
+          <img src="artifacts/creative_studio_eclectic_1772749890105.png" alt="Status-Driven Marketing" loading="lazy">
           <div>
             <span class="date">SEP 2025 // 01</span>
             <h3>The Status Report: Positioning Your Brand as an Icon.</h3>
@@ -2450,8 +2547,8 @@
         </a>
 
         <!-- AUG 2025 POST -->
-        <a href="blog/august-strategy.html" class="blog-post reveal parallax-layer" data-speed="0.08">
-          <img src="artifacts/production_raw_cinematic_1772749839189.png" alt="August Strategic Brand Reset">
+        <a href="blog/august-strategy.html" class="blog-post reveal parallax-layer">
+          <img src="artifacts/production_raw_cinematic_1772749839189.png" alt="August Strategic Brand Reset" loading="lazy">
           <div>
             <span class="date">AUGUST 2025 // THE_RESET</span>
             <h3>August Strategy: Why We're Obsessed with Q4 Pre-Game.</h3>
@@ -2461,7 +2558,7 @@
 
         <!-- JULY 2025 POST -->
         <a href="blog/summer-branding.html" class="blog-post reveal parallax-layer" data-speed="0.06">
-          <img src="artifacts/branding_lifestyle_aesthetic_1772749822722.png" alt="Summer Branding Strategy Aesthetic">
+          <img src="artifacts/branding_lifestyle_aesthetic_1772749822722.png" alt="Summer Branding Strategy Aesthetic" loading="lazy">
           <div>
             <span class="date">JULY 2025 // FEATURED_VINTAGE</span>
             <h3>The Bestie Guide: Positioning Your Brand for California Summer Heat.</h3>
@@ -2477,10 +2574,6 @@
           <button id="trigger-bsod"
             style="background: transparent; border: none; font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; cursor: pointer;">2006_2024_RECORDS.ZIP</button>
         </div>
-        style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none;
-        border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">2023_DEEP_SCAN.EXE</a>
-        <a href="#blog"
-          style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pop-blue); text-decoration: none; border-bottom: 1px dashed var(--pop-blue); padding-bottom: 2px; transition: all 0.2s;">AGENCY_BLUEPRINTS.TXT</a>
       </div>
       </div>
     </section>
@@ -2493,8 +2586,8 @@
         <h2 class="halftone-text">The Gram.</h2>
         <div style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
           <a href="https://www.instagram.com/meettheagency/" target="_blank" rel="noopener" class="ig-follow-btn"
-            style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; padding: 0.6rem 1.5rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; text-decoration: none; border: none; letter-spacing: 1px; box-shadow: 4px 4px 0 rgba(0,0,0,0.4); transition: all 0.3s ease;"
-            >📸 FOLLOW @MEETTHEAGENCY</a>
+            style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; padding: 0.6rem 1.5rem; font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; text-decoration: none; border: none; letter-spacing: 1px; box-shadow: 4px 4px 0 rgba(0,0,0,0.4); transition: all 0.3s ease;">📸
+            FOLLOW @MEETTHEAGENCY</a>
           <span class="mono-label" style="color: #555; font-size: 0.6rem;">// LIVE_FEED_BELOW</span>
         </div>
       </div>
@@ -2590,67 +2683,91 @@
             QUESTIONS TO HELP US UNDERSTAND YOUR VISION AND CURRENT POSITION. WE'LL FOLLOW UP QUICKLY WITH THE NEXT
             STEPS.</p>
           <!-- URGENCY SIGNAL — scarcity/social proof anchoring -->
-          <div style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,17,17,0.1); border: 1px solid rgba(255,17,17,0.4); border-radius: 4px; padding: 0.6rem 1.2rem; margin-top: 1.5rem;">
-            <span style="display: inline-block; width: 8px; height: 8px; background: #ff1111; border-radius: 50%; animation: pulseStatus 1.5s ease-in-out infinite;"></span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #ff6666; letter-spacing: 1px; text-transform: uppercase;">Limited spots available this quarter — we only take on a select number of new clients</span>
+          <div
+            style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,17,17,0.1); border: 1px solid rgba(255,17,17,0.4); border-radius: 4px; padding: 0.6rem 1.2rem; margin-top: 1.5rem;">
+            <span
+              style="display: inline-block; width: 8px; height: 8px; background: #ff1111; border-radius: 50%; animation: pulseStatus 1.5s ease-in-out infinite;"></span>
+            <span
+              style="font-family: var(--font-mono); font-size: 0.7rem; color: #ff6666; letter-spacing: 1px; text-transform: uppercase;">Limited
+              spots available this quarter — we only take on a select number of new clients</span>
           </div>
         </div>
 
         <!-- GOV CONTRACTING & COLLABORATIONS VISIBILITY SECTION -->
-        <div class="reveal" style="margin-bottom: 6vh; border: 2px solid rgba(255,255,255,0.1); padding: 0; overflow: hidden;">
-          <div style="background: linear-gradient(135deg, rgba(0,100,200,0.15), rgba(200,0,50,0.08)); padding: 3rem 2.5rem; position: relative;">
+        <div class="reveal"
+          style="margin-bottom: 6vh; border: 2px solid rgba(255,255,255,0.1); padding: 0; overflow: hidden;">
+          <div
+            style="background: linear-gradient(135deg, rgba(0,100,200,0.15), rgba(200,0,50,0.08)); padding: 3rem 2.5rem; position: relative;">
             <!-- Decorative corner badge -->
-            <div style="position: absolute; top: -1px; right: -1px; background: var(--pop-blue); color: #000; padding: 6px 20px; font-family: var(--font-mono); font-size: 0.55rem; font-weight: 900; letter-spacing: 2px;">
+            <div
+              style="position: absolute; top: -1px; right: -1px; background: var(--pop-blue); color: #000; padding: 6px 20px; font-family: var(--font-mono); font-size: 0.55rem; font-weight: 900; letter-spacing: 2px;">
               GOV_CLEARANCE: ACTIVE
             </div>
-            
+
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
               <!-- Left: Main copy -->
               <div>
-                <div class="mono-label" style="color: var(--pop-blue); margin-bottom: 1rem; opacity: 0.7;">[ CAPABILITIES_MATRIX: EXPANDED ]</div>
-                <h3 style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 1.5rem; line-height: 1.1;">
+                <div class="mono-label" style="color: var(--pop-blue); margin-bottom: 1rem; opacity: 0.7;">[
+                  CAPABILITIES_MATRIX: EXPANDED ]</div>
+                <h3
+                  style="font-family: var(--font-serif); font-style: italic; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 1.5rem; line-height: 1.1;">
                   Government Contracting.<br>
                   <span style="color: var(--pop-blue);">Campaign Infrastructure.</span><br>
-                  PR & Communications.</h3>
-                <p style="font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">
+                  PR & Communications.
+                </h3>
+                <p
+                  style="font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem;">
                   We hold <b style="color: #fff;">federal government contracting capabilities</b> and specialize in
                   building compliant, high-performance digital infrastructure for state and federal entities,
                   political candidates, civic organizations, and public-facing campaigns. Our veteran-owned
                   discipline translates directly into mission-critical execution.
                 </p>
-                <a href="#contact-brief" style="display: inline-block; background: var(--pop-blue); color: #000; padding: 0.7rem 1.8rem; font-family: var(--font-mono); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-decoration: none; box-shadow: 4px 4px 0 rgba(0,0,0,0.4); transition: all 0.3s ease;">
+                <a href="#contact-brief"
+                  style="display: inline-block; background: var(--pop-blue); color: #000; padding: 0.7rem 1.8rem; font-family: var(--font-mono); font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-decoration: none; box-shadow: 4px 4px 0 rgba(0,0,0,0.4); transition: all 0.3s ease;">
                   REQUEST_CAPABILITIES_BRIEF →
                 </a>
               </div>
-              
+
               <!-- Right: Capability badges -->
               <div style="display: grid; gap: 12px;">
-                <div style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div
+                  style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
                   <span style="font-size: 1.5rem;">🏛️</span>
                   <div>
-                    <div class="mono-label" style="color: var(--pop-blue); font-weight: 700; margin-bottom: 2px;">FEDERAL & STATE CONTRACTS</div>
-                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">SAM-registered • Compliant web & brand architecture • Section 508 accessible</div>
+                    <div class="mono-label" style="color: var(--pop-blue); font-weight: 700; margin-bottom: 2px;">
+                      FEDERAL & STATE CONTRACTS</div>
+                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">
+                      SAM-registered • Compliant web & brand architecture • Section 508 accessible</div>
                   </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div
+                  style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
                   <span style="font-size: 1.5rem;">📢</span>
                   <div>
-                    <div class="mono-label" style="color: var(--pop-orange); font-weight: 700; margin-bottom: 2px;">PR & COMMUNICATIONS</div>
-                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Crisis comms • Media strategy • Public messaging • Stakeholder engagement</div>
+                    <div class="mono-label" style="color: var(--pop-orange); font-weight: 700; margin-bottom: 2px;">PR &
+                      COMMUNICATIONS</div>
+                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Crisis
+                      comms • Media strategy • Public messaging • Stakeholder engagement</div>
                   </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div
+                  style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
                   <span style="font-size: 1.5rem;">🗳️</span>
                   <div>
-                    <div class="mono-label" style="color: var(--pop-pink); font-weight: 700; margin-bottom: 2px;">CAMPAIGN & CANDIDATE SUPPORT</div>
-                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Digital campaign branding • Constituent engagement • Civic tech platforms</div>
+                    <div class="mono-label" style="color: var(--pop-pink); font-weight: 700; margin-bottom: 2px;">
+                      CAMPAIGN & CANDIDATE SUPPORT</div>
+                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Digital
+                      campaign branding • Constituent engagement • Civic tech platforms</div>
                   </div>
                 </div>
-                <div style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <div
+                  style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
                   <span style="font-size: 1.5rem;">🎖️</span>
                   <div>
-                    <div class="mono-label" style="color: var(--pop-lime); font-weight: 700; margin-bottom: 2px;">VETERAN-OWNED & CERTIFIED</div>
-                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Female disabled veteran-owned • SDVOSB eligible • Security-conscious ops</div>
+                    <div class="mono-label" style="color: var(--pop-lime); font-weight: 700; margin-bottom: 2px;">
+                      VETERAN-OWNED & CERTIFIED</div>
+                    <div style="font-family: var(--font-sans); font-size: 0.8rem; color: rgba(255,255,255,0.6);">Female
+                      disabled veteran-owned • SDVOSB eligible • Security-conscious ops</div>
                   </div>
                 </div>
               </div>
@@ -2669,14 +2786,14 @@
               immediate shifts in authority and conversion.
             </p>
           </div>
-          <div class="reveal" data-speed="0.1">
+          <div class="reveal">
             <h4 style="color: var(--pop-blue); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">■
               THE ROI FOCUS</h4>
             <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.8;">Every pixel is a conversion point. Every
               strategy is a revenue engine. We focus on the metrics that matter: <b>Bookings, Sales, and Market
                 Dominance.</b></p>
           </div>
-          <div class="reveal" data-speed="0.2">
+          <div class="reveal">
             <h4 style="color: var(--pop-pink); font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem;">■
               ELITE EXECUTION</h4>
             <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.8;">As a female veteran-owned firm, <b>mission
@@ -2740,7 +2857,8 @@
               </div>
               <div class="form-field full">
                 <label>CURRENT WEBSITE / SOCIAL URL</label>
-                <input type="text" name="current_website" placeholder="HTTPS://YOURBRAND.COM OR @HANDLE — WE'LL REVIEW IT BEFORE WE TALK">
+                <input type="text" name="current_website"
+                  placeholder="HTTPS://YOURBRAND.COM OR @HANDLE — WE'LL REVIEW IT BEFORE WE TALK">
               </div>
               <div style="text-align: right; margin-top: 2rem;">
                 <button type="button" onclick="nextStep(2)" class="btn-elite-submit"
@@ -2852,7 +2970,9 @@
             <div id="step3" class="form-step" style="display: none; flex: 1;">
               <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; font-style: italic;">
                 Psychology.</h3>
-              <p style="font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.5; margin-bottom: 1.5rem; letter-spacing: 1px;">THE FUN PART. ANSWER HONESTLY — THIS IS HOW WE READ YOUR MIND.</p>
+              <p
+                style="font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.5; margin-bottom: 1.5rem; letter-spacing: 1px;">
+                THE FUN PART. ANSWER HONESTLY — THIS IS HOW WE READ YOUR MIND.</p>
 
               <!-- VIBE CALIBRATION -->
               <div class="form-field full" style="margin-top: 0.5rem;">
@@ -2889,7 +3009,8 @@
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_luxury" value="Luxury / High-End" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">💎</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">LUXURY / ELITE</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">LUXURY / ELITE
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_tech" value="Cyber / Tech" style="display:none;">
@@ -2899,32 +3020,38 @@
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_editorial" value="Editorial / Magazine" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">📸</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">EDITORIAL / MAG</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">EDITORIAL / MAG
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_organic" value="Organic / Warm" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">🌿</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">ORGANIC / WARM</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">ORGANIC / WARM
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_bold" value="Bold / Disruption" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">🔥</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">BOLD / DISRUPT</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">BOLD / DISRUPT
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_corporate" value="Corporate Asset" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">🏛️</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">CORP/AUTHORITY</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">CORP/AUTHORITY
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_playful" value="Playful / Approachable" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">✨</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">PLAYFUL / FUN</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">PLAYFUL / FUN
+                    </div>
                   </label>
                   <label class="vibe-card">
                     <input type="checkbox" name="vibe_minimalist" value="Minimalist / Clean" style="display:none;">
                     <div class="vibe-icon" style="font-size: 1.5rem; margin-bottom: 2px;">◻</div>
-                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">MINIMAL / CLEAN</div>
+                    <div style="font-size: 0.6rem; font-family: var(--font-mono); font-weight: bold;">MINIMAL / CLEAN
+                    </div>
                   </label>
                 </div>
               </div>
@@ -2947,19 +3074,25 @@
 
               <!-- WHO ARE YOU JEALOUS OF — the gold question -->
               <div class="form-field full" style="margin-top: 1rem;">
-                <label>WHO ARE YOU JEALOUS OF? <span style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(brand, competitor, or anyone in your space you want to be compared to)</span></label>
-                <input type="text" name="brand_jealousy" placeholder="E.G. 'WE WANT TO BE THE APPLE OF OUR INDUSTRY' OR '@COMPETITOR_HANDLE' OR 'THAT LOCAL FIRM THAT KEEPS BEATING US'">
+                <label>WHO ARE YOU JEALOUS OF? <span
+                    style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(brand, competitor, or anyone in your
+                    space you want to be compared to)</span></label>
+                <input type="text" name="brand_jealousy"
+                  placeholder="E.G. 'WE WANT TO BE THE APPLE OF OUR INDUSTRY' OR '@COMPETITOR_HANDLE' OR 'THAT LOCAL FIRM THAT KEEPS BEATING US'">
               </div>
 
               <!-- WHO IS THEIR CUSTOMER -->
               <div class="form-field full" style="margin-top: 1rem;">
                 <label>WHO IS YOUR DREAM CLIENT / CUSTOMER?</label>
-                <input type="text" name="dream_client" placeholder="BE SPECIFIC — AGE, LIFESTYLE, VALUES, INCOME, WHAT THEY CARE ABOUT">
+                <input type="text" name="dream_client"
+                  placeholder="BE SPECIFIC — AGE, LIFESTYLE, VALUES, INCOME, WHAT THEY CARE ABOUT">
               </div>
 
               <!-- SUCCESS VISION -->
               <div class="form-field full" style="margin-top: 1rem;">
-                <label>IN 6 MONTHS, SUCCESS LOOKS LIKE... <span style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(what changes, what gets better?)</span></label>
+                <label>IN 6 MONTHS, SUCCESS LOOKS LIKE... <span
+                    style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(what changes, what gets
+                    better?)</span></label>
                 <textarea name="success_vision"
                   placeholder="E.G. 'FULLY BOOKED OUT, CHARGING DOUBLE, GETTING INQUIRIES WE DIDN'T HAVE TO CHASE' — DREAM OUT LOUD."
                   style="min-height: 70px; padding: 0.5rem;"></textarea>
@@ -2967,8 +3100,10 @@
 
               <!-- INSPIRATION LINKS -->
               <div class="form-field full" style="margin-top: 1rem;">
-                <label>INSPIRATION LINKS <span style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(Pinterest board, brands you love, anything visual)</span></label>
-                <input type="text" name="inspiration_links" placeholder="URLS, PINTEREST BOARDS, INSTAGRAM HANDLES — THE MORE THE BETTER">
+                <label>INSPIRATION LINKS <span style="font-size: 0.65rem; opacity: 0.6; font-weight: normal;">(Pinterest
+                    board, brands you love, anything visual)</span></label>
+                <input type="text" name="inspiration_links"
+                  placeholder="URLS, PINTEREST BOARDS, INSTAGRAM HANDLES — THE MORE THE BETTER">
               </div>
 
               <!-- HOW DID THEY FIND US -->
@@ -3001,7 +3136,8 @@
                   style="background: silver; color: #000; padding: 0.8rem 2rem;">
                   << BACK</button>
                     <button type="submit" class="btn-elite-submit"
-                      style="padding: 0.8rem 2rem; background: #000; color: var(--pop-lime);">SEND THE BRIEF &rarr;</button>
+                      style="padding: 0.8rem 2rem; background: #000; color: var(--pop-lime);">SEND THE BRIEF
+                      &rarr;</button>
               </div>
             </div>
 
@@ -3083,7 +3219,7 @@
           }
         }
       </style>
-      <div class="reveal parallax-layer aquarium-popup" data-speed="0.25"
+      <div class="reveal parallax-layer aquarium-popup"
         style="position: absolute; top: 30vh; right: 5%; width: 100%; max-width: 300px; background: silver; border: 2px solid #fff; border-bottom-color: #000; border-right-color: #000; padding: 4px; z-index: 100; font-family: var(--font-mono); font-size: 0.7rem; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); transform: rotate(3deg);">
         <div
           style="background: darkblue; color: white; padding: 2px 6px; font-weight: bold; display: flex; justify-content: space-between;">
@@ -4163,8 +4299,7 @@
     </div>
   </div>
 
-  <!-- Back to Top Button -->
-  <a href="#" id="back-to-top" class="back-to-top">&uarr;</a>
+
   <!-- INFOMERCIAL POPUP -->
   <style>
     @keyframes infoFlash {

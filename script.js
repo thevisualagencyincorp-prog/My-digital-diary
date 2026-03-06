@@ -22,14 +22,33 @@ const observer = new IntersectionObserver((entries) => {
 // PARALLAX ENGINE
 const updateParallax = () => {
     const scrollY = window.pageYOffset;
+    const windowCenter = scrollY + (window.innerHeight / 2);
+
     document.querySelectorAll('[data-speed]').forEach(el => {
         const speed = parseFloat(el.getAttribute('data-speed')) || 0;
-        const yPos = -(scrollY * speed);
+
+        let initialTop = parseFloat(el.getAttribute('data-initial-top'));
+        if (isNaN(initialTop)) {
+            // Get untransformed absolute top by temporarily removing the transform
+            const currentTransform = el.style.transform;
+            el.style.transform = 'none';
+            initialTop = el.getBoundingClientRect().top + window.pageYOffset;
+            el.style.transform = currentTransform;
+            el.setAttribute('data-initial-top', initialTop);
+        }
+
+        // Calculate the translation based on how far the element's original position is from the center of the viewport
+        const distFromCenter = windowCenter - initialTop;
+
+        // This will be 0 when element is horizontally centered on screen.
+        // Multiply by speed to get the parallax effect.
+        const yPos = -(distFromCenter * speed);
+
         el.style.transform = `translate3d(0, ${yPos}px, 0)`;
 
         // If it's the main large header, add a slight tilt
         if (el.classList.contains('halftone-text') && Math.abs(speed) > 0.1) {
-            const rot = scrollY * 0.01 * speed;
+            const rot = distFromCenter * 0.002 * speed;
             el.style.transform += ` rotate(${rot}deg)`;
         }
     });
