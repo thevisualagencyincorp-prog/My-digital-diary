@@ -3956,12 +3956,21 @@ section {
     }
 
     .horoscope-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        /* Better fit for mobile */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
     }
 
     /* Adjust letter-spacing for massive headers to prevent overflow */
     .halftone-text {
-        letter-spacing: -2px !important;
+        letter-spacing: -1.5px !important;
+    }
+    .retro-sidebar,
+    .chat-sidebar {
+        display: none !important;
+    }
+
+    .horizontal-scroll-section {
+        height: auto !important;
+        min-height: auto !important;
     }
 }
