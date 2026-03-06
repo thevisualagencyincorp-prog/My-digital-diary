@@ -810,17 +810,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize with Aries (default active)
+    // Pre-load Aries content (panel stays closed until user clicks)
     displayReading('aries');
+
+    const readingWrap = document.querySelector('.horoscope-reading-wrap');
+
+    function openReading() {
+        if (readingWrap) {
+            readingWrap.style.maxHeight = '700px';
+            readingWrap.style.padding = '2.5rem';
+            readingWrap.style.borderTop = '2px solid var(--pop-lime)';
+            readingWrap.style.marginTop = '10px';
+        }
+    }
 
     horoscopeCards.forEach(card => {
         card.addEventListener('click', () => {
-            horoscopeCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
             const sign = card.getAttribute('data-sign');
-            displayReading(sign);
+            const wasActive = card.classList.contains('active');
+            horoscopeCards.forEach(c => c.classList.remove('active'));
+
+            if (wasActive && readingWrap && readingWrap.style.maxHeight !== '0px' && readingWrap.style.maxHeight !== '') {
+                // Same card clicked again — collapse the panel
+                readingWrap.style.maxHeight = '0';
+                readingWrap.style.padding = '0';
+                readingWrap.style.borderTop = '';
+                readingWrap.style.marginTop = '';
+            } else {
+                card.classList.add('active');
+                displayReading(sign);
+                openReading();
+                setTimeout(() => {
+                    if (readingWrap) readingWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
         });
     });
+
+    // Reading panel starts closed — opens on first sign click
 
     // ═══════════════════════════════════════════════════════════
     // ✦ COLLECTION MODAL ENGINE

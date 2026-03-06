@@ -1546,15 +1546,20 @@ section {
 
 /* HOROSCOPE READING MODULE */
 .horoscope-reading-wrap {
-    margin-top: 1px;
-    background: #222;
-    padding: 1px;
+    margin-top: 0;
+    background: #111;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease, margin-top 0.3s ease;
+    border: 1px solid #333;
+    border-top: none;
 }
 
 .reading-content {
     background: #000;
-    padding: 4rem;
-    min-height: 30vh;
+    padding: 2.5rem;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2266,7 +2271,7 @@ section {
     background: #FDF3DC;
     color: #2C1010;
     padding: 0;
-    z-index: 10005;
+    z-index: 999999;
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2522,7 +2527,7 @@ section {
     position: fixed;
     inset: 0;
     background: rgba(20, 5, 5, 0.92);
-    z-index: 10004;
+    z-index: 99998;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
@@ -3652,22 +3657,7 @@ section {
 }
 
 /* Modal Overlay (Shared for Oracle and Case Studies) */
-.oracle-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 99998;
-    /* Just below the modal z-index 99999 */
-    display: none;
-    backdrop-filter: blur(5px);
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-
-.oracle-overlay.active {
-    display: block;
-    opacity: 1;
-}
+/* oracle-overlay managed by the first definition above — no duplicate needed */
 
 /* Explicitly disable any hover-triggered display if it's lurking in older browsers */
 .desktop-folder-group:hover .desktop-folder-content:not(.active) {
@@ -4104,13 +4094,9 @@ section {
         max-width: 300px !important;
     }
 
-    .horoscope-reading-wrap {
-        padding: 2rem !important;
-    }
-
     .horoscope-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
     }
 
     /* Adjust letter-spacing for massive headers to prevent overflow */
