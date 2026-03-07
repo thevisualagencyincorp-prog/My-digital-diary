@@ -1,6 +1,160 @@
 /* My Digital Diary — app logic */
 'use strict';
 
+/* ════════════════════════════════════
+   PIN LOCK
+═══════════════════════════════════════ */
+const PIN_HASH_KEY    = 'diary_pin_hash';
+const SESSION_KEY     = 'diary_unlocked';
+const PIN_LENGTH      = 4;
+
+const lockScreen  = document.getElementById('lock-screen');
+const pinForm     = document.getElementById('pin-form');
+const pinInput    = document.getElementById('pin-input');
+const pinDots     = document.querySelectorAll('.pin-dot');
+const pinKeys     = document.querySelectorAll('.pin-key[data-digit]');
+const pinClear    = document.getElementById('pin-clear');
+const pinDel      = document.getElementById('pin-del');
+const lockSubtitle = document.getElementById('lock-subtitle');
+const lockError   = document.getElementById('lock-error');
+
+let pinBuffer = '';
+let isSettingPin = false;
+let pendingPin   = '';   // first entry when creating a new PIN
+
+function bufToHex(buf) {
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function hexToBuf(hex) {
+  const arr = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < arr.length; i++) arr[i] = parseInt(hex.slice(i * 2, i * 2 + 2), 16);
+  return arr.buffer;
+}
+
+async function hashPin(pin, saltHex) {
+  const enc = new TextEncoder();
+  const keyMaterial = await crypto.subtle.importKey(
+    'raw', enc.encode(pin), 'PBKDF2', false, ['deriveBits']
+  );
+  const bits = await crypto.subtle.deriveBits(
+    { name: 'PBKDF2', hash: 'SHA-256', salt: hexToBuf(saltHex), iterations: 200000 },
+    keyMaterial, 256
+  );
+  return bufToHex(bits);
+}
+
+function randomSaltHex() {
+  const salt = new Uint8Array(16);
+  crypto.getRandomValues(salt);
+  return bufToHex(salt.buffer);
+}
+
+function updatePinDots() {
+  pinDots.forEach((dot, i) => {
+    dot.classList.toggle('filled', i < pinBuffer.length);
+    dot.classList.remove('error');
+  });
+}
+
+function showPinError(msg) {
+  lockError.textContent = msg;
+  lockError.classList.remove('hidden');
+  pinDots.forEach(d => d.classList.add('error'));
+  setTimeout(() => {
+    lockError.classList.add('hidden');
+    pinDots.forEach(d => d.classList.remove('error'));
+    pinBuffer = '';
+    updatePinDots();
+  }, 1200);
+}
+
+async function handlePinSubmit() {
+  if (pinBuffer.length < PIN_LENGTH) return;
+  const entered = pinBuffer;
+  pinBuffer = '';
+  updatePinDots();
+
+  const storedRaw = localStorage.getItem(PIN_HASH_KEY);
+
+  if (!storedRaw) {
+    // First-time setup
+    if (!isSettingPin) {
+      isSettingPin = true;
+      pendingPin   = entered;
+      lockSubtitle.textContent = 'Confirm your new PIN';
+    } else {
+      if (entered !== pendingPin) {
+        isSettingPin = false;
+        pendingPin   = '';
+        lockSubtitle.textContent = 'Create a 4-digit PIN';
+        showPinError("PINs didn't match — try again");
+      } else {
+        const saltHex = randomSaltHex();
+        const hash    = await hashPin(entered, saltHex);
+        localStorage.setItem(PIN_HASH_KEY, JSON.stringify({ hash, salt: saltHex }));
+        unlockDiary();
+      }
+    }
+  } else {
+    // Verify PIN
+    const { hash: storedHash, salt: saltHex } = JSON.parse(storedRaw);
+    const hash = await hashPin(entered, saltHex);
+    if (hash === storedHash) {
+      unlockDiary();
+    } else {
+      showPinError('Incorrect PIN');
+    }
+  }
+}
+
+function unlockDiary() {
+  sessionStorage.setItem(SESSION_KEY, '1');
+  lockScreen.classList.add('hidden');
+  lockScreen.setAttribute('aria-hidden', 'true');
+  document.getElementById('btn-new-entry').focus();
+}
+
+function appendPinDigit(digit) {
+  if (pinBuffer.length >= PIN_LENGTH) return;
+  pinBuffer += digit;
+  updatePinDots();
+  if (pinBuffer.length === PIN_LENGTH) handlePinSubmit();
+}
+
+// Keypad button clicks
+pinKeys.forEach(btn => {
+  btn.addEventListener('click', () => appendPinDigit(btn.dataset.digit));
+});
+pinDel.addEventListener('click', () => {
+  pinBuffer = pinBuffer.slice(0, -1);
+  updatePinDots();
+});
+pinClear.addEventListener('click', () => {
+  pinBuffer = '';
+  updatePinDots();
+});
+
+// Physical keyboard support
+document.addEventListener('keydown', e => {
+  if (lockScreen.classList.contains('hidden')) return;
+  if (/^[0-9]$/.test(e.key)) { appendPinDigit(e.key); return; }
+  if (e.key === 'Backspace') { pinBuffer = pinBuffer.slice(0, -1); updatePinDots(); }
+  if (e.key === 'Escape')    { pinBuffer = ''; updatePinDots(); }
+});
+
+function initLock() {
+  const alreadyUnlocked = sessionStorage.getItem(SESSION_KEY) === '1';
+  if (alreadyUnlocked) { return; }
+
+  const hasPin = !!localStorage.getItem(PIN_HASH_KEY);
+  lockSubtitle.textContent = hasPin ? 'Enter your 4-digit PIN' : 'Create a 4-digit PIN';
+  lockScreen.classList.remove('hidden');
+  lockScreen.removeAttribute('aria-hidden');
+}
+
+initLock();
+
 /* ── CONSTANTS ── */
 const STORAGE_KEY = 'digital_diary_entries';
 const MOOD_LABELS = {

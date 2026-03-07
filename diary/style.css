@@ -502,3 +502,127 @@ textarea { resize: vertical; }
   .header-inner { padding: 0.75rem 1rem; }
   .diary-main { padding: 1.5rem 1rem 3rem; }
 }
+
+/* ── LOCK SCREEN ── */
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lock-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 340px;
+  width: 100%;
+}
+
+.lock-icon { font-size: 2.4rem; }
+
+.lock-title {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.lock-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-align: center;
+  min-height: 1.2em;
+}
+
+/* PIN dots */
+.pin-dots {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--text-muted);
+  background: transparent;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.pin-dot.filled {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pin-dot.error {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+/* Hidden native input (keyboard support) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* PIN keypad */
+.pin-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.pin-key {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  padding: 0.9rem 0;
+  text-align: center;
+  transition: background var(--transition), border-color var(--transition), transform 0.08s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pin-key:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.pin-key:active {
+  transform: scale(0.94);
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
+.pin-key--clear,
+.pin-key--del {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.lock-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+  letter-spacing: 0.05em;
+  text-align: center;
+  min-height: 1em;
+}

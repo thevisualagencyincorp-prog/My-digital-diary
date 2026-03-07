@@ -166,6 +166,54 @@
     </div>
   </div>
 
+  <!-- ── PIN LOCK SCREEN ── -->
+  <div id="lock-screen" class="lock-screen hidden" role="dialog" aria-modal="true" aria-labelledby="lock-title">
+    <div class="lock-box">
+      <div class="lock-icon" aria-hidden="true">🔒</div>
+      <h1 class="lock-title" id="lock-title">My Digital Diary</h1>
+      <p class="lock-subtitle" id="lock-subtitle"></p>
+
+      <form id="pin-form" novalidate autocomplete="off">
+        <div class="pin-dots" id="pin-dots" aria-label="PIN entry indicator">
+          <span class="pin-dot" data-index="0"></span>
+          <span class="pin-dot" data-index="1"></span>
+          <span class="pin-dot" data-index="2"></span>
+          <span class="pin-dot" data-index="3"></span>
+        </div>
+
+        <input
+          type="password"
+          id="pin-input"
+          class="pin-input sr-only"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="4"
+          aria-label="4-digit PIN"
+          aria-describedby="lock-subtitle"
+          autocomplete="off"
+        >
+
+        <!-- numeric keypad -->
+        <div class="pin-keypad" role="group" aria-label="PIN keypad">
+          <button type="button" class="pin-key" data-digit="1">1</button>
+          <button type="button" class="pin-key" data-digit="2">2</button>
+          <button type="button" class="pin-key" data-digit="3">3</button>
+          <button type="button" class="pin-key" data-digit="4">4</button>
+          <button type="button" class="pin-key" data-digit="5">5</button>
+          <button type="button" class="pin-key" data-digit="6">6</button>
+          <button type="button" class="pin-key" data-digit="7">7</button>
+          <button type="button" class="pin-key" data-digit="8">8</button>
+          <button type="button" class="pin-key" data-digit="9">9</button>
+          <button type="button" class="pin-key pin-key--clear" id="pin-clear" aria-label="Clear PIN">✕</button>
+          <button type="button" class="pin-key" data-digit="0">0</button>
+          <button type="button" class="pin-key pin-key--del" id="pin-del" aria-label="Delete last digit">⌫</button>
+        </div>
+
+        <p class="lock-error hidden" id="lock-error" role="alert" aria-live="assertive"></p>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

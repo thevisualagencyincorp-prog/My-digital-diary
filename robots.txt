@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /diary/
 
 Sitemap: https://meettheagency.com/sitemap.xml
