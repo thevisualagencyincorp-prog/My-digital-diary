@@ -10,6 +10,19 @@
 */
 /* Google Fonts loaded via <link> in HTML head for non-render-blocking parallel load */
 
+/* ── ACCESSIBILITY: Screen-reader-only utility (not display:none — AI/screen readers CAN read this) ── */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* RETRO NAVIGATION BUTTONS */
 .nav-btn-retro {
     background: #1a1a1a;
@@ -181,6 +194,16 @@
         linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
+    animation: graphPulse 22s ease infinite;
+}
+
+@keyframes graphPulse {
+    0%   { background-color: #ffffff; }
+    20%  { background-color: #fff5fe; }
+    40%  { background-color: #f5fff8; }
+    60%  { background-color: #f5f8ff; }
+    80%  { background-color: #fffdf5; }
+    100% { background-color: #ffffff; }
 }
 
 .bg-graph-dark {
@@ -189,6 +212,15 @@
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 30px 30px;
+    animation: darkPulse 28s ease infinite;
+}
+
+@keyframes darkPulse {
+    0%   { background-color: #070707; }
+    25%  { background-color: #04040e; }
+    50%  { background-color: #060a06; }
+    75%  { background-color: #0a0408; }
+    100% { background-color: #070707; }
 }
 
 /* DESIGNER ANNOTATIONS */
@@ -910,6 +942,310 @@ section {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* === CHAPTER VI: THE PHILOSOPHY — EDITORIAL REDESIGN === */
+.philosophy-vi-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.vi-masthead {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    padding: 0.85rem 5vw;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vi-chapter-label {
+    color: var(--pop-lime) !important;
+    white-space: nowrap;
+    letter-spacing: 4px;
+}
+
+.vi-rule-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.vi-issue-stamp {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.58rem;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
+.vi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: clamp(3rem, 6vw, 9rem);
+    padding: 8vh 8vw 10vh;
+    position: relative;
+    z-index: 1;
+    align-items: start;
+}
+
+/* LEFT column */
+.vi-col-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.vi-headline {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.88;
+    color: #fff;
+    margin: 0 0 2.5rem;
+}
+
+.vi-byline-strip {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.vi-byline-by {
+    color: var(--pop-pink);
+    font-size: 1.6rem;
+}
+
+.vi-founders-name {
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    color: var(--pop-lime);
+    letter-spacing: 0.04em;
+}
+
+.vi-location-label {
+    color: var(--pop-pink);
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    margin-top: 0.3rem;
+}
+
+.vi-badge-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.58rem;
+    margin-top: 0.25rem;
+    letter-spacing: 2px;
+}
+
+.vi-polaroid-outer {
+    position: relative;
+    margin-top: 3rem;
+    transform: rotate(-4deg);
+    width: fit-content;
+    max-width: 82%;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.vi-polaroid-outer:hover {
+    transform: rotate(-1deg) scale(1.03);
+}
+
+.vi-tape {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2.5deg);
+    width: 88px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    border-radius: 2px;
+}
+
+.vi-polaroid-frame {
+    background: #fff;
+    padding: 10px 10px 56px 10px;
+    box-shadow: 6px 9px 28px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    position: relative;
+}
+
+.vi-polaroid-img {
+    width: 100%;
+    border: 1px solid #ddd;
+    filter: grayscale(100%) contrast(1.25) brightness(1.05);
+    display: block;
+}
+
+.vi-polaroid-caption {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #222;
+    text-align: center;
+    font-size: 1.05rem;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    left: 0;
+    transform: rotate(-1.5deg);
+}
+
+/* RIGHT column */
+.vi-col-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 1rem;
+}
+
+.vi-deco-num {
+    font-size: clamp(10rem, 18vw, 18rem);
+    line-height: 0.75;
+    color: rgba(255, 255, 255, 0.04);
+    position: absolute;
+    top: -2rem;
+    right: -3rem;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.vi-pullquote {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    line-height: 1.25;
+    color: #fff;
+    font-style: italic;
+    border-left: 4px solid var(--pop-pink);
+    padding-left: 1.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vi-quote-mark {
+    color: var(--pop-pink);
+    font-size: 1.3em;
+    line-height: 0;
+    vertical-align: -0.25em;
+}
+
+.vi-notepad {
+    background: silver;
+    border: 2px solid #fff;
+    border-bottom-color: #000;
+    border-right-color: #000;
+    padding: 4px;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.55);
+    position: relative;
+    z-index: 2;
+}
+
+.vi-notepad-bar {
+    background: darkblue;
+    color: #fff;
+    padding: 4px 8px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vi-notepad-x {
+    background: silver;
+    color: #000;
+    padding: 0 4px;
+    border: 1px solid #fff;
+    border-bottom-color: #000;
+    border-right-color: #000;
+    cursor: default;
+}
+
+.vi-notepad-body {
+    background: #fff;
+    color: #000;
+    padding: 2rem;
+}
+
+.vi-notepad-body p {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #000;
+}
+
+.vi-notepad-cta {
+    margin-top: 2rem;
+}
+
+.vi-cv-btn {
+    background: #000;
+    color: var(--pop-lime);
+    font-family: var(--font-mono);
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 var(--pop-lime);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.vi-cv-btn:hover {
+    box-shadow: 2px 2px 0 var(--pop-lime);
+    transform: translate(2px, 2px);
+}
+
+.vi-notepad-loc {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+    color: var(--pop-pink);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Bottom ticker */
+.vi-ticker-wrap {
+    background: var(--pop-pink);
+    overflow: hidden;
+    border-top: 2px solid #000;
+}
+
+.vi-ticker {
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    padding: 0.65rem 0;
+    animation: viTicker 35s linear infinite;
+}
+
+@keyframes viTicker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vi-grid {
+        grid-template-columns: 1fr;
+        padding: 5vh 6vw 7vh;
+        gap: 3rem;
+    }
+    .vi-deco-num { display: none; }
+    .vi-col-right { padding-top: 0; }
+    .vi-pullquote { font-size: 1.5rem; border-left-width: 3px; }
+    .vi-headline { font-size: clamp(2.8rem, 10vw, 4rem); }
+    .vi-masthead { gap: 1rem; flex-wrap: wrap; }
+    .vi-issue-stamp { display: none; }
 }
 
 /* MARQUEE SYSTEM */
@@ -4777,5 +5113,156 @@ summary:focus-visible {
     .ig-follow-btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════ */
+/* ✦ RESPONSIVE: Chapter VI + Moodboard + Multi-device   */
+/* ═══════════════════════════════════════════════════════ */
+
+/* TABLET (769–1024px): Chapter VI two-column adjustment */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .vi-grid {
+        grid-template-columns: 1fr 1.1fr;
+        gap: 3rem;
+        padding: 6vh 5vw 8vh;
+    }
+    .vi-headline {
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+    }
+    .vi-pullquote {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+    .vi-polaroid-outer {
+        max-width: 90%;
+    }
+    .vi-deco-num {
+        font-size: clamp(8rem, 14vw, 12rem);
+        right: -1rem;
+    }
+}
+
+/* MOBILE (≤768px): VI ticker — shrink for small screens */
+@media (max-width: 768px) {
+    .vi-ticker-wrap {
+        overflow: hidden;
+    }
+    .vi-ticker {
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+        padding: 0.55rem 0;
+    }
+    .vi-cv-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    .vi-notepad-body {
+        padding: 1.5rem;
+    }
+
+    /* Moodboard case study: full-width on mobile */
+    .mb-hero {
+        flex-direction: column !important;
+    }
+    .mb-hero-img {
+        width: 100% !important;
+        height: 220px !important;
+    }
+    .mb-title-block {
+        padding: 1.5rem !important;
+    }
+    .mb-client-name {
+        font-size: clamp(2.5rem, 10vw, 4rem) !important;
+    }
+    .mb-stats-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    .mb-bottom-row {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    .mb-palette-col,
+    .mb-outcome-col {
+        width: 100% !important;
+    }
+    .mb-deliverables-row {
+        gap: 0.4rem !important;
+    }
+    .mb-tag {
+        font-size: 0.55rem !important;
+    }
+
+    /* Horoscope grid: 3 cols on mobile (was 6) */
+    .horoscope-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+    }
+}
+
+/* NARROW PHONE (≤480px): horoscope 3-col, VI single col tighter */
+@media (max-width: 480px) {
+    .horoscope-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 5px !important;
+    }
+    .vi-grid {
+        padding: 4vh 5vw 6vh !important;
+    }
+    .vi-headline {
+        font-size: clamp(2.2rem, 11vw, 3rem) !important;
+    }
+    .vi-pullquote {
+        font-size: 1.25rem !important;
+    }
+    .vi-founders-name {
+        font-size: 1.2rem !important;
+    }
+    .mb-stats-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* LARGE SCREENS (≥1400px): VI section breathing room */
+@media (min-width: 1400px) {
+    .vi-grid {
+        padding: 10vh 10vw 12vh;
+        gap: 10rem;
+    }
+    .vi-headline {
+        font-size: 8rem;
+    }
+}
+
+/* HIGH CONTRAST / FORCED COLORS: ensure brand text stays readable */
+@media (forced-colors: active) {
+    .vi-pullquote,
+    .vi-headline,
+    .vi-founders-name {
+        forced-color-adjust: none;
+    }
+    .vi-cv-btn {
+        border: 2px solid ButtonText;
+    }
+}
+
+/* ── TOUCH DEVICES: Larger tap targets for all interactive elements ── */
+@media (hover: none) and (pointer: coarse) {
+    .horoscope-card {
+        min-height: 60px !important;
+        padding: 0.6rem !important;
+    }
+    .vi-cv-btn,
+    .vi-polaroid-outer {
+        cursor: default;
+    }
+    .mb-tag {
+        padding: 0.4rem 0.7rem !important;
+    }
+    /* Prevent hover transforms from firing on tap */
+    .vi-polaroid-outer:hover {
+        transform: rotate(-4deg) !important;
     }
 }
