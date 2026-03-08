@@ -194,4 +194,83 @@ window.submitQuiz = submitQuiz;
     });
 })();
 
+// ══ SELF-DESTRUCT FORM SUBMISSION ══
+function runSelfDestruct(overlay, form, btn, origText) {
+    const countdownEl = overlay.querySelector('.sd-countdown');
+    let count = 5;
+
+    // Kick off at 5, tick down every 900ms
+    const tick = setInterval(() => {
+        count--;
+
+        if (countdownEl) {
+            // Remove + re-add class to restart animation
+            countdownEl.classList.remove('pop');
+            void countdownEl.offsetWidth; // reflow to restart animation
+            countdownEl.classList.add('pop');
+
+            if (count > 0) {
+                countdownEl.textContent = count;
+            } else {
+                countdownEl.textContent = '✦';
+                clearInterval(tick);
+
+                // Glitch + dissolve after a beat
+                setTimeout(() => {
+                    overlay.classList.add('self-destruct');
+
+                    // After animation completes, reset everything
+                    setTimeout(() => {
+                        overlay.classList.remove('show', 'self-destruct');
+                        form.reset();
+                        btn.textContent = origText;
+                        btn.disabled = false;
+                    }, 1200);
+                }, 600);
+            }
+        }
+    }, 900);
+}
+
+function initBriefForm(formEl) {
+    if (!formEl) return;
+    const successEl = formEl.querySelector('.brief-success');
+    if (!successEl) return;
+
+    formEl.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = formEl.querySelector('.bf-submit');
+        const origText = btn.textContent;
+
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        try {
+            const res = await fetch(formEl.action, {
+                method: 'POST',
+                body: new FormData(formEl),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                // Reset countdown display to 5 before showing
+                const countdownEl = successEl.querySelector('.sd-countdown');
+                if (countdownEl) countdownEl.textContent = '5';
+
+                successEl.classList.add('show');
+                runSelfDestruct(successEl, formEl, btn, origText);
+            } else {
+                btn.textContent = 'Something went wrong — try again';
+                btn.disabled = false;
+            }
+        } catch {
+            btn.textContent = 'Connection error — try again';
+            btn.disabled = false;
+        }
+    });
+}
+
+// Init both forms
+document.querySelectorAll('.brief-form').forEach(initBriefForm);
+
 console.log('✦ THE AGENCY: System Online.');
