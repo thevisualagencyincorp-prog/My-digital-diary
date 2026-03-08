@@ -2927,83 +2927,95 @@
 
           <!-- COLUMN 3: FRANK (POCKET BESTIE) -->
           <div class="fun-column frank-col retro-window"
-            style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 3px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); width: 100%; max-width: 450px;">
-            <div
-              style="background: linear-gradient(90deg, #008000, #00ff00); color: black; padding: 4px 10px; font-weight: bold; font-size: 0.7rem; display: flex; justify-content: space-between;">
-              <span>📟 FRANK_v2.0.EXE (MODE: BESTIE)</span>
-              <button class="btn-retro-close"
-                style="background: transparent; border: none; font-weight: bold; cursor: pointer;">X</button>
-            </div>
-            <div style="background: #111; padding: 20px;">
-              <div id="frank-container">
-                <div class="frank-device" id="frank-window"
-                  style="background: #222; border-color: #0f0; box-shadow: 0 0 10px #0f0;">
-                  <div class="frank-lcd-frame">
-                    <div class="frank-lcd-screen" id="frank-screen" style="background: #001a00;">
-                      <div class="frank-lcd-bubble" id="frank-popup" style="color: #0f0; border-color: #0f0;">GREETINGS.
-                      </div>
-                      <div class="frank-wrap" id="frank-wrap">
-                        <div id="frank-sprite-dir"
-                          style="display:flex; justify-content:center; align-items:flex-end; height:80px;">
-                          <!-- CSS pixel art Frank — 12×14 grid, 5px per pixel, Siamese cat in LCD green -->
-                          <div id="frank-img" class="sitting" style="
-                            width:5px; height:5px; position:relative; display:block;
-                            margin-bottom:4px;
-                            box-shadow:
-                              10px 0 0 0 #003311, 40px 0 0 0 #003311,
-                              5px 5px 0 0 #003311, 10px 5px 0 0 #003311, 15px 5px 0 0 #003311, 30px 5px 0 0 #003311, 35px 5px 0 0 #003311, 40px 5px 0 0 #003311,
-                              5px 10px 0 0 #003311, 20px 10px 0 0 #003311, 30px 10px 0 0 #003311, 45px 10px 0 0 #003311, 10px 10px 0 0 #22cc55, 15px 10px 0 0 #22cc55, 35px 10px 0 0 #22cc55, 40px 10px 0 0 #22cc55,
-                              10px 15px 0 0 #22cc55, 15px 15px 0 0 #22cc55, 20px 15px 0 0 #22cc55, 25px 15px 0 0 #22cc55, 30px 15px 0 0 #22cc55, 35px 15px 0 0 #22cc55, 40px 15px 0 0 #22cc55, 45px 15px 0 0 #22cc55,
-                              10px 20px 0 0 #22cc55, 25px 20px 0 0 #22cc55, 30px 20px 0 0 #22cc55, 45px 20px 0 0 #22cc55, 15px 20px 0 0 #55ffaa, 20px 20px 0 0 #55ffaa, 35px 20px 0 0 #55ffaa, 40px 20px 0 0 #55ffaa,
-                              10px 25px 0 0 #22cc55, 25px 25px 0 0 #22cc55, 30px 25px 0 0 #22cc55, 45px 25px 0 0 #22cc55, 15px 25px 0 0 #003311, 20px 25px 0 0 #003311, 35px 25px 0 0 #003311, 40px 25px 0 0 #003311,
-                              10px 30px 0 0 #22cc55, 15px 30px 0 0 #22cc55, 20px 30px 0 0 #22cc55, 25px 30px 0 0 #22cc55, 30px 30px 0 0 #22cc55, 35px 30px 0 0 #22cc55, 40px 30px 0 0 #22cc55, 45px 30px 0 0 #22cc55,
-                              15px 35px 0 0 #22cc55, 20px 35px 0 0 #22cc55, 35px 35px 0 0 #22cc55, 40px 35px 0 0 #22cc55, 25px 35px 0 0 #003311, 30px 35px 0 0 #003311,
-                              20px 40px 0 0 #22cc55, 25px 40px 0 0 #22cc55, 30px 40px 0 0 #22cc55, 35px 40px 0 0 #22cc55,
-                              10px 45px 0 0 #003311, 15px 45px 0 0 #003311, 20px 45px 0 0 #003311, 25px 45px 0 0 #003311, 30px 45px 0 0 #003311, 35px 45px 0 0 #003311, 40px 45px 0 0 #003311, 45px 45px 0 0 #003311,
-                              10px 50px 0 0 #22cc55, 15px 50px 0 0 #22cc55, 20px 50px 0 0 #22cc55, 25px 50px 0 0 #22cc55, 30px 50px 0 0 #22cc55, 35px 50px 0 0 #22cc55, 40px 50px 0 0 #22cc55, 45px 50px 0 0 #22cc55,
-                              10px 55px 0 0 #22cc55, 15px 55px 0 0 #22cc55, 20px 55px 0 0 #22cc55, 25px 55px 0 0 #22cc55, 30px 55px 0 0 #22cc55, 35px 55px 0 0 #22cc55, 40px 55px 0 0 #22cc55, 45px 55px 0 0 #22cc55,
-                              10px 60px 0 0 #22cc55, 15px 60px 0 0 #22cc55, 20px 60px 0 0 #22cc55, 25px 60px 0 0 #22cc55, 30px 60px 0 0 #22cc55, 35px 60px 0 0 #22cc55, 40px 60px 0 0 #22cc55, 45px 60px 0 0 #22cc55,
-                              5px 65px 0 0 #003311, 10px 65px 0 0 #003311, 15px 65px 0 0 #003311, 35px 65px 0 0 #003311, 40px 65px 0 0 #003311, 45px 65px 0 0 #003311;
-                            transition: transform 0.3s ease;
-                          "></div>
-                        </div>
-                        <div class="frank-zzz" id="frank-zzz" style="color: #0f0; margin-top: 8px;">Zzz</div>
-                      </div>
+            style="background: #c0c0c0; border: 2px solid #fff; border-right-color: #808080; border-bottom-color: #808080; padding: 20px; box-shadow: 10px 10px 0 rgba(0,0,0,0.5); width: 100%; max-width: 450px; display: flex; align-items: center; justify-content: center;">
+            
+            <div class="device" style="margin: 0 auto; transform: scale(1); transform-origin: center;">
+              <div class="nameplate">
+                <div class="nameplate-inner"><span>frank</span></div>
+              </div>
+              <div class="brand">✦ pixel pet ✦</div>
 
-                      <!-- Bottom Stats on LCD -->
-                      <div class="frank-stats-display">
-                        <div class="frank-stat-item">
-                          <span>HUNGER</span>
-                          <div class="frank-stat-bar-container">
-                            <div id="frank-battery-bar" class="frank-stat-bar" style="width: 100%; background: #0f0;">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="frank-stat-item">
-                          <span>LOVE</span>
-                          <div class="frank-stat-bar-container">
-                            <div id="frank-help-bar" class="frank-stat-bar" style="width: 80%; background: #0f0;"></div>
-                          </div>
-                        </div>
-                      </div>
+              <div class="screen-wrapper">
+                <div class="screen" id="screen">
+                  <div class="screen-flash"  id="screenFlash"></div>
+                  <div class="night-overlay" id="nightOverlay"></div>
+
+                  <div class="status-bar">
+                    <div class="stat">
+                      <span class="stat-icon">❤️</span>
+                      <div class="stat-bar" id="healthBar"></div>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-icon">😊</span>
+                      <div class="stat-bar" id="happyBar"></div>
                     </div>
                   </div>
-                  <div class="frank-controls">
-                    <button class="frank-btn-main" onclick="feedFrank()" title="Feed"
-                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">🍖 FEED</button>
-                    <button class="frank-btn-main" onclick="petFrank()" title="Pet"
-                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">🐾 PET</button>
-                    <button class="frank-btn-main" onclick="playFrank()" title="Play"
-                      style="background: #000; color: #0f0; border: 1px solid #0f0; cursor: pointer;">🎮 PLAY</button>
-                  </div>
+                  <div class="age-display" id="ageDisplay">age:0</div>
+
+                  <div class="moon" id="moon"></div>
+                  <div class="sun"  id="sun"></div>
+
+                  <div class="bg-star" style="top:35px;left:28px"></div>
+                  <div class="bg-star" style="top:55px;left:76px"></div>
+                  <div class="bg-star" style="top:28px;left:130px"></div>
+                  <div class="bg-star" style="top:70px;left:185px"></div>
+                  <div class="bg-star" style="top:40px;left:240px"></div>
+                  <div class="bg-star" style="top:90px;left:48px"></div>
+
+                  <div class="sick-icon" id="sickIcon">🌀</div>
+                  <div class="msg-box"   id="msgBox"></div>
+                  <canvas id="catCanvas" width="80" height="80" style="width:160px;height:160px;"></canvas>
+
+                  <div class="zzz" id="zzz1" style="bottom:125px;left:158px;font-size:9px">z</div>
+                  <div class="zzz" id="zzz2" style="bottom:140px;left:170px;font-size:12px">z</div>
+                  <div class="zzz" id="zzz3" style="bottom:158px;left:183px;font-size:16px">Z</div>
+
+                  <div class="heart" id="heart1" style="bottom:115px;left:96px">♥</div>
+                  <div class="heart" id="heart2" style="bottom:115px;left:170px">♥</div>
+                  <div class="heart" id="heart3" style="bottom:115px;left:133px">♥</div>
+
+                  <div class="poop" id="poop1" style="left:32px">💩</div>
+                  <div class="poop" id="poop2" style="left:58px">💩</div>
+
+                  <div class="food-item" id="foodItem" style="left:50%">🐟</div>
+
+                  <div class="ground"></div>
                 </div>
               </div>
+
+              <div class="buttons">
+                <div class="btn-group">
+                  <button class="frank-device-btn btn-feed"     onclick="feedCat()">🐟</button>
+                  <div class="btn-label">feed</div>
+                </div>
+                <div class="btn-group">
+                  <button class="frank-device-btn btn-play"     onclick="playCat()">🎀</button>
+                  <div class="btn-label">play</div>
+                </div>
+                <div class="btn-group">
+                  <button class="frank-device-btn btn-sleep"    onclick="sleepCat()">🌙</button>
+                  <div class="btn-label">sleep</div>
+                </div>
+                <div class="btn-group">
+                  <button class="frank-device-btn btn-clean"    onclick="cleanCat()">🧹</button>
+                  <div class="btn-label">clean</div>
+                </div>
+                <div class="btn-group">
+                  <button class="frank-device-btn btn-medicine" onclick="giveMedicine()">💊</button>
+                  <div class="btn-label">meds</div>
+                </div>
+              </div>
+
+              <!-- Reset — small, tucked away, requires confirm -->
+              <div style="text-align:center;margin-top:8px;">
+                <button onclick="if(confirm('start over with a new frank?')){resetFrank();}"
+                  style="background:none;border:none;font-family:'Press Start 2P',monospace;
+                         font-size:5px;color:#4a7800;opacity:0.45;cursor:pointer;padding:4px 8px;letter-spacing:1px;">
+                  ↺ new frank
+                </button>
+              </div>
             </div>
-            <!-- Device Label -->
-            <div
-              style="margin-top: 15px; font-family: var(--font-mono); font-size: 0.6rem; color: rgba(255,255,255,0.8); font-weight: bold; letter-spacing: 2px;">
-              FRANK_v2.0 // POCKET_BESTIE
-            </div>
+
           </div>
 
 
@@ -3046,87 +3058,47 @@
       </div>
     </section>
 
-    <!-- PHYSICAL ORACLE CARD MODAL -->
+    <!-- PHYSICAL ORACLE CARD MODAL REDESIGNED -->
     <div class="oracle-overlay" id="oracleOverlay"></div>
     <div class="oracle-card-wrap" id="physicalCard">
 
-      <!-- TOP ORNATE BORDER STRIP -->
-      <div class="zoltar-top-strip">
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-      </div>
-
-      <!-- HEADER -->
-      <div class="zoltar-header">
-        <div class="zoltar-title">ZOLTAR</div>
-        <div class="zoltar-subtitle">SPEAKS</div>
-        <div class="zoltar-eye">𓂀</div>
-        <div class="zoltar-tagline">— The All-Knowing Oracle of Brand Destiny —</div>
+      <!-- TOP HEADER -->
+      <div class="destiny-header">
+        <div class="destiny-title">SYSTEM <span class="destiny-highlight">ORACLE</span></div>
+        <div class="destiny-tagline">v9.9.9 // DESTINY PROTOCOL</div>
       </div>
 
       <!-- CATEGORY BADGE -->
-      <div class="zoltar-category-wrap">
-        <span class="zoltar-category-badge category-cosmic" id="cardCategoryBadge">COSMIC</span>
+      <div class="destiny-category-wrap">
+        <span class="destiny-category-badge" id="cardCategoryBadge">COSMIC</span>
       </div>
 
       <!-- FORTUNE LABEL -->
-      <div class="zoltar-fortune-label">✦ &nbsp; YOUR FORTUNE &nbsp; ✦</div>
+      <div class="destiny-fortune-label">>> DECODED TRANSMISSION <<</div>
 
       <!-- FORTUNE TEXT -->
       <div class="card-fortune-text" id="cardFortuneText">
         YOUR REBRAND IS 99% COMPLETE. THE LOGO IS THE KEY.
       </div>
 
-      <!-- PERFORATED DIVIDER -->
-      <div class="zoltar-perforation">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-
-      <!-- TICKET STUB FOOTER -->
-      <div class="zoltar-stub">
-        <div class="zoltar-stub-left">
-          <div class="zoltar-serial-label">FORTUNE NO.</div>
-          <div class="zoltar-serial" id="cardSerial">#8822-01</div>
-          <div class="zoltar-lucky-wrap">
-            <div class="zoltar-lucky-item">LUCKY NUMBERS: <span id="cardLuckyNums">4, 8, 15, 16, 23, 42</span></div>
-            <div class="zoltar-lucky-item">LUCKY COLOR: <span id="cardLuckyColor">NEON PINK</span></div>
-            <div class="zoltar-lucky-item">LUCKY DAY: <span id="cardLuckyDay">THURSDAY</span></div>
+      <!-- DATA FOOTER -->
+      <div class="destiny-footer">
+        <div class="destiny-stub-left">
+          <div class="destiny-serial" id="cardSerial">ID: #8822-01</div>
+          <div class="destiny-lucky-wrap">
+            <div class="destiny-lucky-item">LUCKY NUMBERS: <span id="cardLuckyNums">4, 8, 15, 16, 23, 42</span></div>
+            <div class="destiny-lucky-item">LUCKY COLOR: <span id="cardLuckyColor">NEON PINK</span></div>
+            <div class="destiny-lucky-item">LUCKY DAY: <span id="cardLuckyDay">THURSDAY</span></div>
           </div>
-          <div class="zoltar-keep" style="margin-bottom: 5px; line-height: 1.4;">
-            📸 SAVE OR SHARE THE TRANSMISSION<br>
-            <span style="color: var(--pop-blue); font-size: 0.75rem;">TAG <b
-                style="color: #000; text-decoration: underline;">@meettheagency</b> // <b
-                style="color: #000; text-decoration: underline;">#meet_the_agency</b></span>
-          </div>
-          <div
-            style="font-family: var(--font-mono); font-size: 0.5rem; color: #8B1A1A; opacity: 0.6; font-weight: bold; letter-spacing: 1px; display: flex; align-items: center; gap: 4px;">
-            © 1988 THE AGENCY INTERNATIONAL // <a href="https://meettheagency.com"
-              style="color: inherit; text-decoration: underline;">meettheagency.com</a>
+          <div class="destiny-copyright">
+            © 1988 THE AGENCY INTERNATIONAL
           </div>
         </div>
-        <div class="zoltar-action-buttons">
-          <button class="btn-zoltar-action" id="btnSaveCard" onclick="saveCardAsImage()">💾 SAVE IMAGE</button>
-          <button class="btn-zoltar-action" id="btnShareCard" onclick="shareCard()">📤 SHARE</button>
-          <button class="btn-zoltar-action close-card-btn">✕ CLOSE</button>
+        <div class="destiny-action-buttons">
+          <button class="btn-destiny-action" id="btnSaveCard" onclick="saveCardAsImage()">💾 SAVE</button>
+          <button class="btn-destiny-action" id="btnShareCard" onclick="shareCard()">📤 SHARE</button>
+          <button class="btn-destiny-action close-card-btn">✕ CLOSE</button>
         </div>
-      </div>
-
-      <!-- BOTTOM ORNATE STRIP (Moved inside oracle-card-wrap) -->
-      <div class="zoltar-top-strip" style="margin-top: 0.5rem; margin-bottom: 0;">
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
-        <span class="zoltar-star">★</span>
-        <span class="zoltar-star">✦</span>
       </div>
 
     </div> <!-- Close oracle-card-wrap -->
@@ -4215,400 +4187,251 @@
     Stay magical. ✨
   -->
   <style>
-    /* Frank Digital Pet (Early 2000s Elevation) */
-    #frank-container {
-      position: relative;
-      margin-top: 5rem;
-      z-index: 100;
-      width: 100%;
-      height: 440px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    /* ── FRANK DEVICE VARIABLES ─────────────────────────── */
+    :root {
+      --lime:       #c8f030;
+      --lime-dark:  #7aaa10;
+      --lime-light: #eeff88;
+      --screen-bg:  #cef040;
+      --pixel:      #1a2800;
+      --egg-shell:  #c8f030;
+      --egg-border: #7aaa10;
+      --glow:       rgba(180,240,40,0.55);
     }
 
-    .frank-device {
-      width: 280px;
-      height: 380px;
-      background: linear-gradient(135deg, #008000, #00ff00, #008000);
-      border-radius: 90px 90px 120px 120px;
-      padding: 15px;
+    /* ── DEVICE ─────────────────────────── */
+    .device {
+      position:relative;
+      width: min(360px, 92vw);
+      background:var(--egg-shell);
+      border-radius:52% 52% 46% 46% / 58% 58% 42% 42%;
+      padding: min(30px,4vw) min(26px,3.5vw) min(44px,6vw);
+      border:5px solid var(--egg-border);
       box-shadow:
-        inset -5px -5px 15px rgba(0, 0, 0, 0.4),
-        inset 5px 5px 15px rgba(255, 255, 255, 0.6),
-        10px 15px 30px rgba(0, 0, 0, 0.5);
-      position: relative;
-      border: 4px solid #006400;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-      cursor: move;
+        0 0 0 3px #5a8a00,
+        0 12px 44px rgba(0,0,0,0.75),
+        0 0 90px var(--glow),
+        inset 0 4px 14px rgba(255,255,255,0.5),
+        inset 0 -6px 20px rgba(0,0,0,0.07);
+      filter:drop-shadow(0 0 32px rgba(180,240,40,0.5));
+      font-family: 'Press Start 2P', monospace;
+    }
+    .device * {
+      box-sizing:border-box; image-rendering:pixelated; -webkit-tap-highlight-color:transparent;
     }
 
-    .frank-device:hover {
-      transform: translateY(-5px) rotate(1deg);
-      box-shadow:
-        inset -5px -5px 15px rgba(0, 0, 0, 0.4),
-        inset 5px 5px 15px rgba(255, 255, 255, 0.6),
-        15px 20px 40px rgba(0, 0, 0, 0.6);
+    .device::before {
+      content:''; position:absolute; top:20px; left:44px;
+      width:75px; height:11px;
+      background:rgba(255,255,255,0.52);
+      border-radius:6px; transform:rotate(-18deg);
+    }
+    .device::after {
+      content:''; position:absolute; top:38px; left:58px;
+      width:34px; height:6px;
+      background:rgba(255,255,255,0.3);
+      border-radius:4px; transform:rotate(-18deg);
     }
 
-    .frank-device::after {
-      content: "";
-      position: absolute;
-      top: 5%;
-      left: 10%;
-      width: 80%;
-      height: 40%;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
-      border-radius: 60px;
-      pointer-events: none;
+    /* ── NAMEPLATE ───────────────────────── */
+    .nameplate { text-align:center; margin-bottom:10px; }
+    .nameplate-inner {
+      display:inline-block; background:#4a7800;
+      border:3px solid #2a4400; border-radius:7px;
+      padding:5px 20px 6px;
+      box-shadow:0 4px 0 #1a2800, inset 0 1px 4px rgba(255,255,255,0.25);
+    }
+    .nameplate span {
+      font-size:clamp(9px, 3vw, 13px);
+      color:#d8ff60; letter-spacing:8px; text-transform:uppercase;
+      text-shadow:0 1px 0 rgba(0,0,0,0.6);
     }
 
-    .frank-lcd-frame {
-      width: 200px;
-      height: 180px;
-      background: #333;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: inset 0 0 10px #000;
-      margin-top: 20px;
-      position: relative;
+    .brand {
+      text-align:center; font-size:6px; color:#5a8a00;
+      letter-spacing:4px; margin-bottom:10px;
+      text-transform:uppercase; opacity:0.85;
     }
 
-    .frank-lcd-screen {
-      width: 100%;
-      height: 100%;
-      background: #7a8a7a;
-      /* Classic LCD green-grey */
-      border: 2px solid #222;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      image-rendering: pixelated;
+    /* ── SCREEN ──────────────────────────── */
+    .screen-wrapper {
+      background:#0e1800; border-radius:12px; padding:5px;
+      border:4px solid #1e2e00;
+      box-shadow:inset 0 3px 12px rgba(0,0,0,0.95), 0 3px 7px rgba(0,0,0,0.45);
     }
 
-    /* Pixel Grid Overlay */
-    .frank-lcd-screen::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image:
-        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-      background-size: 3px 3px;
-      pointer-events: none;
-      z-index: 5;
+    .screen {
+      background:var(--screen-bg); border-radius:7px; width:100%;
+      height: min(240px, 46vw);
+      position:relative; overflow:hidden;
+      border:2px solid #a0c820;
+      box-shadow:inset 0 0 35px rgba(0,0,0,0.13);
     }
 
-    .frank-lcd-screen::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
-      pointer-events: none;
+    .screen::after {
+      content:''; position:absolute; inset:0;
+      background:repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 6px);
+      pointer-events:none; z-index:10;
     }
 
-    .frank-wrap {
-      position: relative;
-      z-index: 2;
-      transition: transform 0.2s ease;
+    /* ── STATUS BAR ──────────────────────── */
+    .status-bar {
+      position:absolute; top:7px; left:7px; right:7px;
+      display:flex; justify-content:space-between; z-index:5;
+    }
+    .stat { display:flex; align-items:center; gap:3px; }
+    .stat-icon { font-size:8px; }
+    .stat-bar  { display:flex; gap:2px; }
+    .stat-pip {
+      width:8px; height:8px; background:var(--pixel);
+      border-radius:1px; transition:background 0.3s;
+    }
+    .stat-pip.empty { background:rgba(26,40,0,0.2); }
+
+    .age-display {
+      position:absolute; top:7px; right:7px;
+      font-size:7px; color:var(--pixel); z-index:5;
     }
 
-    #frank-img {
-      width: 110px;
-      height: auto;
-      image-rendering: pixelated;
-      /* Force pixel look */
-      filter: contrast(1.2) brightness(0.9) grayscale(0.2);
-      transition: all 0.3s ease;
-      transform-origin: bottom center;
+    /* ── GROUND ──────────────────────────── */
+    .ground {
+      position:absolute; bottom:0; left:0; right:0;
+      height:22px; background:#7ac840; border-top:3px solid #4a9820;
+    }
+    .ground::before {
+      content:''; position:absolute; top:-6px; left:0; right:0; height:6px;
+      background:repeating-linear-gradient(90deg,#4a9820 0,#4a9820 6px,transparent 6px,transparent 12px);
     }
 
-    #frank-img.sleeping {
-      filter: brightness(0.6) grayscale(1);
-      animation: frankBreathe 2s infinite alternate ease-in-out;
+    /* ── BG STARS ────────────────────────── */
+    .bg-star {
+      position:absolute; width:3px; height:3px;
+      background:var(--pixel); opacity:0.2; border-radius:1px;
     }
 
-    #frank-img.sitting {
-      transform: scaleY(1);
+    /* ── MSG BOX ─────────────────────────── */
+    .msg-box {
+      position:absolute; top:28px; left:7px; right:7px;
+      background:rgba(206,240,64,0.95);
+      border:2px solid var(--pixel); padding:5px 8px;
+      font-size:7px; color:var(--pixel); line-height:1.7;
+      display:none; z-index:20; border-radius:2px;
+      white-space:pre-line;
+      text-transform: lowercase;
+    }
+    .msg-box.show { display:block; }
+
+    /* ── OVERLAYS ────────────────────────── */
+    .screen-flash {
+      position:absolute; inset:0; background:white; opacity:0;
+      pointer-events:none; z-index:50; transition:opacity 0.08s;
+    }
+    .screen-flash.flash { opacity:0.55; }
+    .night-overlay {
+      position:absolute; inset:0; background:rgba(0,5,20,0.55);
+      pointer-events:none; z-index:8; opacity:0; transition:opacity 1.2s;
+    }
+    .night-overlay.night { opacity:1; }
+    .moon {
+      position:absolute; top:12px; right:20px; width:18px; height:18px;
+      background:#f5e878; border-radius:50%; display:none; z-index:9;
+      box-shadow:0 0 8px #f5e878;
+    }
+    .sun {
+      position:absolute; top:10px; left:16px; width:20px; height:20px;
+      background:#ffe040; border-radius:50%; display:none; z-index:9;
+      box-shadow:0 0 10px #ffe040;
     }
 
-    #frank-img.happy {
-      animation: frankJump 0.4s infinite alternate;
+    /* ── ZZZ ─────────────────────────────── */
+    .zzz {
+      position:absolute; color:var(--pixel);
+      font-family:'Press Start 2P',monospace;
+      opacity:0; transition:opacity 0.5s; pointer-events:none; z-index:12;
     }
 
-    #frank-img.walking {
-      animation: frankWaddle 0.6s infinite alternate ease-in-out;
+    /* ── HEARTS ──────────────────────────── */
+    .heart { position:absolute; font-size:16px; opacity:0; pointer-events:none; z-index:15; }
+
+    /* ── SICK / POOP / FOOD ──────────────── */
+    .sick-icon { position:absolute; font-size:15px; top:30px; right:16px; display:none; z-index:15; }
+    .poop      { position:absolute; bottom:22px; font-size:16px; display:none; }
+    .food-item { position:absolute; font-size:20px; bottom:32px; opacity:0; pointer-events:none; }
+
+    /* ── CANVAS ──────────────────────────── */
+    #catCanvas {
+      position:absolute; bottom:20px; left:50%;
+      transform:translateX(-50%); image-rendering:pixelated;
     }
 
-    @keyframes frankJump {
-      0% {
-        transform: translateY(0);
-      }
+    /* ── ALERTS ──────────────────────────── */
+    @keyframes alert-flash { 0%,100%{opacity:1} 50%{opacity:0} }
+    .alert { animation:alert-flash 0.8s infinite; }
 
-      100% {
-        transform: translateY(-15px) scaleY(1.1);
-      }
+    /* ── CAT ANIMS ───────────────────────── */
+    @keyframes hop {
+      0%,100%{ transform:translateX(-50%) translateY(0); }
+      50%    { transform:translateX(-50%) translateY(-18px); }
+    }
+    @keyframes wiggle {
+      0%,100%{ transform:translateX(-50%) rotate(0deg); }
+      25%    { transform:translateX(-50%) rotate(-7deg); }
+      75%    { transform:translateX(-50%) rotate(7deg); }
+    }
+    @keyframes sleep-bob {
+      0%,100%{ transform:translateX(-50%) translateY(0); }
+      50%    { transform:translateX(-50%) translateY(4px); }
+    }
+    @keyframes float-heart {
+      0%   { transform:translateY(0) scale(0.5); opacity:1; }
+      100% { transform:translateY(-65px) scale(1.4); opacity:0; }
+    }
+    @keyframes eat-food {
+      0%  { opacity:1; transform:translateX(-50%) scale(1); }
+      80% { opacity:1; transform:translateX(-50%) scale(0.7); }
+      100%{ opacity:0; transform:translateX(-50%) scale(0); }
     }
 
-    @keyframes frankWaddle {
-      0% {
-        transform: rotate(-5deg) translateX(-5px);
-      }
-
-      100% {
-        transform: rotate(5deg) translateX(5px);
-      }
+    /* ── BUTTONS ─────────────────────────── */
+    .buttons {
+      display:flex; justify-content:center;
+      gap: min(10px, 2vw);
+      margin-top: min(20px, 3vw);
     }
+    .btn-group { display:flex; flex-direction:column; align-items:center; gap:5px; }
+    .btn-label { font-size:5px; color:#4a7800; letter-spacing:0.5px; }
 
-    @keyframes frankBreathe {
-      0% {
-        transform: scaleY(0.95);
-      }
-
-      100% {
-        transform: scaleY(1.05);
-      }
+    .frank-device-btn {
+      width: min(44px, 9vw);
+      height: min(44px, 9vw);
+      border-radius:50%; border:3px solid;
+      cursor:pointer;
+      font-size: min(17px, 3.5vw);
+      display:flex; align-items:center; justify-content:center;
+      transition:transform 0.1s,box-shadow 0.1s;
+      box-shadow:0 5px 0px rgba(0,0,0,0.38), 0 2px 8px rgba(0,0,0,0.22);
+      background:var(--btn-color,#ff6eb0);
+      border-color:color-mix(in srgb,var(--btn-color,#ff6eb0) 60%,#000);
+      position:relative; user-select:none;
+      -webkit-appearance:none;
+      touch-action:manipulation;
     }
-
-    /* Device Buttons */
-    .frank-controls {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      margin-top: 30px;
-      padding: 0 10px;
+    .frank-device-btn::after {
+      content:''; position:absolute; top:5px; left:7px;
+      width:13px; height:5px;
+      background:rgba(255,255,255,0.45);
+      border-radius:3px; transform:rotate(-10deg);
     }
+    .frank-device-btn:active { transform:translateY(4px); box-shadow:0 1px 0px rgba(0,0,0,0.3); }
 
-    .frank-btn-main {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #ffff00;
-      border: 3px solid #ccaa00;
-      box-shadow: 0 4px 0 #ccaa00, 2px 5px 10px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      transition: all 0.1s;
-      outline: none;
-    }
-
-    .frank-btn-main:active {
-      transform: translateY(3px);
-      box-shadow: 0 1px 0 #ccaa00;
-    }
-
-    .frank-icon-bar {
-      position: absolute;
-      top: 5px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      font-size: 0.8rem;
-      opacity: 0.6;
-      z-index: 10;
-    }
-
-    .frank-icon {
-      filter: grayscale(1);
-      transition: all 0.2s;
-    }
-
-    .frank-icon.active {
-      filter: grayscale(0) brightness(1.2);
-      transform: scale(1.2);
-      opacity: 1;
-    }
-
-    .frank-stats-display {
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      font-weight: bold;
-      color: #222;
-    }
-
-    .frank-stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .frank-stat-bar-container {
-      width: 40px;
-      height: 6px;
-      background: rgba(0, 0, 0, 0.2);
-      border: 1px solid #000;
-    }
-
-    .frank-stat-bar {
-      height: 100%;
-      background: #222;
-      transition: width 0.3s ease;
-    }
-
-    /* Speech Bubble on LCD */
-    .frank-lcd-bubble {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #000;
-      padding: 5px;
-      font-size: 10px;
-      font-family: var(--font-mono);
-      z-index: 20;
-      display: none;
-      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
-      color: #000;
-      text-align: center;
-    }
-
-    .frank-zzz {
-      position: absolute;
-      top: -10px;
-      right: 20px;
-      font-family: var(--font-mono);
-      font-weight: bold;
-      font-size: 1.2rem;
-      display: none;
-      animation: floatZ 4s infinite linear;
-      color: #000;
-      z-index: 10;
-    }
-
-    @keyframes floatZ {
-      0% {
-        transform: translateY(0) scale(0.8);
-        opacity: 0;
-      }
-
-      20% {
-        opacity: 1;
-      }
-
-      80% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(-30px) scale(1.5);
-        opacity: 0;
-      }
-    }
-
-
-    /* Blink overlay */
-    .blink {
-      position: absolute;
-      top: 30px;
-      left: 35px;
-      width: 70px;
-      height: 2px;
-      /* Thinner line for a more subtle blink */
-      background: transparent;
-      /* Remove the brown background as requested */
-      border-bottom: 2px solid #000;
-      /* Subtle line instead of a bar */
-      opacity: 0;
-    }
-
-    .sparkle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: hotpink;
-      border-radius: 50%;
-      animation: sparkle 0.8s forwards;
-    }
-
-    @keyframes sparkle {
-      to {
-        opacity: 0;
-        transform: scale(2);
-      }
-    }
-
-    .frank-popup {
-      position: absolute;
-      top: -45px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 230px;
-      background: white;
-      color: black;
-      border: 2px solid black;
-      box-shadow: 4px 4px 0 black;
-      padding: 8px;
-      font-size: 11px;
-      display: none;
-      z-index: 100;
-    }
-
-    button.frank-btn {
-      margin: 4px;
-      padding: 4px 8px;
-      background: silver;
-      border: 2px outset white;
-      cursor: pointer;
-      font-size: 11px;
-      color: black;
-    }
-
-    button.frank-btn:active {
-      border: 2px inset white;
-    }
-
-    .guardian-glow {
-      box-shadow: 0 0 25px rgba(173, 216, 230, 0.7);
-    }
-
-    .love-glow {
-      box-shadow: 0 0 25px rgba(255, 105, 180, 0.7);
-    }
-
-    .minimized {
-      display: none;
-    }
-
-    .taskbar-icon {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #000080;
-      color: white;
-      padding: 6px 12px;
-      font-size: 12px;
-      cursor: pointer;
-      display: none;
-      pointer-events: auto;
-      border: 2px outset #fff;
-    }
-
-    #clippy-global-popup {
+    .btn-feed     { --btn-color:#ff6eb0; }
+    .btn-play     { --btn-color:#60c8ff; }
+    .btn-sleep    { --btn-color:#ffe040; }
+    .btn-clean    { --btn-color:#60ffb0; }
+    .btn-medicine { --btn-color:#ff7060; }
+\n    #clippy-global-popup {
       width: 200px !important;
       right: 1rem !important;
       transform: scale(0.9);
@@ -4656,207 +4479,384 @@
 
 
   <script>
-    let battery = 100;
-    let helpfulness = 80;
-    let isSick = false;
-    let weight = 5;
-
-    let memory = JSON.parse(localStorage.getItem("frankMemory")) || {
-      visits: 0,
-      tips: 0
+    // ═══════════════════════════════════
+    //  AUDIO
+    // ═══════════════════════════════════
+    let _ctx=null;
+    function ac(){ if(!_ctx) _ctx=new (window.AudioContext||window.webkitAudioContext)(); return _ctx; }
+    function beep(freq,dur,type='square',vol=0.15){
+      try{
+        const c=ac(),o=c.createOscillator(),g=c.createGain();
+        o.connect(g);g.connect(c.destination);
+        o.type=type;o.frequency.value=freq;
+        g.gain.setValueAtTime(vol,c.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001,c.currentTime+dur);
+        o.start(c.currentTime);o.stop(c.currentTime+dur);
+      }catch(e){}
+    }
+    const sfx={
+      feed:  ()=>{beep(880,.08);setTimeout(()=>beep(1100,.1),80);setTimeout(()=>beep(1320,.12),180);}, 
+      play:  ()=>{[659,784,988,1319].forEach((f,i)=>setTimeout(()=>beep(f,.09),i*70));},
+      sleep: ()=>{beep(440,.15,'sine',.1);setTimeout(()=>beep(330,.2,'sine',.07),160);},
+      wake:  ()=>{[330,440,660].forEach((f,i)=>setTimeout(()=>beep(f,.09,'sine'),i*100));},
+      clean: ()=>{[1047,1175,1319,1568].forEach((f,i)=>setTimeout(()=>beep(f,.08),i*80));},
+      meds:  ()=>{[523,659,784].forEach((f,i)=>setTimeout(()=>beep(f,.1),i*110));},
+      alert: ()=>{beep(440,.08,'square',.25);setTimeout(()=>beep(330,.1,'square',.22),130);},
+      dead:  ()=>{[330,294,262,247,220].forEach((f,i)=>setTimeout(()=>beep(f,.18,'sine',.14),i*115));},
+      hatch: ()=>{[523,659,784,1047,1319].forEach((f,i)=>setTimeout(()=>beep(f,.1),i*80));},
     };
-    memory.visits++;
-    localStorage.setItem("frankMemory", JSON.stringify(memory));
 
-    const popup = document.getElementById("frank-popup");
-    const frank = document.getElementById("frank-img");
-    const frankWrap = document.getElementById("frank-wrap");
+    // ═══════════════════════════════════
+    //  PIXEL SPRITE
+    // ═══════════════════════════════════
+    let cv, ctx;
 
-    // Web Audio Beeps
-    function beep(freq = 440, duration = 100, type = 'square') {
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      const oscillator = audioCtx.createOscillator();
-      const gainNode = audioCtx.createGain();
-      oscillator.type = type;
-      oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
-      oscillator.connect(gainNode);
-      gainNode.connect(audioCtx.destination);
-      oscillator.start();
-      setTimeout(() => oscillator.stop(), duration);
+    // SIAMESE palette — pale cream dominates, dark only at points
+    const P={
+      _:null,
+      W:'#fff8eb',  // near-white cream — the dominant color
+      M:'#48240e',  // seal brown — ear outline, eye rings only
+      D:'#200c02',  // near-black — ear tips + paw tips only
+      E:'#1e96ff',  // vivid siamese blue eyes
+      N:'#ffa0a0',  // pink nose
+      I:'#b45030',  // inner ear
+      C:'#d81e1e',  // collar red
+      G:'#ebc018',  // gold tag
+    };
+
+    const F={
+      idle:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P.D,P.D,P._,P._,P._,P._,P.D,P.D,P._],
+        [P._,P.M,P.I,P.M,P._,P._,P.M,P.I,P.M,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P.W,P.M,P.W,P.W,P.W,P.W,P.M,P.W,P._],
+        [P._,P.W,P.E,P.W,P.N,P.N,P.W,P.E,P.W,P._],
+        [P._,P.C,P.C,P.C,P.G,P.C,P.C,P.C,P.C,P._],
+        [P._,P._,P.M,P.W,P.W,P.W,P.W,P.M,P._,P._],
+        [P._,P._,P.W,P.W,P.W,P.W,P.W,P.W,P._,P._],
+        [P._,P._,P.D,P.D,P._,P._,P.D,P.D,P._,P._],
+      ],
+      blink:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P.D,P.D,P._,P._,P._,P._,P.D,P.D,P._],
+        [P._,P.M,P.I,P.M,P._,P._,P.M,P.I,P.M,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P.W,P.M,P.W,P.W,P.W,P.W,P.M,P.W,P._],
+        [P._,P.W,P.M,P.W,P.N,P.N,P.W,P.M,P.W,P._],
+        [P._,P.C,P.C,P.C,P.G,P.C,P.C,P.C,P.C,P._],
+        [P._,P._,P.M,P.W,P.W,P.W,P.W,P.M,P._,P._],
+        [P._,P._,P.W,P.W,P.W,P.W,P.W,P.W,P._,P._],
+        [P._,P._,P.D,P.D,P._,P._,P.D,P.D,P._,P._],
+      ],
+      happy:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P.D,P.D,P._,P._,P._,P._,P.D,P.D,P._],
+        [P._,P.M,P.I,P.M,P._,P._,P.M,P.I,P.M,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P._],
+        [P._,P.W,P.E,P.W,P.N,P.N,P.W,P.E,P.W,P._],
+        [P._,P.C,P.C,P.C,P.G,P.C,P.C,P.C,P.C,P._],
+        [P._,P._,P.M,P.W,P.W,P.W,P.W,P.M,P._,P._],
+        [P._,P._,P.W,P.W,P.W,P.W,P.W,P.W,P._,P._],
+        [P._,P._,P.D,P.D,P._,P._,P.D,P.D,P._,P._],
+      ],
+      sleep:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P.D,P.D,P._,P._,P.D,P.D,P._,P._],
+        [P._,P._,P.M,P.W,P.W,P.W,P.W,P.M,P._,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P.C,P.C,P.C,P.G,P.C,P.C,P.C,P.C,P._],
+        [P._,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P._],
+        [P._,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P.W,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P._,P.D,P.D,P.D,P.D,P.D,P.D,P._,P._],
+      ],
+      sick:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P.D,P.D,P._,P._,P._,P._,P.D,P.D,P._],
+        [P._,P.M,P.I,P.M,P._,P._,P.M,P.I,P.M,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P.W,P.M,P.W,P.W,P.W,P.W,P.M,P.W,P._],
+        [P._,P.W,P.D,P.W,P.N,P.N,P.W,P.D,P.W,P._],
+        [P._,P.C,P.C,P.C,P.G,P.C,P.C,P.C,P.C,P._],
+        [P._,P._,P.M,P.W,P.W,P.W,P.W,P.M,P._,P._],
+        [P._,P._,P.W,P.W,P.W,P.W,P.W,P.W,P._,P._],
+        [P._,P._,P.D,P.D,P._,P._,P.D,P.D,P._,P._],
+      ],
+      dead:[
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P.M,P.D,P._,P._,P._,P._,P.D,P.M,P._],
+        [P._,P._,P.W,P.D,P._,P._,P.D,P.W,P._,P._],
+        [P._,P._,P.D,P.W,P._,P._,P.W,P.D,P._,P._],
+        [P._,P.M,P.W,P.W,P.W,P.W,P.W,P.W,P.M,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+        [P._,P._,P._,P._,P._,P._,P._,P._,P._,P._],
+      ],
+    };
+
+    function drawFrame(name){
+      if(!ctx) return;
+      ctx.clearRect(0,0,80,80);
+      (F[name]||F.idle).forEach((row,y)=>row.forEach((col,x)=>{
+        if(col){ctx.fillStyle=col;ctx.fillRect(x*8,y*8,8,8);}
+      }));
     }
 
-    function updateStats() {
-      battery = Math.max(0, battery);
-      helpfulness = Math.max(0, helpfulness);
+    const GREET = ["oh. you're back.", "took you long enough.", "i wasn't waiting.", "finally.", "i was fine without you.", "don't make it weird."];
+    const FEED_LINES = ["...fine. i'll eat it.", "it's not that good.\n...okay it's good.", "about time.", "i would have survived.", "don't expect a thank you.", "i suppose this is acceptable."];
+    const FEED_FULL = ["i said i'm full. back off.", "do i look hungry to you.", "stop hovering.", "i'm not a garbage can."];
+    const PLAY_LINES = ["this is beneath me.\n...okay one more time.", "i'm only doing this for you.", "don't tell anyone i had fun.", "i was going to nap but fine.", "you're lucky i like you.", "ugh. FINE."];
+    const SLEEP_LINES = ["finally. leave me alone.", "do not disturb me.", "i'm going to sleep. go away.", "it's nap time. obviously."];
+    const WAKE_LINES = ["i was awake already.", "i was just resting my eyes.", "you woke me up. rude.", "good. you're here. not that i care."];
+    const CLEAN_LINES = ["it's about time.", "took you long enough.", "disgusting in here.", "i expected this sooner."];
+    const MEDS_LINES = ["i didn't need that.\nbut... thanks.", "don't look so pleased with yourself.", "i could have gotten better on my own.", "fine. i feel better. happy now?"];
+    const SICK_LINES = ["i'm fine. stop staring.", "it's nothing. go away.", "i don't need your help.\n...okay maybe a little."];
+    const HUNGRY_LINES = ["hey. food. now.", "i'm starving over here.", "hello? anyone? food?", "i'm not above begging. food."];
+    const LONELY_LINES = ["...it's too quiet in here.", "not that i miss you. just. come back.", "i'm bored. where are you.", "you could at least look at me."];
+    const HELP_LINES = ["okay. i might need help.", "don't panic. but. help.", "...i feel terrible. don't gloat."];
+    const CLEAN_ALREADY = ["i'm not an animal. it's clean.", "what are you implying.", "i have standards, you know."];
+    const HEALTHY_LINES = ["i'm fine. obviously.", "do i look sick to you. i'm fine.", "stop fussing. i'm perfectly healthy."];
 
-      const bBar = document.getElementById("frank-battery-bar");
-      const hBar = document.getElementById("frank-help-bar");
+    function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
 
-      if (bBar) bBar.style.width = battery + "%";
-      if (hBar) hBar.style.width = helpfulness + "%";
+    const MAX=4;
+    const DEFAULT={health:4,happy:4,hunger:4,age:0,sleeping:false,sick:false,poopCount:0,currentAnim:'idle',lastSave:Date.now()};
 
-      // Icon highlighting logic
-      document.querySelectorAll('.frank-icon').forEach(icon => icon.classList.remove('active'));
-      if (battery < 20) document.getElementById('icon-feed').classList.add('active');
-      if (helpfulness < 30) document.getElementById('icon-play').classList.add('active');
-      if (isSick) document.getElementById('icon-med').classList.add('active');
-    }
-
-    function showPopup(text) {
-      if (popup) {
-        popup.innerText = text;
-        popup.style.display = "block";
-        setTimeout(() => popup.style.display = "none", 3000);
-      }
-    }
-
-    let frankState = "sitting";
-    const frankZzz = document.getElementById("frank-zzz");
-
-    function setFrankState(state) {
-      if (frankState === "pet" || frankState === "eating" || frankState === "jumping") return;
-
-      frankState = state;
-      const lcd = document.getElementById("frank-screen");
-      const dirWrap = document.getElementById("frank-sprite-dir");
-
-      if (frank) {
-        frank.className = state;
-
-        // Handle Walking Movement
-        if (state === "walking") {
-          const moveX = (Math.random() - 0.5) * 80; // Walk up to 40px either way
-          frankWrap.style.transition = "transform 4s ease-in-out";
-          frankWrap.style.transform = `translateX(${moveX}px)`;
-          // Flip sprite based on direction on the WRAPPER, not the image
-          if (dirWrap) dirWrap.style.transform = moveX > 0 ? "scaleX(-1)" : "scaleX(1)";
-        } else if (state === "sitting") {
-          frankWrap.style.transition = "transform 2s ease-in-out";
-          frankWrap.style.transform = "translateX(0px)";
-          if (dirWrap) dirWrap.style.transform = "scaleX(1)";
+    function loadState(){
+      try{
+        const s=JSON.parse(localStorage.getItem('frank-state'));
+        if(s){
+          const elapsed=Math.floor((Date.now()-s.lastSave)/30000);
+          s.age=Math.min(s.age+elapsed,99);
+          if(!s.sleeping&&elapsed>4){
+            s.hunger=Math.max(1,s.hunger-Math.min(1,Math.floor(elapsed/6)));
+            s.happy =Math.max(1,s.happy -Math.min(1,Math.floor(elapsed/8)));
+          }
+          s.health=Math.max(1,s.health);
+          s.lastSave=Date.now();
+          return {...DEFAULT,...s};
         }
+      }catch(e){}
+      return {...DEFAULT};
+    }
+    
+    let S = {...DEFAULT};
+    
+    function saveState(){ try{ localStorage.setItem('frank-state',JSON.stringify({...S,lastSave:Date.now()})); }catch(e){} }
 
-        if (isSick) frank.style.filter = "hue-rotate(90deg) grayscale(0.5)";
-        else frank.style.filter = "contrast(1.2) brightness(0.9) grayscale(0.2)";
+    let blinkTO,decayIV,ageIV;
+
+    function renderStats(){
+      [['healthBar',S.health],['happyBar',S.happy]].forEach(([id,v])=>{
+        const el=document.getElementById(id); 
+        if(el){
+          el.innerHTML='';
+          for(let i=0;i<MAX;i++){
+            const p=document.createElement('div');
+            p.className='stat-pip'+(i<v?'':' empty');
+            if(v<=1&&i<v) p.classList.add('alert');
+            el.appendChild(p);
+          }
+        }
+      });
+      const ageDisp = document.getElementById('ageDisplay');
+      if(ageDisp) ageDisp.textContent='age:'+S.age;
+    }
+
+    function renderCat(){
+      if(S.sleeping) return drawFrame('sleep');
+      if(S.sick)     return drawFrame('sick');
+      if(S.health<=1||S.happy<=1) return drawFrame('blink');
+      drawFrame(S.currentAnim);
+    }
+    function setAnim(n){S.currentAnim=n;renderCat();}
+
+    function scheduleBlink(){
+      clearTimeout(blinkTO);
+      if(S.sleeping) return;
+      blinkTO=setTimeout(()=>{
+        if(!S.sleeping&&!S.sick){
+          drawFrame('blink');
+          setTimeout(()=>{drawFrame(S.currentAnim);scheduleBlink();},170);
+        } else scheduleBlink();
+      },2300+Math.random()*3200);
+    }
+
+    let msgTO;
+    function showMsg(txt,dur=2700){
+      const b=document.getElementById('msgBox');
+      if(!b) return;
+      b.textContent=txt;b.classList.add('show');
+      clearTimeout(msgTO);
+      if(dur<999999) msgTO=setTimeout(()=>b.classList.remove('show'),dur);
+    }
+
+    function flash(){
+      const f=document.getElementById('screenFlash');
+      if(f){ f.classList.add('flash');setTimeout(()=>f.classList.remove('flash'),90); }
+    }
+
+    function spawnHearts(){
+      ['heart1','heart2','heart3'].forEach((id,i)=>setTimeout(()=>{
+        const h=document.getElementById(id);
+        if(h){
+          h.style.opacity='1';h.style.animation='float-heart 1.5s forwards';
+          setTimeout(()=>{h.style.animation='';h.style.opacity='0';},1600);
+        }
+      },i*130));
+    }
+
+    function feedCat(){
+      if(!cv) return;
+      if(S.sleeping) return showMsg('i am SLEEPING.\ndo not.');
+      if(S.sick)     return showMsg('medicine first.\nthen food.');
+      if(S.hunger>=MAX){showMsg(pick(FEED_FULL));return;}
+      sfx.feed();
+      const food=document.getElementById('foodItem');
+      if(food){ food.style.opacity='1';food.style.animation='eat-food 1s forwards'; setTimeout(()=>{food.style.animation='';food.style.opacity='0';},1000); }
+      S.hunger=Math.min(MAX,S.hunger+2);S.health=Math.min(MAX,S.health+1);
+      flash();setAnim('happy');showMsg(pick(FEED_LINES));
+      cv.style.animation='hop 0.4s ease';
+      setTimeout(()=>{cv.style.animation='';if(!S.dead&&!S.sleeping)setAnim('idle');},1400);
+      setTimeout(()=>{if(!S.dead&&!S.sleeping&&S.poopCount<2){S.poopCount++;updatePoop();}},9000+Math.random()*6000);
+      renderStats();saveState();
+    }
+
+    function playCat(){
+      if(!cv) return;
+      if(S.sleeping)  return showMsg('i am SLEEPING.\nleave me alone.');
+      if(S.sick)      return showMsg('i feel terrible.\nmaybe later.');
+      if(S.hunger<=1) return showMsg('feed me first.\nthen we can play.');
+      sfx.play();
+      S.happy=Math.min(MAX,S.happy+2);S.hunger=Math.max(0,S.hunger-1);
+      flash();setAnim('happy');showMsg(pick(PLAY_LINES));spawnHearts();
+      cv.style.animation='wiggle 0.3s ease';
+      setTimeout(()=>{cv.style.animation='';if(!S.dead&&!S.sleeping)setAnim('idle');},2000);
+      renderStats();saveState();
+    }
+
+    function sleepCat(){
+      if(!cv) return;
+      if(S.sleeping){
+        sfx.wake();S.sleeping=false;
+        document.getElementById('nightOverlay').classList.remove('night');
+        document.getElementById('moon').style.display='none';
+        document.getElementById('sun').style.display='block';
+        setTimeout(()=>document.getElementById('sun').style.display='none',2500);
+        setZZZ(false);setAnim('idle');cv.style.animation='';
+        showMsg(pick(WAKE_LINES));scheduleBlink();
+      }else{
+        sfx.sleep();S.sleeping=true;
+        S.health=Math.min(MAX,S.health+1);S.happy=Math.min(MAX,S.happy+1);
+        document.getElementById('nightOverlay').classList.add('night');
+        document.getElementById('moon').style.display='block';
+        setZZZ(true);drawFrame('sleep');
+        cv.style.animation='sleep-bob 2.2s ease-in-out infinite';
+        showMsg(pick(SLEEP_LINES));clearTimeout(blinkTO);
       }
+      renderStats();saveState();
+    }
+    function setZZZ(v){
+      ['zzz1','zzz2','zzz3'].forEach((id,i)=>{ const el = document.getElementById(id); if(el) el.style.opacity=v?[0.5,0.75,1][i]:'0'; });
+    }
 
-      // Handle Sleeping Visuals
-      if (state === "sleeping") {
-        if (frankZzz) frankZzz.style.display = "block";
-        if (lcd) lcd.style.background = "#4a5a4a"; // Dim the LCD
+    function cleanCat(){
+      if(!cv) return;
+      if(S.sleeping) return showMsg('i am ASLEEP.\ndo not touch anything.');
+      if(S.poopCount===0){showMsg(pick(CLEAN_ALREADY));return;}
+      sfx.clean();S.poopCount=0;updatePoop();
+      S.happy=Math.min(MAX,S.happy+1);
+      flash();showMsg(pick(CLEAN_LINES));spawnHearts();
+      renderStats();saveState();
+    }
+    function updatePoop(){
+      const p1=document.getElementById('poop1'), p2=document.getElementById('poop2');
+      if(p1) p1.style.display=S.poopCount>=1?'block':'none';
+      if(p2) p2.style.display=S.poopCount>=2?'block':'none';
+      if(S.poopCount>=2&&!S.sick&&!S.dead) setSick(true);
+    }
+
+    function setSick(v){
+      S.sick=v;
+      const si = document.getElementById('sickIcon');
+      if(si) si.style.display=v?'block':'none';
+      if(v){sfx.alert();drawFrame('sick');showMsg(pick(SICK_LINES));}
+    }
+    function giveMedicine(){
+      if(!cv) return;
+      if(S.sleeping)return showMsg('asleep. do not disturb.');
+      if(!S.sick)   return showMsg(pick(HEALTHY_LINES));
+      sfx.meds();S.sick=false;S.health=Math.min(MAX,S.health+2);
+      document.getElementById('sickIcon').style.display='none';
+      flash();setAnim('happy');showMsg(pick(MEDS_LINES));spawnHearts();
+      setTimeout(()=>{if(!S.dead&&!S.sleeping)setAnim('idle');},1500);
+      renderStats();saveState();
+    }
+
+    function decayLoop(){
+      if(!cv) return;
+      if(S.sleeping){S.health=Math.min(MAX,S.health+0.5);renderStats();saveState();return;}
+      if(Math.random()<0.06&&S.poopCount<2){S.poopCount++;updatePoop();}
+      if(Math.random()<0.25){S.hunger=Math.max(1,S.hunger-1);}
+      if(Math.random()<0.2){S.happy=Math.max(1,S.happy-1);}
+      if(!S.sick&&Math.random()<0.03&&S.happy<=2)setSick(true);
+      if(S.hunger<=1)showMsg(pick(HUNGRY_LINES));
+      else if(S.happy<=1)showMsg(pick(LONELY_LINES));
+      else if(S.sick){sfx.alert();showMsg(pick(SICK_LINES));}
+      S.health=Math.max(1,S.health);
+      if(!S.sick&&!S.sleeping)setAnim(S.happy>=3&&S.health>=3?'happy':'idle');
+      renderStats();saveState();
+    }
+
+    function resetFrank(){
+      localStorage.removeItem('frank-state');
+      location.reload();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      cv=document.getElementById('catCanvas');
+      if(!cv) return;
+      ctx=cv.getContext('2d');
+      ctx.imageSmoothingEnabled=false;
+
+      S = loadState();
+      
+      setInterval(saveState,10000);
+      window.addEventListener('pagehide',saveState);
+      window.addEventListener('visibilitychange',()=>{ if(document.hidden) saveState(); });
+
+      renderStats();
+      if(S.sleeping){
+        drawFrame('sleep');
+        document.getElementById('nightOverlay').classList.add('night');
+        document.getElementById('moon').style.display='block';
+        setZZZ(true);
+        cv.style.animation='sleep-bob 2.2s ease-in-out infinite';
       } else {
-        if (frankZzz) frankZzz.style.display = "none";
-        if (lcd) lcd.style.background = "#7a8a7a"; // Normal LCD
+        updatePoop();
+        if(S.sick) setSick(true);
+        drawFrame(S.currentAnim);
+        scheduleBlink();
+        if(S.age===0){
+          setTimeout(()=>{
+            sfx.hatch();flash();
+            showMsg("oh. so you're\nmy person now.\nfine.");
+            setAnim('happy');spawnHearts();
+            setTimeout(()=>setAnim('idle'),2300);
+          },700);
+        } else {
+          showMsg(pick(GREET));
+        }
       }
-    }
-
-    function petFrank() {
-      beep(660, 100);
-      helpfulness = Math.min(100, helpfulness + 15);
-      battery -= 2;
-      memory.tips++;
-      localStorage.setItem("frankMemory", JSON.stringify(memory));
-      if (frankZzz) frankZzz.style.display = "none";
-      setFrankState("happy");
-      frankState = "jumping"; // lock
-      sparkle();
-      showPopup("Purrr...");
-      setTimeout(() => {
-        frankState = "sitting";
-        setFrankState("sitting");
-      }, 1500);
-      updateStats();
-    }
-
-    function feedFrank() {
-      beep(440, 150);
-      setTimeout(() => beep(554, 150), 100);
-      battery = Math.min(100, battery + 25);
-      weight += 1;
-      if (frankZzz) frankZzz.style.display = "none";
-      frankState = "eating"; // lock state
-      showPopup("Munch munch!");
-
-      // Visual feedback: click bounce
-      if (frank) {
-        frank.style.transform = "scaleY(1.2) translateX(5px)";
-        setTimeout(() => frank.style.transform = "scaleY(1) translateX(0)", 300);
-      }
-
-      setTimeout(() => {
-        frankState = "sitting";
-        setFrankState("sitting");
-      }, 1000);
-
-      updateStats();
-    }
-
-    function playFrank() {
-      beep(880, 50);
-      setTimeout(() => beep(987, 50), 50);
-      setTimeout(() => beep(1174, 100), 100);
-      helpfulness = Math.min(100, helpfulness + 20);
-      battery -= 10;
-      setFrankState("happy");
-      frankState = "jumping";
-      showPopup("WHEEE!");
-      setTimeout(() => {
-        frankState = "sitting";
-        setFrankState("sitting");
-      }, 2000);
-      updateStats();
-    }
-
-    function sparkle() {
-      for (let i = 0; i < 6; i++) {
-        let s = document.createElement("div");
-        s.style.position = "absolute";
-        s.style.width = "4px";
-        s.style.height = "4px";
-        s.style.background = "#fff";
-        s.style.borderRadius = "50%";
-        s.style.left = Math.random() * 100 + "%";
-        s.style.top = Math.random() * 100 + "%";
-        s.style.zIndex = "10";
-        if (frankWrap) frankWrap.appendChild(s);
-        setTimeout(() => s.remove(), 800);
-      }
-    }
-
-    /* Frank State Machine AI */
-    setInterval(() => {
-      battery -= 2;
-      helpfulness -= 2;
-      if (battery < 10 || helpfulness < 10) isSick = true;
-      updateStats();
-
-      // Determine next state
-      let r = Math.random();
-      if (r < 0.2) {
-        setFrankState("sleeping");
-      } else if (r < 0.5) {
-        setFrankState("walking");
-      } else {
-        setFrankState("sitting");
-      }
-
-      // Frank's helpful interjections
-      if (frankState !== "sleeping" && Math.random() > 0.7) {
-        const tips = [
-          "Meow! Brand evolution detected!",
-          "Need a marketing vibe check?",
-          "I'm feeling pixelated today.",
-          "Feed me data (and salmon).",
-          "Your ROI is looking juicy!",
-          "Early 2000s vibes only. Meow."
-        ];
-        showPopup(tips[Math.floor(Math.random() * tips.length)]);
-      }
-    }, 10000);
-
-
-    /* Global Clippy Drag */
+      decayIV=setInterval(decayLoop,9000);
+      ageIV  =setInterval(()=>{S.age++;renderStats();saveState();},30000);
+    });
+\n    /* Global Clippy Drag */
     const gWin = document.getElementById("clippy-global-popup");
     const gDrag = document.getElementById("clippy-global-drag");
     if (gDrag && gWin) {

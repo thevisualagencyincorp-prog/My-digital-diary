@@ -517,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Category badge
                     if (categoryBadge) {
                         categoryBadge.textContent = fortune.category;
-                        categoryBadge.className = 'zoltar-category-badge category-' + fortune.category.toLowerCase();
+                        categoryBadge.className = 'destiny-category-badge category-' + fortune.category.toLowerCase();
                     }
 
                     // Serial number
