@@ -1098,3 +1098,74 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     .svc-card, .work-card, .svc-img img, .work-img img { transition: none; }
 }
 :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
+
+/* ══ § 23 · PHOTO + VIDEO SECTION ══ */
+.photo-video-sec {
+    padding: clamp(80px, 10vw, 140px) clamp(36px, 5vw, 80px);
+    background: var(--cream);
+}
+.pv-hdr {
+    text-align: center; max-width: 640px; margin: 0 auto 64px;
+}
+.pv-grid {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pv-divider {
+    display: flex; align-items: flex-start;
+    justify-content: center; padding-top: 220px;
+}
+.pv-or {
+    font-size: 22px; color: var(--mid);
+    animation: float-script 4s ease-in-out infinite;
+}
+.pv-col { display: flex; flex-direction: column; gap: 32px; }
+.pv-col-img {
+    position: relative; border-radius: 16px; overflow: hidden;
+    aspect-ratio: 4/3;
+}
+.pv-col-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .5s ease;
+}
+.pv-col:hover .pv-col-img img { transform: scale(1.04); }
+.pv-col-badge {
+    position: absolute; top: 16px; left: 16px;
+    background: var(--ink); color: var(--cream);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 10px; letter-spacing: .16em;
+}
+.pv-col-badge-pk { background: var(--pink); }
+.pv-col-body { padding: 0 8px; }
+.pv-col-hed {
+    font-family: var(--serif); font-size: clamp(22px, 2.6vw, 32px);
+    font-style: italic; color: var(--ink); margin-bottom: 14px; line-height: 1.15;
+}
+.pv-col-desc {
+    font-family: var(--sans); font-size: 15px; line-height: 1.7;
+    color: var(--mid); margin-bottom: 20px;
+}
+.pv-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+}
+.pv-list li {
+    font-family: var(--condensed); font-weight: 700;
+    font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink); padding-left: 20px; position: relative;
+}
+.pv-list li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--pink); font-family: var(--sans); font-weight: 400;
+}
+.pv-cta { text-align: center; margin-top: 60px; }
+
+@media (max-width: 860px) {
+    .pv-grid { grid-template-columns: 1fr; }
+    .pv-divider { padding-top: 0; padding-bottom: 0; }
+    .pv-or { font-size: 18px; }
+}
