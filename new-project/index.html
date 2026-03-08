@@ -72,7 +72,7 @@
     <!-- ══ NAV ══ -->
     <nav class="nav" id="nav">
         <div class="nav-ticker">
-            <span class="nav-ticker-inner">★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; 3 CLIENTS PER QUARTER &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span id="live-datetime">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; · &nbsp; ★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; 3 CLIENTS PER QUARTER &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span class="live-datetime-2">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; ·</span>
+            <span class="nav-ticker-inner">★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span id="live-datetime">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; · &nbsp; ★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span class="live-datetime-2">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; ·</span>
         </div>
         <div class="nav-inner">
             <nav class="nav-L" aria-label="Main navigation left">
@@ -517,10 +517,9 @@
     <!-- ══ STATEMENT BAND ══ -->
     <div class="statement-band">
         <span class="script-white">The deal —</span>
-        <p class="statement-quote">"We take 3 clients per quarter. Not because we can't handle more — because we refuse
-            to give you less than everything."</p>
-        <p class="statement-sub">Every client gets the full team, full attention, full quarter.</p>
-        <a href="#contact" class="btn-lime">Claim Your Spot →</a>
+        <p class="statement-quote">"We limit our intake on purpose. Because you don't hire The Agency to get a slice — you get the whole team or nothing."</p>
+        <p class="statement-sub">Spots are limited every quarter. When they're gone, they're gone.</p>
+        <a href="#contact" class="btn-lime">Check Availability →</a>
     </div>
 
     <!-- ══ QUIZ ══ -->
@@ -810,44 +809,490 @@
 
     </section>
 
-    <!-- ══ CONTACT ══ -->
-    <section class="contact-sec" id="contact">
-        <div class="contact-inner">
-            <span class="contact-tag">Let's Build Something</span>
-            <h2 class="contact-hed rv">Let's<br>Talk,<br><em>Friend.</em></h2>
-            <p class="contact-deck rv d1">We're selective about who we work with — not because we're precious, but
-                because we're committed. Three clients per quarter means three clients who get all of us.</p>
-            <a href="mailto:hello@meettheagency.com" class="btn-lime rv d2">Start the Conversation →</a>
-            <div class="contact-details rv d3">
-                <div>
-                    <span class="ci-label">Location</span>
-                    <span class="ci-val">Tehachapi · Bakersfield · LA</span>
+    <!-- ══ CLIENT BRIEF FORM ══ -->
+    <section class="contact-sec brief-sec" id="contact">
+        <div class="brief-top rv">
+            <span class="contact-tag">Client Brief</span>
+            <h2 class="contact-hed">Let's<br><em>Build.</em></h2>
+            <p class="brief-deck">Fill this out as thoroughly as you can. The more you give us, the more we can bring to the table before we even say hello. We show up prepared — so by the time we talk, you'll already know we mean business.</p>
+        </div>
+        <div class="brief-layout">
+            <!-- Sidebar -->
+            <aside class="brief-sidebar rv d1">
+                <!-- Availability / FOMO -->
+                <div class="avail-block">
+                    <div class="avail-live">
+                        <span class="avail-dot"></span>
+                        <span class="avail-live-label">Q2 2026 · Now Open</span>
+                    </div>
+                    <div class="avail-count">2 Spots Left</div>
+                    <p class="avail-sub">We limit intake intentionally. When a spot fills, it's gone until next quarter — and the waitlist fills fast.</p>
                 </div>
-                <div>
-                    <span class="ci-label">Intake</span>
-                    <span class="ci-val">3 clients / quarter</span>
+
+                <div class="brief-sidebar-divider"></div>
+
+                <div class="ci-block">
+                    <span class="ci-label">Email</span>
+                    <span class="ci-val">hello@meettheagency.com</span>
                 </div>
-                <div>
+                <div class="ci-block">
                     <span class="ci-label">Phone</span>
                     <span class="ci-val">(323) 388-5657</span>
                 </div>
-                <div>
-                    <span class="ci-label">Founded</span>
-                    <span class="ci-val">Est. 2006</span>
+                <div class="ci-block">
+                    <span class="ci-label">Location</span>
+                    <span class="ci-val">Tehachapi · Bakersfield · LA</span>
+                </div>
+
+                <div class="brief-sidebar-divider"></div>
+
+                <div class="brief-sidebar-note">
+                    <span class="barlow-tag pk" style="font-size:10px;letter-spacing:.18em;">What Happens Next</span>
+                    <p>We review every brief personally. If we're a fit, you'll hear from us within 48 hours — with a response that proves we actually read it.</p>
+                </div>
+                <a href="#partnerships" class="brief-collab-link">Gov / State / White Label? <span>→</span></a>
+            </aside>
+
+            <!-- The Form -->
+            <form class="brief-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="✦ New Client Brief — The Agency">
+                <input type="hidden" name="form_type" value="client_brief">
+
+                <!-- 01 You -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">01 — You</span>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-fname">First Name *</label>
+                            <input class="bf-input" type="text" id="bf-fname" name="first_name" required placeholder="Ash">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-lname">Last Name *</label>
+                            <input class="bf-input" type="text" id="bf-lname" name="last_name" required placeholder="Frantz">
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-email">Email *</label>
+                            <input class="bf-input" type="email" id="bf-email" name="email" required placeholder="you@yourbusiness.com">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-phone">Phone</label>
+                            <input class="bf-input" type="tel" id="bf-phone" name="phone" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-biz">Business Name *</label>
+                            <input class="bf-input" type="text" id="bf-biz" name="business_name" required placeholder="Your Business Name">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-web">Current Website</label>
+                            <input class="bf-input" type="url" id="bf-web" name="website" placeholder="https://yoursite.com">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-industry">Industry / Niche *</label>
+                            <select class="bf-input bf-select" id="bf-industry" name="industry" required>
+                                <option value="" disabled selected>Select your industry</option>
+                                <option>Health + Wellness</option>
+                                <option>Beauty + Aesthetics</option>
+                                <option>Food + Hospitality</option>
+                                <option>Real Estate</option>
+                                <option>Professional Services (Law, Finance, Consulting)</option>
+                                <option>Photography / Videography</option>
+                                <option>Retail + E-commerce</option>
+                                <option>Fitness + Sport</option>
+                                <option>Tech + SaaS</option>
+                                <option>Government / Public Sector</option>
+                                <option>Nonprofit / Mission-Driven</option>
+                                <option>Creative / Entertainment</option>
+                                <option>Construction + Trades</option>
+                                <option>Education</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Your Brand -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">02 — Your Brand</span>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label">Where are you right now? *</label>
+                            <div class="bf-radio-group">
+                                <label class="bf-radio"><input type="radio" name="brand_status" value="Starting from scratch — no brand yet" required><span>Starting from scratch — no brand yet</span></label>
+                                <label class="bf-radio"><input type="radio" name="brand_status" value="Have some pieces but nothing cohesive"><span>Have some pieces but nothing cohesive</span></label>
+                                <label class="bf-radio"><input type="radio" name="brand_status" value="Full rebrand — time to evolve"><span>Full rebrand — time to evolve</span></label>
+                                <label class="bf-radio"><input type="radio" name="brand_status" value="Brand is solid, need one specific service"><span>Brand is solid, need one specific service</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-vibe">Describe your brand vibe in 3–5 words</label>
+                            <input class="bf-input" type="text" id="bf-vibe" name="brand_vibe" placeholder="e.g. Bold. Feminine. Clinical. Grounded. Luxe.">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-audience">Who is your dream customer? Be specific. *</label>
+                            <textarea class="bf-input bf-textarea" id="bf-audience" name="dream_customer" required placeholder="Age, lifestyle, what they care about, where they spend money, how they find businesses like yours..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 Services -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">03 — What You Need</span>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label">Services you're interested in (select all that apply) *</label>
+                            <div class="bf-check-group">
+                                <label class="bf-check"><input type="checkbox" name="services" value="Brand Identity"><span>Brand Identity</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Web Design"><span>Web Design</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Brand Photography"><span>Brand Photography</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Video Production"><span>Video Production</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Social Media Management"><span>Social Media Management</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="App Development"><span>App Development</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Generative AI + GEO"><span>Generative AI + GEO</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="SEO + Content Strategy"><span>SEO + Content Strategy</span></label>
+                                <label class="bf-check"><input type="checkbox" name="services" value="Not sure — need your guidance"><span>Not sure — need your guidance</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-problem">What problem are you trying to solve? *</label>
+                            <textarea class="bf-input bf-textarea" id="bf-problem" name="problem_to_solve" required placeholder="What's not working? What are clients or prospects saying? What keeps you up at night about your business presence?"></textarea>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-win">What does a win look like in 6 months? *</label>
+                            <textarea class="bf-input bf-textarea" id="bf-win" name="success_in_6mo" required placeholder="More leads? Premium clients? A rebrand that finally feels like you? Tell us the outcome you're chasing."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 Inspiration -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">04 — Inspiration</span>
+                    </div>
+                    <p class="bf-section-note">This is where we get to know your taste. Don't overthink it — just share what you love.</p>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-pinterest">Pinterest Board URL</label>
+                            <input class="bf-input" type="url" id="bf-pinterest" name="pinterest_board" placeholder="https://pinterest.com/yourboard">
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-inspo1">Website You Love #1</label>
+                            <input class="bf-input" type="url" id="bf-inspo1" name="inspo_site_1" placeholder="https://...">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-inspo2">Website You Love #2</label>
+                            <input class="bf-input" type="url" id="bf-inspo2" name="inspo_site_2" placeholder="https://...">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-inspo3">Website You Love #3</label>
+                            <input class="bf-input" type="url" id="bf-inspo3" name="inspo_site_3" placeholder="https://...">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-admire">Brands or businesses you admire (competitors or not)</label>
+                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-admire" name="brands_admired" placeholder="Names, IG handles, websites — anything. What do you love about them?"></textarea>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-competitors">Your direct competitors (who are you up against?)</label>
+                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-competitors" name="competitors" placeholder="Who shows up when someone searches for what you offer? Who are you trying to outshine?"></textarea>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-notlike">Brands / aesthetics you absolutely do NOT want to look like</label>
+                            <input class="bf-input" type="text" id="bf-notlike" name="dont_want" placeholder="e.g. 'nothing too corporate' / 'not overly feminine' / 'not like [Brand X]'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05 Logistics -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">05 — Logistics</span>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-budget">Budget Range *</label>
+                            <select class="bf-input bf-select" id="bf-budget" name="budget_range" required>
+                                <option value="" disabled selected>Select a range</option>
+                                <option>Under $2,500</option>
+                                <option>$2,500 – $5,000</option>
+                                <option>$5,000 – $10,000</option>
+                                <option>$10,000 – $25,000</option>
+                                <option>$25,000 – $50,000</option>
+                                <option>$50,000+</option>
+                                <option>Monthly retainer — let's talk</option>
+                            </select>
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-timeline">Timeline</label>
+                            <select class="bf-input bf-select" id="bf-timeline" name="timeline">
+                                <option value="" disabled selected>When do you need this?</option>
+                                <option>ASAP — I needed this yesterday</option>
+                                <option>Within 30 days</option>
+                                <option>1–3 months</option>
+                                <option>3–6 months</option>
+                                <option>6+ months / planning ahead</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-referral">How did you find us?</label>
+                            <select class="bf-input bf-select" id="bf-referral" name="referral_source">
+                                <option value="" disabled selected>Select one</option>
+                                <option>Instagram (@meettheagency)</option>
+                                <option>Google Search</option>
+                                <option>Referral from a friend or client</option>
+                                <option>TikTok</option>
+                                <option>LinkedIn</option>
+                                <option>Government / Procurement Directory</option>
+                                <option>We've worked together before</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="bf-anything">Anything else we should know?</label>
+                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-anything" name="additional_notes" placeholder="The more context, the better. Oversharing is welcome here."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bf-submit-row">
+                    <button type="submit" class="btn-pk bf-submit">Submit My Brief →</button>
+                    <p class="bf-submit-note">We review every submission personally. We'll be in touch within 48 hours if we're a fit.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ══ PARTNERSHIPS + GOV FORM ══ -->
+    <section class="partners-sec" id="partnerships">
+        <div class="partners-top rv">
+            <span class="barlow-tag pk">Partnerships &amp; Procurement</span>
+            <h2 class="section-hed rv d1">Gov. Contracts.<br>State Work.<br><em>White Label.</em></h2>
+            <p class="body-text rv d2" style="max-width:560px;margin:18px auto 0;">We're SDVOSB + WOSB certified and procurement-ready. We've partnered with creative agencies, government contractors, and state vendors across California. If you're looking for a certified creative partner — this form is for you.</p>
+        </div>
+
+        <div class="partners-layout">
+            <!-- Collab callout -->
+            <div class="partners-cred-col rv d1">
+                <div class="partners-cert-block">
+                    <div class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">Our Certifications</div>
+                    <div class="cert-row"><span class="cert-badge">SDVOSB</span><span class="cert-desc">Service-Disabled Veteran-Owned Small Business · Verified</span></div>
+                    <div class="cert-row"><span class="cert-badge cert-badge-lav">WOSB</span><span class="cert-desc">Woman-Owned Small Business · Certified</span></div>
+                    <div class="cert-row"><span class="cert-badge cert-badge-lime">USAF</span><span class="cert-desc">Female Disabled Veteran · Ash Frantz, Founder</span></div>
+                </div>
+                <div class="partners-services-block">
+                    <div class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">White Label Capabilities</div>
+                    <ul class="pv-list">
+                        <li>Full brand identity systems</li>
+                        <li>Website design + development</li>
+                        <li>Content creation + photography</li>
+                        <li>Video production + editing</li>
+                        <li>Social media management</li>
+                        <li>AI content systems + GEO</li>
+                        <li>Creative direction + strategy</li>
+                    </ul>
+                </div>
+                <div class="partners-collab-note">
+                    <span class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);display:block;margin-bottom:8px;">Past Partnership Example</span>
+                    <p>We've served as the white-label creative arm for agencies across California — delivering at full agency quality while our partners maintain the client relationship seamlessly.</p>
                 </div>
             </div>
-        </div>
-        <div class="contact-svc-list rv d2">
-            <div class="contact-svc-heading">What We Do</div>
-            <ul>
-                <li>Brand Identity <span>From $5K</span></li>
-                <li>Web Design <span>From $8K</span></li>
-                <li>Photography + Video <span>Custom Packages</span></li>
-                <li>App Development <span>Custom Tech</span></li>
-                <li>Social Media <span>From $1.5K/mo</span></li>
-                <li>SEO + Content <span>From $1.2K/mo</span></li>
-                <li>Generative AI + GEO <span>From $1.2K/mo</span></li>
-            </ul>
+
+            <!-- Gov Form -->
+            <form class="brief-form partners-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="✦ Partnership / Gov Inquiry — The Agency">
+                <input type="hidden" name="form_type" value="partnership_gov">
+
+                <!-- 01 Organization -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">01 — Your Organization</span>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-company">Company / Agency Name *</label>
+                            <input class="bf-input" type="text" id="pf-company" name="company_name" required placeholder="Alyssa Gabrielle + Co.">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-contact">Contact Name + Title *</label>
+                            <input class="bf-input" type="text" id="pf-contact" name="contact_name_title" required placeholder="Jane Smith, CEO">
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-email">Email *</label>
+                            <input class="bf-input" type="email" id="pf-email" name="email" required placeholder="you@yourcompany.com">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-phone">Phone</label>
+                            <input class="bf-input" type="tel" id="pf-phone" name="phone" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-web">Website</label>
+                            <input class="bf-input" type="url" id="pf-web" name="website" placeholder="https://...">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-linkedin">LinkedIn</label>
+                            <input class="bf-input" type="url" id="pf-linkedin" name="linkedin" placeholder="https://linkedin.com/...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Inquiry Type -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">02 — Inquiry Type</span>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label">What kind of partnership are you exploring? *</label>
+                            <div class="bf-radio-group">
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Government Contract (Federal)" required><span>Government Contract — Federal</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Government Contract (State of California)"><span>Government Contract — State of California</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="White Label Creative Services"><span>White Label Creative Services</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Subcontracting / Teaming Agreement"><span>Subcontracting / Teaming Agreement</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Creative Agency Partnership"><span>Creative Agency Partnership</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Other / Let's talk"><span>Other — let's talk</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 Procurement Details -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">03 — Procurement Details</span>
+                        <span class="bf-optional-note">If applicable</span>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-uei">SAM.gov UEI #</label>
+                            <input class="bf-input" type="text" id="pf-uei" name="sam_uei" placeholder="Unique Entity ID">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-cage">CAGE Code</label>
+                            <input class="bf-input" type="text" id="pf-cage" name="cage_code" placeholder="5-char CAGE Code">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-naics">NAICS Codes</label>
+                            <input class="bf-input" type="text" id="pf-naics" name="naics_codes" placeholder="e.g. 541810, 541430, 541511">
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label">Certifications your organization holds</label>
+                            <div class="bf-check-group">
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="SDVOSB"><span>SDVOSB</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="WOSB"><span>WOSB</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="8(a)"><span>8(a)</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="HUBZone"><span>HUBZone</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="SBA Small Business"><span>SBA Small Business</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="None / Commercial"><span>None / Commercial</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-vehicle">Contract vehicle or mechanism (if applicable)</label>
+                            <input class="bf-input" type="text" id="pf-vehicle" name="contract_vehicle" placeholder="e.g. IDIQ, BPA, GSA Schedule, Task Order, Open Market">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 Scope + Budget -->
+                <div class="brief-section">
+                    <div class="brief-section-label">
+                        <span class="barlow-tag">04 — Scope + Budget</span>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-scope">Scope of creative services needed *</label>
+                            <textarea class="bf-input bf-textarea" id="pf-scope" name="scope_of_work" required placeholder="What creative services are you looking to subcontract or partner on? Website, brand, content, video, social, AI systems — describe the project or ongoing need."></textarea>
+                        </div>
+                    </div>
+                    <div class="bf-row bf-2col">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-pop">Period of Performance / Timeline</label>
+                            <input class="bf-input" type="text" id="pf-pop" name="period_of_performance" placeholder="e.g. 12-month base + 2 options, or Q3 2026">
+                        </div>
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-value">Estimated Contract Value / Budget</label>
+                            <select class="bf-input bf-select" id="pf-value" name="contract_value">
+                                <option value="" disabled selected>Select range</option>
+                                <option>Under $25,000</option>
+                                <option>$25,000 – $100,000</option>
+                                <option>$100,000 – $500,000</option>
+                                <option>$500,000 – $1M</option>
+                                <option>$1M+</option>
+                                <option>TBD / To be discussed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-org">Tell us about your organization *</label>
+                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="pf-org" name="org_description" required placeholder="Who are you, what do you do, and why are you looking for a certified creative partner?"></textarea>
+                        </div>
+                    </div>
+                    <div class="bf-row">
+                        <div class="bf-field">
+                            <label class="bf-label" for="pf-found">How did you find us?</label>
+                            <select class="bf-input bf-select" id="pf-found" name="referral_source">
+                                <option value="" disabled selected>Select one</option>
+                                <option>SAM.gov / Government directory</option>
+                                <option>Google Search</option>
+                                <option>LinkedIn</option>
+                                <option>Referral from a colleague</option>
+                                <option>Instagram (@meettheagency)</option>
+                                <option>California Supplier Registry</option>
+                                <option>We've worked together before</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bf-submit-row">
+                    <button type="submit" class="btn-pk bf-submit">Submit Partnership Inquiry →</button>
+                    <p class="bf-submit-note">We take every partnership inquiry seriously. Expect a response within 2 business days.</p>
+                </div>
+            </form>
         </div>
     </section>
 
