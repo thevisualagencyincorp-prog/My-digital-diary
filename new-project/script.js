@@ -53,6 +53,66 @@ if (rvEls.length) {
     rvEls.forEach(el => obs.observe(el));
 }
 
+// ══ STATS BAND REVEAL + COUNT-UP ══
+function animateCount(el, target, suffix) {
+    const dur = 1400;
+    const start = performance.now();
+    const update = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+}
+const statsBand = document.querySelector('.stats-band');
+if (statsBand) {
+    const statsObs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+            statsBand.classList.add('on-view');
+            // Count-up for each stat number
+            [
+                { selector: '.stat:nth-child(1) .stat-n', target: 19, suffix: '+' },
+                { selector: '.stat:nth-child(2) .stat-n', target: 3,  suffix: '' },
+                { selector: '.stat:nth-child(4) .stat-n', target: 100, suffix: '%' },
+            ].forEach(({ selector, target, suffix }) => {
+                const el = document.querySelector(selector);
+                if (el) animateCount(el, target, suffix);
+            });
+            // Handle "2×" manually
+            const twoX = document.querySelector('.stat:nth-child(3) .stat-n');
+            if (twoX) setTimeout(() => { twoX.textContent = '2×'; }, 600);
+            statsObs.disconnect();
+        }
+    }, { threshold: 0.3 });
+    statsObs.observe(statsBand);
+}
+
+// ══ BLOG CATEGORY FILTER ══
+const filterBtns = document.querySelectorAll('.blog-filter');
+const blogCards = document.querySelectorAll('#blog-grid .blog-card');
+const blogFeatured = document.querySelector('.blog-featured');
+if (filterBtns.length) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const cat = btn.dataset.cat;
+            // Featured post
+            if (blogFeatured) {
+                const featCat = blogFeatured.dataset.cat || '';
+                blogFeatured.style.display = (cat === 'all' || featCat.includes(cat)) ? '' : 'none';
+            }
+            // Grid cards
+            blogCards.forEach(card => {
+                const cardCat = card.dataset.cat || '';
+                const show = cat === 'all' || cardCat.includes(cat);
+                card.classList.toggle('hidden', !show);
+            });
+        });
+    });
+}
+
 // ══ QUIZ LOGIC ══
 function selectOpt(el) {
     const q = el.dataset.q;
