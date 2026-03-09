@@ -1861,6 +1861,43 @@ button {
     width: 80px;
 }
 
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    width: 52px;
+    height: 52px;
+    background: var(--pink);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 10px 24px rgba(252, 24, 91, .3);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity .4s ease, transform .4s ease, visibility .4s ease, background .3s ease;
+}
+
+.back-to-top:hover {
+    background: #d4004a;
+    transform: translateY(17px);
+    /* Slight lift on hover while visible */
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
 /* Hero text large overlay (Tuesday Co style) */
 .hero-media::after {
     content: 'THE AGENCY';
