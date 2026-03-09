@@ -68,11 +68,20 @@
 
 <body>
     <div class="wipe" id="wipe"></div>
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
     <!-- ══ NAV ══ -->
     <nav class="nav" id="nav">
         <div class="nav-ticker">
-            <span class="nav-ticker-inner">★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span id="live-datetime">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; · &nbsp; ★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span class="live-datetime-2">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; ·</span>
+            <span class="nav-ticker-inner">★ &nbsp; THE AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; ·
+                &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; · &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB
+                · PHOTO · VIDEO · APPS · SOCIAL &nbsp; · &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span
+                    id="live-datetime">...</span> &nbsp; · &nbsp; YOUR BRAND DESERVES THIS &nbsp; · &nbsp; ★ &nbsp; THE
+                AGENCY IS IN &nbsp; · &nbsp; KERN COUNTY + LOS ANGELES &nbsp; · &nbsp; VETERAN-OWNED SINCE 2006 &nbsp; ·
+                &nbsp; LIMITED SPOTS · APPLY NOW &nbsp; · &nbsp; BRANDING · WEB · PHOTO · VIDEO · APPS · SOCIAL &nbsp; ·
+                &nbsp; @MEETTHEAGENCY &nbsp; · &nbsp; <span class="live-datetime-2">...</span> &nbsp; · &nbsp; YOUR
+                BRAND DESERVES THIS &nbsp; ·</span>
         </div>
         <div class="nav-inner">
             <nav class="nav-L" aria-label="Main navigation left">
@@ -103,7 +112,8 @@
                 <span class="pill pill-lav">Est. 2006</span>
             </div>
             <a href="#contact" class="btn-pk rv d4">Apply for a Spot →</a>
-            <div class="hero-byline rv d5">Kern County · Bakersfield · LA · Female Disabled Veteran-Owned · SDVOSB · WOSB</div>
+            <div class="hero-byline rv d5">Kern County · Bakersfield · LA · Female Disabled Veteran-Owned · SDVOSB ·
+                WOSB</div>
         </div>
         <div class="hero-media">
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1100&h=1100&fit=crop"
@@ -111,6 +121,24 @@
             <div class="hero-media-overlay"></div>
         </div>
     </section>
+
+    <!-- ══ MARQUEE BAND 1 ══ -->
+    <div class="marquee-band marquee-band-lime">
+        <div class="marquee-track">
+            <span>★ &nbsp; BRANDING &nbsp; · &nbsp; WEB DESIGN &nbsp; · &nbsp; PHOTO &nbsp; · &nbsp; VIDEO &nbsp; ·
+                &nbsp; APPS &nbsp; · &nbsp; SOCIAL &nbsp; · &nbsp; AI + GEO &nbsp; · &nbsp; KERN COUNTY + LA &nbsp; ·
+                &nbsp; NOW BOOKING Q2 2026 &nbsp; · &nbsp;</span>
+            <span>★ &nbsp; BRANDING &nbsp; · &nbsp; WEB DESIGN &nbsp; · &nbsp; PHOTO &nbsp; · &nbsp; VIDEO &nbsp; ·
+                &nbsp; APPS &nbsp; · &nbsp; SOCIAL &nbsp; · &nbsp; AI + GEO &nbsp; · &nbsp; KERN COUNTY + LA &nbsp; ·
+                &nbsp; NOW BOOKING Q2 2026 &nbsp; · &nbsp;</span>
+            <span>★ &nbsp; BRANDING &nbsp; · &nbsp; WEB DESIGN &nbsp; · &nbsp; PHOTO &nbsp; · &nbsp; VIDEO &nbsp; ·
+                &nbsp; APPS &nbsp; · &nbsp; SOCIAL &nbsp; · &nbsp; AI + GEO &nbsp; · &nbsp; KERN COUNTY + LA &nbsp; ·
+                &nbsp; NOW BOOKING Q2 2026 &nbsp; · &nbsp;</span>
+            <span>★ &nbsp; BRANDING &nbsp; · &nbsp; WEB DESIGN &nbsp; · &nbsp; PHOTO &nbsp; · &nbsp; VIDEO &nbsp; ·
+                &nbsp; APPS &nbsp; · &nbsp; SOCIAL &nbsp; · &nbsp; AI + GEO &nbsp; · &nbsp; KERN COUNTY + LA &nbsp; ·
+                &nbsp; NOW BOOKING Q2 2026 &nbsp; · &nbsp;</span>
+        </div>
+    </div>
 
     <!-- ══ ABOUT ══ -->
     <section class="about" id="about">
@@ -132,7 +160,7 @@
                     powerhouse built on true friendship, unyielding discipline, and unapologetic ambition — so
                     brilliant businesses stop disappearing into the noise.</p>
                 <p class="body-text">We started in 2006 with military-grade discipline and a single mission: make
-                    brands that actually work. Psychology-first. Vibe-engineered. Built to dominate your market and
+                    brands that actually work. Psychology first. Vibe engineered. Built to dominate your market and
                     make your competition uncomfortable.</p>
             </div>
 
@@ -190,9 +218,10 @@
                 <div class="founder-photo-wrap">
                     <!-- Curved arc text -->
                     <svg class="founder-arc" viewBox="0 0 320 100" aria-hidden="true">
-                        <path id="ash-arc" d="M 10,90 Q 160,-30 310,90" fill="none"/>
+                        <path id="ash-arc" d="M 10,90 Q 160,-30 310,90" fill="none" />
                         <text font-family="Homemade Apple, cursive" font-size="12.5" fill="#111111" opacity=".7">
-                            <textPath href="#ash-arc" startOffset="5%">visual storytelling · brand creation · creative direction</textPath>
+                            <textPath href="#ash-arc" startOffset="5%">visual storytelling · brand creation · creative
+                                direction</textPath>
                         </text>
                     </svg>
                     <!-- Oval photo -->
@@ -212,7 +241,7 @@
                     <p class="founder-bio">Ash Frantz. USAF veteran. Visual storyteller and the creative force behind
                         every design decision at The Agency. Psychology-first brand architecture,
                         cinematic content production, and the rare ability to make your brand the most
-                        beautiful — and effective — thing in the room.</p>
+                        beautiful and effective thing in the room.</p>
                 </div>
             </div>
 
@@ -221,9 +250,10 @@
                 <div class="founder-photo-wrap">
                     <!-- Curved arc text -->
                     <svg class="founder-arc" viewBox="0 0 320 100" aria-hidden="true">
-                        <path id="britt-arc" d="M 10,90 Q 160,-30 310,90" fill="none"/>
+                        <path id="britt-arc" d="M 10,90 Q 160,-30 310,90" fill="none" />
                         <text font-family="Homemade Apple, cursive" font-size="12.5" fill="#111111" opacity=".7">
-                            <textPath href="#britt-arc" startOffset="3%">brand strategy · market positioning · client growth</textPath>
+                            <textPath href="#britt-arc" startOffset="3%">brand strategy · market positioning · client
+                                growth</textPath>
                         </text>
                     </svg>
                     <!-- Oval photo -->
@@ -269,6 +299,24 @@
         </div>
     </div>
 
+    <!-- ══ MARQUEE BAND 2 ══ -->
+    <div class="marquee-band marquee-band-pk marquee-band-reverse">
+        <div class="marquee-track marquee-track-reverse">
+            <span>YOUR BRAND DESERVES BETTER &nbsp; ✦ &nbsp; PSYCHOLOGY-FIRST BRANDING &nbsp; ✦ &nbsp; VETERAN-OWNED
+                SINCE 2006 &nbsp; ✦ &nbsp; LIMITED SPOTS EACH QUARTER &nbsp; ✦ &nbsp; THE AGENCY IS IN &nbsp; ✦
+                &nbsp;</span>
+            <span>YOUR BRAND DESERVES BETTER &nbsp; ✦ &nbsp; PSYCHOLOGY-FIRST BRANDING &nbsp; ✦ &nbsp; VETERAN-OWNED
+                SINCE 2006 &nbsp; ✦ &nbsp; LIMITED SPOTS EACH QUARTER &nbsp; ✦ &nbsp; THE AGENCY IS IN &nbsp; ✦
+                &nbsp;</span>
+            <span>YOUR BRAND DESERVES BETTER &nbsp; ✦ &nbsp; PSYCHOLOGY-FIRST BRANDING &nbsp; ✦ &nbsp; VETERAN-OWNED
+                SINCE 2006 &nbsp; ✦ &nbsp; LIMITED SPOTS EACH QUARTER &nbsp; ✦ &nbsp; THE AGENCY IS IN &nbsp; ✦
+                &nbsp;</span>
+            <span>YOUR BRAND DESERVES BETTER &nbsp; ✦ &nbsp; PSYCHOLOGY-FIRST BRANDING &nbsp; ✦ &nbsp; VETERAN-OWNED
+                SINCE 2006 &nbsp; ✦ &nbsp; LIMITED SPOTS EACH QUARTER &nbsp; ✦ &nbsp; THE AGENCY IS IN &nbsp; ✦
+                &nbsp;</span>
+        </div>
+    </div>
+
     <!-- ══ SERVICES ══ -->
     <section class="services" id="services">
         <div class="services-hdr">
@@ -290,7 +338,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">01 — Branding</span>
                     <h3 class="svc-name">Brand Identity</h3>
-                    <p class="svc-desc">Full brand systems — logo suites, color psychology, typography, brand voice, and guidelines. The whole architecture, built once, built right. From $5K.</p>
+                    <p class="svc-desc">Full brand systems — logo suites, color psychology, typography, brand voice, and
+                        guidelines. The whole architecture, built once, built right. From $5K.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -301,7 +350,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">02 — Digital</span>
                     <h3 class="svc-name">Web Design</h3>
-                    <p class="svc-desc">Strategy-first websites that convert visitors into clients. Psychology-driven UX, scroll-stopping visuals, and copy that closes. From $8K.</p>
+                    <p class="svc-desc">Strategy-first websites that convert visitors into clients. Psychology-driven
+                        UX, scroll-stopping visuals, and copy that closes. From $8K.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -312,7 +362,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">03 — Visual</span>
                     <h3 class="svc-name">Photography</h3>
-                    <p class="svc-desc">Brand portraits, product shoots, team photos, and editorial content. Real visuals that actually look like your business — not a stock photo site.</p>
+                    <p class="svc-desc">Brand portraits, product shoots, team photos, and editorial content. Real
+                        visuals that actually look like your business — not a stock photo site.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -323,7 +374,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">04 — Motion</span>
                     <h3 class="svc-name">Video Production</h3>
-                    <p class="svc-desc">Cinematic brand films to social-first Reels — shot on phone or pro gear. Videos people actually finish watching, share, and remember.</p>
+                    <p class="svc-desc">Cinematic brand films to social-first Reels — shot on phone or pro gear. Videos
+                        people actually finish watching, share, and remember.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -334,7 +386,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">05 — Tech</span>
                     <h3 class="svc-name">App Development</h3>
-                    <p class="svc-desc">Custom apps, client portals, and digital products for real business problems. Built lean, shipped fast, and designed to scale.</p>
+                    <p class="svc-desc">Custom apps, client portals, and digital products for real business problems.
+                        Built lean, shipped fast, and designed to scale.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -345,7 +398,8 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">06 — Social</span>
                     <h3 class="svc-name">Social Media</h3>
-                    <p class="svc-desc">Full-service social management — strategy, content creation, copy, Reels, and analytics. Built to grow audiences that actually buy. From $1.5K/mo.</p>
+                    <p class="svc-desc">Full-service social management — strategy, content creation, copy, Reels, and
+                        analytics. Built to grow audiences that actually buy. From $1.5K/mo.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
@@ -356,31 +410,80 @@
                 <div class="svc-body">
                     <span class="svc-n barlow-tag">07 — AI + GEO</span>
                     <h3 class="svc-name">Generative AI &amp; GEO</h3>
-                    <p class="svc-desc">AI-powered content systems and Generative Engine Optimization — built so AI search tools recommend your brand, not your competitors. From $1.2K/mo.</p>
+                    <p class="svc-desc">AI-powered content systems and Generative Engine Optimization — built so AI
+                        search tools recommend your brand, not your competitors. From $1.2K/mo.</p>
                     <span class="svc-arrow">→</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ══ GOV / WHITE LABEL (Expandable) ══ -->
+    <div class="gov-expand-wrap" id="gov-expand">
+        <button class="gov-expand-trigger" onclick="document.getElementById('gov-expand').classList.toggle('open')">
+            <span class="gov-expand-label">
+                <span class="barlow-tag" style="color:var(--pink);display:inline;">SDVOSB + WOSB Certified</span>
+                <span class="gov-expand-title">Gov Contracts · State Work · White Label</span>
+            </span>
+            <span class="gov-expand-icon">+</span>
+        </button>
+        <div class="gov-expand-body">
+            <div class="gov-expand-inner">
+                <div class="gov-expand-col">
+                    <div class="gov-cert-grid">
+                        <div class="cert-row"><span class="cert-badge">SDVOSB</span><span
+                                class="cert-desc">Service-Disabled Veteran-Owned Small Business · Verified</span></div>
+                        <div class="cert-row"><span class="cert-badge cert-badge-lav">WOSB</span><span
+                                class="cert-desc">Woman-Owned Small Business · Certified</span></div>
+                        <div class="cert-row"><span class="cert-badge cert-badge-lime">USAF</span><span
+                                class="cert-desc">Female Disabled Veteran · Ash Frantz, Founder</span></div>
+                    </div>
+                    <div style="margin-top:24px;">
+                        <div class="barlow-tag"
+                            style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:12px;">White Label
+                            Capabilities</div>
+                        <ul class="pv-list" style="columns:2;gap:12px;">
+                            <li>Full brand identity systems</li>
+                            <li>Website design + development</li>
+                            <li>Content creation + photography</li>
+                            <li>Video production + editing</li>
+                            <li>Social media management</li>
+                            <li>AI content systems + GEO</li>
+                            <li>Creative direction + strategy</li>
+                        </ul>
+                    </div>
+                    <p style="font-size:14px;color:var(--mid);line-height:1.65;margin-top:20px;">We're procurement-ready
+                        and have partnered with agencies, gov contractors, and state vendors across California.</p>
+                    <a href="#partnerships" class="btn-outline" style="margin-top:24px;">Submit Partnership Inquiry
+                        →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ══ PHOTO + VIDEO ══ -->
     <section class="photo-video-sec" id="content-creation">
         <div class="pv-hdr rv">
             <span class="script-tag">Shoot Day is Sacred</span>
             <h2 class="section-hed rv d1">Content That<br><em>Converts.</em></h2>
-            <p class="body-text rv d2" style="max-width:540px;margin:18px auto 0;">We shoot everything. Phone-native social content. Cinematic brand films. Product photography. Team portraits. Whether it's an iPhone or a cinema camera — we know how to make your business look undeniable.</p>
+            <p class="body-text rv d2" style="max-width:540px;margin:18px auto 0;">We shoot everything. Phone-native
+                social content. Cinematic brand films. Product photography. Team portraits. Whether it's an iPhone or a
+                cinema camera we know how to make your business look undeniable.</p>
         </div>
         <div class="pv-grid">
             <div class="pv-col pv-phone rv">
                 <div class="pv-col-img">
-                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=700&h=520&fit=crop" alt="Phone-native social media content creation" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=700&h=520&fit=crop"
+                        alt="Phone-native social media content creation" loading="lazy">
                     <div class="pv-col-badge">
                         <span class="barlow-tag">Phone-Native</span>
                     </div>
                 </div>
                 <div class="pv-col-body">
                     <h3 class="pv-col-hed">Social-First Content</h3>
-                    <p class="pv-col-desc">Authentic, fast-turnaround content made for the scroll. Shot on iPhone in real environments — the kind that drives saves, shares, and DMs. Perfect for Reels, Stories, and social campaigns that feel native to the platform.</p>
+                    <p class="pv-col-desc">Authentic, fast-turnaround content made for the scroll. Shot on iPhone in
+                        real environments the kind that drives saves, shares, and DMs. Perfect for Reels, Stories, and
+                        social campaigns that feel native to the platform.</p>
                     <ul class="pv-list">
                         <li>Instagram Reels &amp; TikToks</li>
                         <li>Behind-the-scenes content</li>
@@ -395,14 +498,17 @@
             </div>
             <div class="pv-col pv-pro rv d2">
                 <div class="pv-col-img">
-                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&h=520&fit=crop" alt="Professional camera brand photography and video" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&h=520&fit=crop"
+                        alt="Professional camera brand photography and video" loading="lazy">
                     <div class="pv-col-badge pv-col-badge-pk">
                         <span class="barlow-tag">Pro Gear</span>
                     </div>
                 </div>
                 <div class="pv-col-body">
                     <h3 class="pv-col-hed">Cinematic Brand Content</h3>
-                    <p class="pv-col-desc">Studio-quality photography and video using our professional gear collection. For brands that need to show up at the highest level — on their website, in ads, at pitches, and everywhere else that matters.</p>
+                    <p class="pv-col-desc">Studio-quality photography and video using our professional gear collection.
+                        For brands that need to show up at the highest level — on their website, in ads, at pitches, and
+                        everywhere else that matters.</p>
                     <ul class="pv-list">
                         <li>Brand photography sessions</li>
                         <li>Product + commercial photography</li>
@@ -514,10 +620,25 @@
         <a href="#contact" class="btn-outline-light rv" style="display:inline-flex;margin-top:52px;">See More Work →</a>
     </section>
 
+    <!-- ══ MARQUEE BAND 3 ══ -->
+    <div class="marquee-band marquee-band-lav">
+        <div class="marquee-track">
+            <span>WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp; WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;
+                WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;</span>
+            <span>WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp; WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;
+                WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;</span>
+            <span>WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp; WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;
+                WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;</span>
+            <span>WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp; WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;
+                WE SHOULD DEFINITELY WORK TOGETHER &nbsp; ★ &nbsp;</span>
+        </div>
+    </div>
+
     <!-- ══ STATEMENT BAND ══ -->
     <div class="statement-band">
         <span class="script-white">The deal —</span>
-        <p class="statement-quote">"We limit our intake on purpose. Because you don't hire The Agency to get a slice — you get the whole team or nothing."</p>
+        <p class="statement-quote">"We limit our intake on purpose. Because you don't hire The Agency to get a slice —
+            you get the whole team or nothing."</p>
         <p class="statement-sub">Spots are limited every quarter. When they're gone, they're gone.</p>
         <a href="#contact" class="btn-lime">Check Availability →</a>
     </div>
@@ -568,7 +689,8 @@
                             <span class="quiz-opt-letter">A</span>A clear, confident one-liner that always lands.
                         </div>
                         <div class="quiz-opt" data-q="1" data-v="b" onclick="selectOpt(this)">
-                            <span class="quiz-opt-letter">B</span>Something different every time. Still figuring out the pitch.
+                            <span class="quiz-opt-letter">B</span>Something different every time. Still figuring out the
+                            pitch.
                         </div>
                         <div class="quiz-opt" data-q="1" data-v="c" onclick="selectOpt(this)">
                             <span class="quiz-opt-letter">C</span>A long explanation that loses people halfway through.
@@ -579,10 +701,12 @@
                     <div class="quiz-q-text">2. Your current visual brand is…</div>
                     <div class="quiz-opts">
                         <div class="quiz-opt" data-q="2" data-v="a" onclick="selectOpt(this)">
-                            <span class="quiz-opt-letter">A</span>Cohesive, consistent, and something I'm genuinely proud of.
+                            <span class="quiz-opt-letter">A</span>Cohesive, consistent, and something I'm genuinely
+                            proud of.
                         </div>
                         <div class="quiz-opt" data-q="2" data-v="b" onclick="selectOpt(this)">
-                            <span class="quiz-opt-letter">B</span>Okay-ish? It gets the job done but doesn't really WOW anyone.
+                            <span class="quiz-opt-letter">B</span>Okay-ish? It gets the job done but doesn't really WOW
+                            anyone.
                         </div>
                         <div class="quiz-opt" data-q="2" data-v="c" onclick="selectOpt(this)">
                             <span class="quiz-opt-letter">C</span>A Canva logo, an old website, and vibes. That's it.
@@ -596,10 +720,12 @@
                             <span class="quiz-opt-letter">A</span>Have a strategy. Post consistently. See real results.
                         </div>
                         <div class="quiz-opt" data-q="3" data-v="b" onclick="selectOpt(this)">
-                            <span class="quiz-opt-letter">B</span>Post when you feel like it. No real plan but good intentions.
+                            <span class="quiz-opt-letter">B</span>Post when you feel like it. No real plan but good
+                            intentions.
                         </div>
                         <div class="quiz-opt" data-q="3" data-v="c" onclick="selectOpt(this)">
-                            <span class="quiz-opt-letter">C</span>Avoid it. Know you should do more. Feel guilty. Repeat.
+                            <span class="quiz-opt-letter">C</span>Avoid it. Know you should do more. Feel guilty.
+                            Repeat.
                         </div>
                     </div>
                 </div>
@@ -626,12 +752,20 @@
     <section class="insta-sec" id="instagram">
         <div class="insta-hdr">
             <span class="script-tag rv">Follow the Journey</span>
-            <h2 class="insta-hed rv d1">@<em class="pk">meettheagency</em></h2>
+            <h2 class="insta-hed rv d1">@<em class="pk">meet_the_agency</em></h2>
             <p class="body-text rv d2">Behind the scenes. Client wins. Hot takes on branding. The real stuff.</p>
         </div>
-        <div class="ig-grid rv d3" id="ig-feed"></div>
-        <a href="https://www.instagram.com/meettheagency/" target="_blank" rel="noopener"
-            class="btn-outline rv d4">Follow Us on Instagram →</a>
+        <div class="ig-slider-wrap rv d3">
+            <div class="ig-slider" id="ig-feed"></div>
+        </div>
+        <div class="ig-links rv d4">
+            <a href="https://www.instagram.com/meet_the_agency/" target="_blank" rel="noopener"
+                class="btn-outline">Instagram →</a>
+            <a href="https://www.threads.net/@meet_the_agency" target="_blank" rel="noopener"
+                class="btn-outline">Threads →</a>
+            <a href="https://www.facebook.com/meettheagencyllc" target="_blank" rel="noopener"
+                class="btn-outline">Facebook →</a>
+        </div>
     </section>
 
     <!-- ══ BLOG ══ -->
@@ -671,7 +805,8 @@
 
         <!-- FEATURED POST -->
         <article class="blog-featured rv" data-cat="kern branding" itemscope itemtype="https://schema.org/Article">
-            <a class="blog-feat-img" href="#blog" aria-label="Read: Why Kern County Businesses Are Finally Winning at Branding">
+            <a class="blog-feat-img" href="#blog"
+                aria-label="Read: Why Kern County Businesses Are Finally Winning at Branding">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=560&fit=crop"
                     alt="Kern County business branding strategy" loading="lazy" itemprop="image">
                 <div class="blog-feat-overlay"></div>
@@ -735,7 +870,8 @@
                 </div>
             </article>
 
-            <article class="blog-card rv d2" data-cat="branding strategy" itemscope itemtype="https://schema.org/Article">
+            <article class="blog-card rv d2" data-cat="branding strategy" itemscope
+                itemtype="https://schema.org/Article">
                 <a href="#blog" class="blog-card-img-wrap">
                     <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=380&fit=crop"
                         alt="Brand identity design Bakersfield" loading="lazy" itemprop="image">
@@ -766,7 +902,8 @@
                         <time datetime="2025-12-01" itemprop="datePublished">Dec 2025</time>
                         <span class="blog-read">9 min</span>
                     </div>
-                    <h3 class="blog-card-title" itemprop="headline">From Tehachapi to the State Capitol: California Brand
+                    <h3 class="blog-card-title" itemprop="headline">From Tehachapi to the State Capitol: California
+                        Brand
                         Strategy for Service Businesses</h3>
                     <p class="blog-card-excerpt" itemprop="description">California's service business landscape is
                         shifting. Clients from Sacramento to San Diego choose brands that feel local and think big.
@@ -800,8 +937,7 @@
         <!-- Blog footer / IG CTA -->
         <div class="blog-footer rv">
             <p class="blog-footer-text">More takes, behind-the-scenes, and client wins —</p>
-            <a href="https://www.instagram.com/meet_the_agency/" target="_blank" rel="noopener"
-                class="blog-ig-cta">
+            <a href="https://www.instagram.com/meet_the_agency/" target="_blank" rel="noopener" class="blog-ig-cta">
                 <span class="blog-ig-handle">@meet_the_agency</span>
                 <span class="blog-ig-sub">Follow on Instagram →</span>
             </a>
@@ -814,23 +950,23 @@
         <div class="brief-top rv">
             <span class="contact-tag">Client Brief</span>
             <h2 class="contact-hed">Let's<br><em>Build.</em></h2>
-            <p class="brief-deck">Fill this out as thoroughly as you can. The more you give us, the more we can bring to the table before we even say hello. We show up prepared — so by the time we talk, you'll already know we mean business.</p>
+            <p class="brief-deck">Fill this out as thoroughly as you can. The more you give us, the more we can bring to
+                the table before we even say hello. We show up prepared — so by the time we talk, you'll already know we
+                mean business.</p>
         </div>
-        <div class="brief-layout">
-            <!-- Sidebar -->
-            <aside class="brief-sidebar rv d1">
-                <!-- Availability / FOMO -->
-                <div class="avail-block">
-                    <div class="avail-live">
-                        <span class="avail-dot"></span>
-                        <span class="avail-live-label">Q2 2026 · Now Open</span>
-                    </div>
-                    <div class="avail-count">2 Spots Left</div>
-                    <p class="avail-sub">We limit intake intentionally. When a spot fills, it's gone until next quarter — and the waitlist fills fast.</p>
+
+        <!-- Contact Info Bar -->
+        <div class="brief-info-bar rv d1">
+            <div class="avail-block">
+                <div class="avail-live">
+                    <span class="avail-dot"></span>
+                    <span class="avail-live-label">Q2 2026 · Now Open</span>
                 </div>
-
-                <div class="brief-sidebar-divider"></div>
-
+                <div class="avail-count">2 Spots Left</div>
+                <p class="avail-sub">We limit intake intentionally. When a spot fills, it's gone until next quarter —
+                    and the waitlist fills fast.</p>
+            </div>
+            <div class="brief-info-details">
                 <div class="ci-block">
                     <span class="ci-label">Email</span>
                     <span class="ci-val">hello@meettheagency.com</span>
@@ -843,269 +979,304 @@
                     <span class="ci-label">Location</span>
                     <span class="ci-val">Tehachapi · Bakersfield · LA</span>
                 </div>
-
-                <div class="brief-sidebar-divider"></div>
-
-                <div class="brief-sidebar-note">
-                    <span class="barlow-tag pk" style="font-size:10px;letter-spacing:.18em;">What Happens Next</span>
-                    <p>We review every brief personally. If we're a fit, you'll hear from us within 48 hours — with a response that proves we actually read it.</p>
-                </div>
-                <a href="#partnerships" class="brief-collab-link">Gov / State / White Label? <span>→</span></a>
-            </aside>
-
-            <!-- The Form -->
-            <form class="brief-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
-                <input type="hidden" name="_subject" value="✦ New Client Brief — The Agency">
-                <input type="hidden" name="form_type" value="client_brief">
-
-                <!-- 01 You -->
-                <div class="brief-section">
-                    <div class="brief-section-label">
-                        <span class="barlow-tag">01 — You</span>
-                    </div>
-                    <div class="bf-row bf-2col">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-fname">First Name *</label>
-                            <input class="bf-input" type="text" id="bf-fname" name="first_name" required placeholder="Ash">
-                        </div>
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-lname">Last Name *</label>
-                            <input class="bf-input" type="text" id="bf-lname" name="last_name" required placeholder="Frantz">
-                        </div>
-                    </div>
-                    <div class="bf-row bf-2col">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-email">Email *</label>
-                            <input class="bf-input" type="email" id="bf-email" name="email" required placeholder="you@yourbusiness.com">
-                        </div>
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-phone">Phone</label>
-                            <input class="bf-input" type="tel" id="bf-phone" name="phone" placeholder="(555) 000-0000">
-                        </div>
-                    </div>
-                    <div class="bf-row bf-2col">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-biz">Business Name *</label>
-                            <input class="bf-input" type="text" id="bf-biz" name="business_name" required placeholder="Your Business Name">
-                        </div>
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-web">Current Website</label>
-                            <input class="bf-input" type="url" id="bf-web" name="website" placeholder="https://yoursite.com">
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-industry">Industry / Niche *</label>
-                            <select class="bf-input bf-select" id="bf-industry" name="industry" required>
-                                <option value="" disabled selected>Select your industry</option>
-                                <option>Health + Wellness</option>
-                                <option>Beauty + Aesthetics</option>
-                                <option>Food + Hospitality</option>
-                                <option>Real Estate</option>
-                                <option>Professional Services (Law, Finance, Consulting)</option>
-                                <option>Photography / Videography</option>
-                                <option>Retail + E-commerce</option>
-                                <option>Fitness + Sport</option>
-                                <option>Tech + SaaS</option>
-                                <option>Government / Public Sector</option>
-                                <option>Nonprofit / Mission-Driven</option>
-                                <option>Creative / Entertainment</option>
-                                <option>Construction + Trades</option>
-                                <option>Education</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 02 Your Brand -->
-                <div class="brief-section">
-                    <div class="brief-section-label">
-                        <span class="barlow-tag">02 — Your Brand</span>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label">Where are you right now? *</label>
-                            <div class="bf-radio-group">
-                                <label class="bf-radio"><input type="radio" name="brand_status" value="Starting from scratch — no brand yet" required><span>Starting from scratch — no brand yet</span></label>
-                                <label class="bf-radio"><input type="radio" name="brand_status" value="Have some pieces but nothing cohesive"><span>Have some pieces but nothing cohesive</span></label>
-                                <label class="bf-radio"><input type="radio" name="brand_status" value="Full rebrand — time to evolve"><span>Full rebrand — time to evolve</span></label>
-                                <label class="bf-radio"><input type="radio" name="brand_status" value="Brand is solid, need one specific service"><span>Brand is solid, need one specific service</span></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-vibe">Describe your brand vibe in 3–5 words</label>
-                            <input class="bf-input" type="text" id="bf-vibe" name="brand_vibe" placeholder="e.g. Bold. Feminine. Clinical. Grounded. Luxe.">
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-audience">Who is your dream customer? Be specific. *</label>
-                            <textarea class="bf-input bf-textarea" id="bf-audience" name="dream_customer" required placeholder="Age, lifestyle, what they care about, where they spend money, how they find businesses like yours..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 03 Services -->
-                <div class="brief-section">
-                    <div class="brief-section-label">
-                        <span class="barlow-tag">03 — What You Need</span>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label">Services you're interested in (select all that apply) *</label>
-                            <div class="bf-check-group">
-                                <label class="bf-check"><input type="checkbox" name="services" value="Brand Identity"><span>Brand Identity</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Web Design"><span>Web Design</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Brand Photography"><span>Brand Photography</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Video Production"><span>Video Production</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Social Media Management"><span>Social Media Management</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="App Development"><span>App Development</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Generative AI + GEO"><span>Generative AI + GEO</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="SEO + Content Strategy"><span>SEO + Content Strategy</span></label>
-                                <label class="bf-check"><input type="checkbox" name="services" value="Not sure — need your guidance"><span>Not sure — need your guidance</span></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-problem">What problem are you trying to solve? *</label>
-                            <textarea class="bf-input bf-textarea" id="bf-problem" name="problem_to_solve" required placeholder="What's not working? What are clients or prospects saying? What keeps you up at night about your business presence?"></textarea>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-win">What does a win look like in 6 months? *</label>
-                            <textarea class="bf-input bf-textarea" id="bf-win" name="success_in_6mo" required placeholder="More leads? Premium clients? A rebrand that finally feels like you? Tell us the outcome you're chasing."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 04 Inspiration -->
-                <div class="brief-section">
-                    <div class="brief-section-label">
-                        <span class="barlow-tag">04 — Inspiration</span>
-                    </div>
-                    <p class="bf-section-note">This is where we get to know your taste. Don't overthink it — just share what you love.</p>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-pinterest">Pinterest Board URL</label>
-                            <input class="bf-input" type="url" id="bf-pinterest" name="pinterest_board" placeholder="https://pinterest.com/yourboard">
-                        </div>
-                    </div>
-                    <div class="bf-row bf-2col">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-inspo1">Website You Love #1</label>
-                            <input class="bf-input" type="url" id="bf-inspo1" name="inspo_site_1" placeholder="https://...">
-                        </div>
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-inspo2">Website You Love #2</label>
-                            <input class="bf-input" type="url" id="bf-inspo2" name="inspo_site_2" placeholder="https://...">
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-inspo3">Website You Love #3</label>
-                            <input class="bf-input" type="url" id="bf-inspo3" name="inspo_site_3" placeholder="https://...">
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-admire">Brands or businesses you admire (competitors or not)</label>
-                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-admire" name="brands_admired" placeholder="Names, IG handles, websites — anything. What do you love about them?"></textarea>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-competitors">Your direct competitors (who are you up against?)</label>
-                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-competitors" name="competitors" placeholder="Who shows up when someone searches for what you offer? Who are you trying to outshine?"></textarea>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-notlike">Brands / aesthetics you absolutely do NOT want to look like</label>
-                            <input class="bf-input" type="text" id="bf-notlike" name="dont_want" placeholder="e.g. 'nothing too corporate' / 'not overly feminine' / 'not like [Brand X]'">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 05 Logistics -->
-                <div class="brief-section">
-                    <div class="brief-section-label">
-                        <span class="barlow-tag">05 — Logistics</span>
-                    </div>
-                    <div class="bf-row bf-2col">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-budget">Budget Range *</label>
-                            <select class="bf-input bf-select" id="bf-budget" name="budget_range" required>
-                                <option value="" disabled selected>Select a range</option>
-                                <option>Under $2,500</option>
-                                <option>$2,500 – $5,000</option>
-                                <option>$5,000 – $10,000</option>
-                                <option>$10,000 – $25,000</option>
-                                <option>$25,000 – $50,000</option>
-                                <option>$50,000+</option>
-                                <option>Monthly retainer — let's talk</option>
-                            </select>
-                        </div>
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-timeline">Timeline</label>
-                            <select class="bf-input bf-select" id="bf-timeline" name="timeline">
-                                <option value="" disabled selected>When do you need this?</option>
-                                <option>ASAP — I needed this yesterday</option>
-                                <option>Within 30 days</option>
-                                <option>1–3 months</option>
-                                <option>3–6 months</option>
-                                <option>6+ months / planning ahead</option>
-                                <option>Flexible</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-referral">How did you find us?</label>
-                            <select class="bf-input bf-select" id="bf-referral" name="referral_source">
-                                <option value="" disabled selected>Select one</option>
-                                <option>Instagram (@meettheagency)</option>
-                                <option>Google Search</option>
-                                <option>Referral from a friend or client</option>
-                                <option>TikTok</option>
-                                <option>LinkedIn</option>
-                                <option>Government / Procurement Directory</option>
-                                <option>We've worked together before</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="bf-row">
-                        <div class="bf-field">
-                            <label class="bf-label" for="bf-anything">Anything else we should know?</label>
-                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-anything" name="additional_notes" placeholder="The more context, the better. Oversharing is welcome here."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bf-submit-row">
-                    <button type="submit" class="btn-pk bf-submit">Submit My Brief →</button>
-                    <p class="bf-submit-note">We review every submission personally. You'll hear from us within one business day.</p>
-                </div>
-
-                <!-- Self-destruct confirmation -->
-                <div class="brief-success" role="alert" aria-live="assertive">
-                    <div class="sd-inner">
-                        <span class="barlow-tag sd-tag">Transmission Received</span>
-                        <h3 class="sd-hed">We Got You.</h3>
-                        <p class="sd-body">Your brief is in our hands. We review every submission personally — expect us in your inbox within <strong>one business day</strong>. If we're a fit, we'll come prepared.</p>
-                        <div class="sd-countdown-wrap">
-                            <span class="sd-destruct-label">This message will self-destruct in</span>
-                            <span class="sd-countdown">5</span>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <div class="brief-sidebar-note">
+                <span class="barlow-tag pk" style="font-size:10px;letter-spacing:.18em;">What Happens Next</span>
+                <p>We review every brief personally. If we're a fit, you'll hear from us within 48 hours — with a
+                    response that proves we actually read it.</p>
+            </div>
         </div>
+
+        <!-- The Form -->
+        <form class="brief-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="✦ New Client Brief — The Agency">
+            <input type="hidden" name="form_type" value="client_brief">
+
+            <!-- 01 You -->
+            <div class="brief-section">
+                <div class="brief-section-label">
+                    <span class="barlow-tag">01 — You</span>
+                </div>
+                <div class="bf-row bf-2col">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-fname">First Name *</label>
+                        <input class="bf-input" type="text" id="bf-fname" name="first_name" required placeholder="Ash">
+                    </div>
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-lname">Last Name *</label>
+                        <input class="bf-input" type="text" id="bf-lname" name="last_name" required
+                            placeholder="Frantz">
+                    </div>
+                </div>
+                <div class="bf-row bf-2col">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-email">Email *</label>
+                        <input class="bf-input" type="email" id="bf-email" name="email" required
+                            placeholder="you@yourbusiness.com">
+                    </div>
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-phone">Phone</label>
+                        <input class="bf-input" type="tel" id="bf-phone" name="phone" placeholder="(555) 000-0000">
+                    </div>
+                </div>
+                <div class="bf-row bf-2col">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-biz">Business Name *</label>
+                        <input class="bf-input" type="text" id="bf-biz" name="business_name" required
+                            placeholder="Your Business Name">
+                    </div>
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-web">Current Website</label>
+                        <input class="bf-input" type="url" id="bf-web" name="website"
+                            placeholder="https://yoursite.com">
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-industry">Industry / Niche *</label>
+                        <select class="bf-input bf-select" id="bf-industry" name="industry" required>
+                            <option value="" disabled selected>Select your industry</option>
+                            <option>Health + Wellness</option>
+                            <option>Beauty + Aesthetics</option>
+                            <option>Food + Hospitality</option>
+                            <option>Real Estate</option>
+                            <option>Professional Services (Law, Finance, Consulting)</option>
+                            <option>Photography / Videography</option>
+                            <option>Retail + E-commerce</option>
+                            <option>Fitness + Sport</option>
+                            <option>Tech + SaaS</option>
+                            <option>Government / Public Sector</option>
+                            <option>Nonprofit / Mission-Driven</option>
+                            <option>Creative / Entertainment</option>
+                            <option>Construction + Trades</option>
+                            <option>Education</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 Your Brand -->
+            <div class="brief-section">
+                <div class="brief-section-label">
+                    <span class="barlow-tag">02 — Your Brand</span>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label">Where are you right now? *</label>
+                        <div class="bf-radio-group">
+                            <label class="bf-radio"><input type="radio" name="brand_status"
+                                    value="Starting from scratch — no brand yet" required><span>Starting from
+                                    scratch — no brand yet</span></label>
+                            <label class="bf-radio"><input type="radio" name="brand_status"
+                                    value="Have some pieces but nothing cohesive"><span>Have some pieces but nothing
+                                    cohesive</span></label>
+                            <label class="bf-radio"><input type="radio" name="brand_status"
+                                    value="Full rebrand — time to evolve"><span>Full rebrand — time to
+                                    evolve</span></label>
+                            <label class="bf-radio"><input type="radio" name="brand_status"
+                                    value="Brand is solid, need one specific service"><span>Brand is solid, need one
+                                    specific service</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-vibe">Describe your brand vibe in 3–5 words</label>
+                        <input class="bf-input" type="text" id="bf-vibe" name="brand_vibe"
+                            placeholder="e.g. Bold. Feminine. Clinical. Grounded. Luxe.">
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-audience">Who is your dream customer? Be specific. *</label>
+                        <textarea class="bf-input bf-textarea" id="bf-audience" name="dream_customer" required
+                            placeholder="Age, lifestyle, what they care about, where they spend money, how they find businesses like yours..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 Services -->
+            <div class="brief-section">
+                <div class="brief-section-label">
+                    <span class="barlow-tag">03 — What You Need</span>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label">Services you're interested in (select all that apply) *</label>
+                        <div class="bf-check-group">
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Brand Identity"><span>Brand Identity</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services" value="Web Design"><span>Web
+                                    Design</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Brand Photography"><span>Brand Photography</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Video Production"><span>Video Production</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Social Media Management"><span>Social Media Management</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="App Development"><span>App Development</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Generative AI + GEO"><span>Generative AI + GEO</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="SEO + Content Strategy"><span>SEO + Content Strategy</span></label>
+                            <label class="bf-check"><input type="checkbox" name="services"
+                                    value="Not sure — need your guidance"><span>Not sure — need your
+                                    guidance</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-problem">What problem are you trying to solve? *</label>
+                        <textarea class="bf-input bf-textarea" id="bf-problem" name="problem_to_solve" required
+                            placeholder="What's not working? What are clients or prospects saying? What keeps you up at night about your business presence?"></textarea>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-win">What does a win look like in 6 months? *</label>
+                        <textarea class="bf-input bf-textarea" id="bf-win" name="success_in_6mo" required
+                            placeholder="More leads? Premium clients? A rebrand that finally feels like you? Tell us the outcome you're chasing."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 Inspiration -->
+            <div class="brief-section">
+                <div class="brief-section-label">
+                    <span class="barlow-tag">04 — Inspiration</span>
+                </div>
+                <p class="bf-section-note">This is where we get to know your taste. Don't overthink it — just share
+                    what you love.</p>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-pinterest">Pinterest Board URL</label>
+                        <input class="bf-input" type="url" id="bf-pinterest" name="pinterest_board"
+                            placeholder="https://pinterest.com/yourboard">
+                    </div>
+                </div>
+                <div class="bf-row bf-2col">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-inspo1">Website You Love #1</label>
+                        <input class="bf-input" type="url" id="bf-inspo1" name="inspo_site_1" placeholder="https://...">
+                    </div>
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-inspo2">Website You Love #2</label>
+                        <input class="bf-input" type="url" id="bf-inspo2" name="inspo_site_2" placeholder="https://...">
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-inspo3">Website You Love #3</label>
+                        <input class="bf-input" type="url" id="bf-inspo3" name="inspo_site_3" placeholder="https://...">
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-admire">Brands or businesses you admire (competitors or
+                            not)</label>
+                        <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-admire" name="brands_admired"
+                            placeholder="Names, IG handles, websites — anything. What do you love about them?"></textarea>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-competitors">Your direct competitors (who are you up
+                            against?)</label>
+                        <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-competitors" name="competitors"
+                            placeholder="Who shows up when someone searches for what you offer? Who are you trying to outshine?"></textarea>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-notlike">Brands / aesthetics you absolutely do NOT want to
+                            look like</label>
+                        <input class="bf-input" type="text" id="bf-notlike" name="dont_want"
+                            placeholder="e.g. 'nothing too corporate' / 'not overly feminine' / 'not like [Brand X]'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05 Logistics -->
+            <div class="brief-section">
+                <div class="brief-section-label">
+                    <span class="barlow-tag">05 — Logistics</span>
+                </div>
+                <div class="bf-row bf-2col">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-budget">Budget Range *</label>
+                        <select class="bf-input bf-select" id="bf-budget" name="budget_range" required>
+                            <option value="" disabled selected>Select a range</option>
+                            <option>Under $2,500</option>
+                            <option>$2,500 – $5,000</option>
+                            <option>$5,000 – $10,000</option>
+                            <option>$10,000 – $25,000</option>
+                            <option>$25,000 – $50,000</option>
+                            <option>$50,000+</option>
+                            <option>Monthly retainer — let's talk</option>
+                        </select>
+                    </div>
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-timeline">Timeline</label>
+                        <select class="bf-input bf-select" id="bf-timeline" name="timeline">
+                            <option value="" disabled selected>When do you need this?</option>
+                            <option>ASAP — I needed this yesterday</option>
+                            <option>Within 30 days</option>
+                            <option>1–3 months</option>
+                            <option>3–6 months</option>
+                            <option>6+ months / planning ahead</option>
+                            <option>Flexible</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-referral">How did you find us?</label>
+                        <select class="bf-input bf-select" id="bf-referral" name="referral_source">
+                            <option value="" disabled selected>Select one</option>
+                            <option>Instagram (@meettheagency)</option>
+                            <option>Google Search</option>
+                            <option>Referral from a friend or client</option>
+                            <option>TikTok</option>
+                            <option>LinkedIn</option>
+                            <option>Government / Procurement Directory</option>
+                            <option>We've worked together before</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bf-row">
+                    <div class="bf-field">
+                        <label class="bf-label" for="bf-anything">Anything else we should know?</label>
+                        <textarea class="bf-input bf-textarea bf-textarea-sm" id="bf-anything" name="additional_notes"
+                            placeholder="The more context, the better. Oversharing is welcome here."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bf-submit-row">
+                <button type="submit" class="btn-pk bf-submit">Submit My Brief →</button>
+                <p class="bf-submit-note">We review every submission personally. You'll hear from us within one
+                    business day.</p>
+            </div>
+
+            <!-- Self-destruct confirmation -->
+            <div class="brief-success" role="alert" aria-live="assertive">
+                <div class="sd-inner">
+                    <span class="barlow-tag sd-tag">Transmission Received</span>
+                    <h3 class="sd-hed">We Got You.</h3>
+                    <p class="sd-body">Your brief is in our hands. We review every submission personally — expect us
+                        in your inbox within <strong>one business day</strong>. If we're a fit, we'll come prepared.
+                    </p>
+                    <div class="sd-countdown-wrap">
+                        <span class="sd-destruct-label">This message will self-destruct in</span>
+                        <span class="sd-countdown">5</span>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
 
     <!-- ══ PARTNERSHIPS + GOV FORM ══ -->
@@ -1113,20 +1284,29 @@
         <div class="partners-top rv">
             <span class="barlow-tag pk">Partnerships &amp; Procurement</span>
             <h2 class="section-hed rv d1">Gov. Contracts.<br>State Work.<br><em>White Label.</em></h2>
-            <p class="body-text rv d2" style="max-width:560px;margin:18px auto 0;">We're SDVOSB + WOSB certified and procurement-ready. We've partnered with creative agencies, government contractors, and state vendors across California. If you're looking for a certified creative partner — this form is for you.</p>
+            <p class="body-text rv d2" style="max-width:560px;margin:18px auto 0;">We're SDVOSB + WOSB certified and
+                procurement-ready. We've partnered with creative agencies, government contractors, and state vendors
+                across California. If you're looking for a certified creative partner — this form is for you.</p>
         </div>
 
         <div class="partners-layout">
             <!-- Collab callout -->
             <div class="partners-cred-col rv d1">
                 <div class="partners-cert-block">
-                    <div class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">Our Certifications</div>
-                    <div class="cert-row"><span class="cert-badge">SDVOSB</span><span class="cert-desc">Service-Disabled Veteran-Owned Small Business · Verified</span></div>
-                    <div class="cert-row"><span class="cert-badge cert-badge-lav">WOSB</span><span class="cert-desc">Woman-Owned Small Business · Certified</span></div>
-                    <div class="cert-row"><span class="cert-badge cert-badge-lime">USAF</span><span class="cert-desc">Female Disabled Veteran · Ash Frantz, Founder</span></div>
+                    <div class="barlow-tag"
+                        style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">Our
+                        Certifications</div>
+                    <div class="cert-row"><span class="cert-badge">SDVOSB</span><span class="cert-desc">Service-Disabled
+                            Veteran-Owned Small Business · Verified</span></div>
+                    <div class="cert-row"><span class="cert-badge cert-badge-lav">WOSB</span><span
+                            class="cert-desc">Woman-Owned Small Business · Certified</span></div>
+                    <div class="cert-row"><span class="cert-badge cert-badge-lime">USAF</span><span
+                            class="cert-desc">Female Disabled Veteran · Ash Frantz, Founder</span></div>
                 </div>
                 <div class="partners-services-block">
-                    <div class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">White Label Capabilities</div>
+                    <div class="barlow-tag"
+                        style="font-size:10px;letter-spacing:.2em;color:var(--mid);margin-bottom:16px;">White Label
+                        Capabilities</div>
                     <ul class="pv-list">
                         <li>Full brand identity systems</li>
                         <li>Website design + development</li>
@@ -1138,13 +1318,17 @@
                     </ul>
                 </div>
                 <div class="partners-collab-note">
-                    <span class="barlow-tag" style="font-size:10px;letter-spacing:.2em;color:var(--mid);display:block;margin-bottom:8px;">Past Partnership Example</span>
-                    <p>We've served as the white-label creative arm for agencies across California — delivering at full agency quality while our partners maintain the client relationship seamlessly.</p>
+                    <span class="barlow-tag"
+                        style="font-size:10px;letter-spacing:.2em;color:var(--mid);display:block;margin-bottom:8px;">Past
+                        Partnership Example</span>
+                    <p>We've served as the white-label creative arm for agencies across California — delivering at full
+                        agency quality while our partners maintain the client relationship seamlessly.</p>
                 </div>
             </div>
 
             <!-- Gov Form -->
-            <form class="brief-form partners-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
+            <form class="brief-form partners-form rv d2" action="https://formspree.io/f/mbdawrqy" method="POST"
+                novalidate>
                 <input type="hidden" name="_subject" value="✦ Partnership / Gov Inquiry — The Agency">
                 <input type="hidden" name="form_type" value="partnership_gov">
 
@@ -1156,17 +1340,20 @@
                     <div class="bf-row bf-2col">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-company">Company / Agency Name *</label>
-                            <input class="bf-input" type="text" id="pf-company" name="company_name" required placeholder="Alyssa Gabrielle + Co.">
+                            <input class="bf-input" type="text" id="pf-company" name="company_name" required
+                                placeholder="Alyssa Gabrielle + Co.">
                         </div>
                         <div class="bf-field">
                             <label class="bf-label" for="pf-contact">Contact Name + Title *</label>
-                            <input class="bf-input" type="text" id="pf-contact" name="contact_name_title" required placeholder="Jane Smith, CEO">
+                            <input class="bf-input" type="text" id="pf-contact" name="contact_name_title" required
+                                placeholder="Jane Smith, CEO">
                         </div>
                     </div>
                     <div class="bf-row bf-2col">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-email">Email *</label>
-                            <input class="bf-input" type="email" id="pf-email" name="email" required placeholder="you@yourcompany.com">
+                            <input class="bf-input" type="email" id="pf-email" name="email" required
+                                placeholder="you@yourcompany.com">
                         </div>
                         <div class="bf-field">
                             <label class="bf-label" for="pf-phone">Phone</label>
@@ -1180,7 +1367,8 @@
                         </div>
                         <div class="bf-field">
                             <label class="bf-label" for="pf-linkedin">LinkedIn</label>
-                            <input class="bf-input" type="url" id="pf-linkedin" name="linkedin" placeholder="https://linkedin.com/...">
+                            <input class="bf-input" type="url" id="pf-linkedin" name="linkedin"
+                                placeholder="https://linkedin.com/...">
                         </div>
                     </div>
                 </div>
@@ -1194,12 +1382,23 @@
                         <div class="bf-field">
                             <label class="bf-label">What kind of partnership are you exploring? *</label>
                             <div class="bf-radio-group">
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Government Contract (Federal)" required><span>Government Contract — Federal</span></label>
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Government Contract (State of California)"><span>Government Contract — State of California</span></label>
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="White Label Creative Services"><span>White Label Creative Services</span></label>
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Subcontracting / Teaming Agreement"><span>Subcontracting / Teaming Agreement</span></label>
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Creative Agency Partnership"><span>Creative Agency Partnership</span></label>
-                                <label class="bf-radio"><input type="radio" name="partnership_type" value="Other / Let's talk"><span>Other — let's talk</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="Government Contract (Federal)" required><span>Government Contract —
+                                        Federal</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="Government Contract (State of California)"><span>Government Contract —
+                                        State of California</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="White Label Creative Services"><span>White Label Creative
+                                        Services</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="Subcontracting / Teaming Agreement"><span>Subcontracting / Teaming
+                                        Agreement</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="Creative Agency Partnership"><span>Creative Agency
+                                        Partnership</span></label>
+                                <label class="bf-radio"><input type="radio" name="partnership_type"
+                                        value="Other / Let's talk"><span>Other — let's talk</span></label>
                             </div>
                         </div>
                     </div>
@@ -1214,36 +1413,47 @@
                     <div class="bf-row bf-2col">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-uei">SAM.gov UEI #</label>
-                            <input class="bf-input" type="text" id="pf-uei" name="sam_uei" placeholder="Unique Entity ID">
+                            <input class="bf-input" type="text" id="pf-uei" name="sam_uei"
+                                placeholder="Unique Entity ID">
                         </div>
                         <div class="bf-field">
                             <label class="bf-label" for="pf-cage">CAGE Code</label>
-                            <input class="bf-input" type="text" id="pf-cage" name="cage_code" placeholder="5-char CAGE Code">
+                            <input class="bf-input" type="text" id="pf-cage" name="cage_code"
+                                placeholder="5-char CAGE Code">
                         </div>
                     </div>
                     <div class="bf-row">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-naics">NAICS Codes</label>
-                            <input class="bf-input" type="text" id="pf-naics" name="naics_codes" placeholder="e.g. 541810, 541430, 541511">
+                            <input class="bf-input" type="text" id="pf-naics" name="naics_codes"
+                                placeholder="e.g. 541810, 541430, 541511">
                         </div>
                     </div>
                     <div class="bf-row">
                         <div class="bf-field">
                             <label class="bf-label">Certifications your organization holds</label>
                             <div class="bf-check-group">
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="SDVOSB"><span>SDVOSB</span></label>
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="WOSB"><span>WOSB</span></label>
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="8(a)"><span>8(a)</span></label>
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="HUBZone"><span>HUBZone</span></label>
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="SBA Small Business"><span>SBA Small Business</span></label>
-                                <label class="bf-check"><input type="checkbox" name="org_certifications" value="None / Commercial"><span>None / Commercial</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="SDVOSB"><span>SDVOSB</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="WOSB"><span>WOSB</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="8(a)"><span>8(a)</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="HUBZone"><span>HUBZone</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="SBA Small Business"><span>SBA Small Business</span></label>
+                                <label class="bf-check"><input type="checkbox" name="org_certifications"
+                                        value="None / Commercial"><span>None / Commercial</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="bf-row">
                         <div class="bf-field">
-                            <label class="bf-label" for="pf-vehicle">Contract vehicle or mechanism (if applicable)</label>
-                            <input class="bf-input" type="text" id="pf-vehicle" name="contract_vehicle" placeholder="e.g. IDIQ, BPA, GSA Schedule, Task Order, Open Market">
+                            <label class="bf-label" for="pf-vehicle">Contract vehicle or mechanism (if
+                                applicable)</label>
+                            <input class="bf-input" type="text" id="pf-vehicle" name="contract_vehicle"
+                                placeholder="e.g. IDIQ, BPA, GSA Schedule, Task Order, Open Market">
                         </div>
                     </div>
                 </div>
@@ -1256,13 +1466,15 @@
                     <div class="bf-row">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-scope">Scope of creative services needed *</label>
-                            <textarea class="bf-input bf-textarea" id="pf-scope" name="scope_of_work" required placeholder="What creative services are you looking to subcontract or partner on? Website, brand, content, video, social, AI systems — describe the project or ongoing need."></textarea>
+                            <textarea class="bf-input bf-textarea" id="pf-scope" name="scope_of_work" required
+                                placeholder="What creative services are you looking to subcontract or partner on? Website, brand, content, video, social, AI systems — describe the project or ongoing need."></textarea>
                         </div>
                     </div>
                     <div class="bf-row bf-2col">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-pop">Period of Performance / Timeline</label>
-                            <input class="bf-input" type="text" id="pf-pop" name="period_of_performance" placeholder="e.g. 12-month base + 2 options, or Q3 2026">
+                            <input class="bf-input" type="text" id="pf-pop" name="period_of_performance"
+                                placeholder="e.g. 12-month base + 2 options, or Q3 2026">
                         </div>
                         <div class="bf-field">
                             <label class="bf-label" for="pf-value">Estimated Contract Value / Budget</label>
@@ -1280,7 +1492,9 @@
                     <div class="bf-row">
                         <div class="bf-field">
                             <label class="bf-label" for="pf-org">Tell us about your organization *</label>
-                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="pf-org" name="org_description" required placeholder="Who are you, what do you do, and why are you looking for a certified creative partner?"></textarea>
+                            <textarea class="bf-input bf-textarea bf-textarea-sm" id="pf-org" name="org_description"
+                                required
+                                placeholder="Who are you, what do you do, and why are you looking for a certified creative partner?"></textarea>
                         </div>
                     </div>
                     <div class="bf-row">
@@ -1303,7 +1517,8 @@
 
                 <div class="bf-submit-row">
                     <button type="submit" class="btn-pk bf-submit">Submit Partnership Inquiry →</button>
-                    <p class="bf-submit-note">We take every partnership inquiry seriously. Expect a response within one business day.</p>
+                    <p class="bf-submit-note">We take every partnership inquiry seriously. Expect a response within one
+                        business day.</p>
                 </div>
 
                 <!-- Self-destruct confirmation -->
@@ -1311,7 +1526,8 @@
                     <div class="sd-inner">
                         <span class="barlow-tag sd-tag">Transmission Received</span>
                         <h3 class="sd-hed">Brief Logged.</h3>
-                        <p class="sd-body">Your partnership inquiry is in the right hands. We'll review it personally and be in touch within <strong>one business day</strong>.</p>
+                        <p class="sd-body">Your partnership inquiry is in the right hands. We'll review it personally
+                            and be in touch within <strong>one business day</strong>.</p>
                         <div class="sd-countdown-wrap">
                             <span class="sd-destruct-label">This message will self-destruct in</span>
                             <span class="sd-countdown">5</span>
@@ -1322,15 +1538,70 @@
         </div>
     </section>
 
+    <!-- ══ NEWSLETTER + EVENTS ══ -->
+    <section class="signup-sec" id="community">
+        <div class="signup-hdr rv">
+            <span class="script-tag">Join the Inner Circle</span>
+            <h2 class="section-hed rv d1">Stay<br><em>Connected.</em></h2>
+        </div>
+        <div class="signup-grid">
+            <!-- Newsletter -->
+            <div class="signup-card rv">
+                <div class="signup-card-icon">✦</div>
+                <h3 class="signup-card-title">The Agency Newsletter</h3>
+                <p class="signup-card-desc">Brand tips, creative process, hot takes, and exclusive announcements. No
+                    spam, ever. Just the good stuff from Bakersfield's most opinionated studio.</p>
+                <form class="signup-form" action="https://formspree.io/f/mbdawrqy" method="POST">
+                    <input type="hidden" name="_subject" value="✦ Newsletter Signup — The Agency">
+                    <input type="hidden" name="form_type" value="newsletter">
+                    <div class="signup-form-row">
+                        <input type="email" name="email" required placeholder="your@email.com" class="signup-input">
+                        <button type="submit" class="signup-btn">Subscribe →</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Murder Mystery Mingles -->
+            <div class="signup-card signup-card-dark rv d1">
+                <div class="signup-card-badge">Coming Soon</div>
+                <h3 class="signup-card-title">Murder Mystery Mingles</h3>
+                <p class="signup-card-desc">Immersive murder mystery networking events for Kern County creatives and
+                    entrepreneurs. Think Clue meets cocktail hour. Sign up to get first access.</p>
+                <form class="signup-form" action="https://formspree.io/f/mbdawrqy" method="POST">
+                    <input type="hidden" name="_subject" value="✦ Murder Mystery Mingles Interest — The Agency">
+                    <input type="hidden" name="form_type" value="murder_mystery_mingles">
+                    <div class="signup-form-row">
+                        <input type="email" name="email" required placeholder="your@email.com" class="signup-input">
+                        <button type="submit" class="signup-btn signup-btn-lav">Notify Me →</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Coffee Cowork Club -->
+            <div class="signup-card signup-card-warm rv d2">
+                <div class="signup-card-badge">Coming Soon</div>
+                <h3 class="signup-card-title">Coffee + Cowork Club</h3>
+                <p class="signup-card-desc">Casual coworking sessions at local Kern County coffee shops. Show up, plug
+                    in, connect with other founders and freelancers. No pressure, just vibes.</p>
+                <form class="signup-form" action="https://formspree.io/f/mbdawrqy" method="POST">
+                    <input type="hidden" name="_subject" value="✦ Coffee Cowork Club Interest — The Agency">
+                    <input type="hidden" name="form_type" value="coffee_cowork_club">
+                    <div class="signup-form-row">
+                        <input type="email" name="email" required placeholder="your@email.com" class="signup-input">
+                        <button type="submit" class="signup-btn signup-btn-lime">Notify Me →</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- ══ FOOTER ══ -->
     <footer class="footer">
         <div class="foot-logo">The <span>Agency</span></div>
         <p class="foot-copy">© 2006–2026 The Visual Agency Inc. · Female Disabled Veteran-Owned · Kern County + LA ·
             All Rights Reserved</p>
         <ul class="foot-links">
-            <li><a href="https://www.instagram.com/meettheagency/" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="https://www.instagram.com/meet_the_agency/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.threads.net/@meet_the_agency" target="_blank" rel="noopener">Threads</a></li>
+            <li><a href="https://www.facebook.com/meettheagencyllc" target="_blank" rel="noopener">Facebook</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </footer>

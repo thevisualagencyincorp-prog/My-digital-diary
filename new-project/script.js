@@ -73,7 +73,7 @@ if (statsBand) {
             // Count-up for each stat number
             [
                 { selector: '.stat:nth-child(1) .stat-n', target: 19, suffix: '+' },
-                { selector: '.stat:nth-child(2) .stat-n', target: 3,  suffix: '' },
+                { selector: '.stat:nth-child(2) .stat-n', target: 3, suffix: '' },
                 { selector: '.stat:nth-child(4) .stat-n', target: 100, suffix: '%' },
             ].forEach(({ selector, target, suffix }) => {
                 const el = document.querySelector(selector);
@@ -152,7 +152,7 @@ function submitQuiz() {
 window.selectOpt = selectOpt;
 window.submitQuiz = submitQuiz;
 
-// ══ INSTAGRAM FEED (curated — swap for live API when ready) ══
+// ══ INSTAGRAM FEED (auto-sliding carousel) ══
 (function buildIGFeed() {
     const feed = document.getElementById('ig-feed');
     if (!feed) return;
@@ -168,12 +168,12 @@ window.submitQuiz = submitQuiz;
         { src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=320&h=320&fit=crop', alt: 'Coding session' },
     ];
 
-    photos.forEach(p => {
+    function createSlide(p) {
         const a = document.createElement('a');
-        a.href = 'https://www.instagram.com/meettheagency/';
+        a.href = 'https://www.instagram.com/meet_the_agency/';
         a.target = '_blank';
         a.rel = 'noopener';
-        a.style.cssText = 'display:block;aspect-ratio:1;overflow:hidden;position:relative;';
+        a.style.cssText = 'display:block;width:220px;height:220px;flex-shrink:0;overflow:hidden;position:relative;border-radius:10px;';
 
         const img = document.createElement('img');
         img.src = p.src;
@@ -183,16 +183,20 @@ window.submitQuiz = submitQuiz;
         a.appendChild(img);
 
         const ov = document.createElement('div');
-        ov.style.cssText = 'position:absolute;inset:0;background:rgba(252,24,91,.75);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;';
+        ov.style.cssText = 'position:absolute;inset:0;background:rgba(252,24,91,.75);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;border-radius:10px;';
         ov.innerHTML = '<span style="font-family:\'Barlow Condensed\',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;">View on IG →</span>';
         a.appendChild(ov);
 
         a.addEventListener('mouseenter', () => { img.style.transform = 'scale(1.06)'; ov.style.opacity = '1'; });
         a.addEventListener('mouseleave', () => { img.style.transform = 'scale(1)'; ov.style.opacity = '0'; });
 
-        feed.appendChild(a);
-    });
+        return a;
+    }
+
+    // Build slides (duplicate for infinite scroll)
+    [...photos, ...photos].forEach(p => feed.appendChild(createSlide(p)));
 })();
+
 
 // ══ SELF-DESTRUCT FORM SUBMISSION ══
 function runSelfDestruct(overlay, form, btn, origText) {
@@ -274,3 +278,157 @@ function initBriefForm(formEl) {
 document.querySelectorAll('.brief-form').forEach(initBriefForm);
 
 console.log('✦ THE AGENCY: System Online.');
+
+// ══ CURSOR-FOLLOWING GLOW ══
+const cursorGlow = document.getElementById('cursor-glow');
+const heroSection = document.querySelector('.hero');
+if (cursorGlow && heroSection) {
+    let glowActive = false;
+    let mouseX = 0, mouseY = 0;
+    let glowX = 0, glowY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Only show glow when near the hero section
+        const heroRect = heroSection.getBoundingClientRect();
+        const inHero = e.clientY < heroRect.bottom + 200;
+        if (inHero && !glowActive) {
+            glowActive = true;
+            cursorGlow.style.opacity = '1';
+        } else if (!inHero && glowActive) {
+            glowActive = false;
+            cursorGlow.style.opacity = '0';
+        }
+    });
+
+    // Smooth follow with requestAnimationFrame
+    function updateGlow() {
+        glowX += (mouseX - glowX) * 0.08;
+        glowY += (mouseY - glowY) * 0.08;
+        cursorGlow.style.left = glowX + 'px';
+        cursorGlow.style.top = glowY + 'px';
+        requestAnimationFrame(updateGlow);
+    }
+    requestAnimationFrame(updateGlow);
+}
+
+// ══ PARALLAX ON SCROLL ══
+const heroMedia = document.querySelector('.hero-media img');
+const founderOvals = document.querySelectorAll('.founder-oval');
+const aboutBlob = document.querySelector('.about-blob');
+
+function updateParallax() {
+    const scrollY = window.scrollY;
+
+    // Hero image parallax (subtle)
+    if (heroMedia) {
+        const heroRect = heroMedia.closest('.hero').getBoundingClientRect();
+        if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) {
+            const progress = -heroRect.top / window.innerHeight;
+            heroMedia.style.transform = `translateY(${progress * 40}px) scale(1.05)`;
+        }
+    }
+
+    // About blob parallax
+    if (aboutBlob) {
+        const aboutRect = aboutBlob.getBoundingClientRect();
+        if (aboutRect.bottom > 0 && aboutRect.top < window.innerHeight) {
+            const progress = (aboutRect.top - window.innerHeight) / (window.innerHeight * 2);
+            aboutBlob.style.transform = `translateY(${progress * -30}px)`;
+        }
+    }
+
+    // Founder ovals parallax (slight float)
+    founderOvals.forEach((oval, i) => {
+        const rect = oval.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            const progress = (rect.top - window.innerHeight * 0.5) / window.innerHeight;
+            const dir = i % 2 === 0 ? 1 : -1;
+            oval.style.transform = `translateY(${progress * 20 * dir}px) rotate(${dir * -1.4}deg)`;
+        }
+    });
+
+    requestAnimationFrame(updateParallax);
+}
+requestAnimationFrame(updateParallax);
+
+// ══ GALLERY CARD STAGGERED ENTRANCE ══
+const galleryCards = document.querySelectorAll('.gallery-card');
+if (galleryCards.length) {
+    const galleryObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('on');
+                galleryObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    galleryCards.forEach(card => galleryObs.observe(card));
+}
+
+// ══ SECTION HEADING UNDERLINE REVEAL ══
+const sectionHeds = document.querySelectorAll('.section-hed');
+if (sectionHeds.length) {
+    const hedObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('on');
+                hedObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    sectionHeds.forEach(hed => hedObs.observe(hed));
+}
+
+// ══ IMAGE REVEAL ON SCROLL ══
+const imgReveals = document.querySelectorAll('.img-reveal');
+if (imgReveals.length) {
+    const imgObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('on');
+                imgObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    imgReveals.forEach(el => imgObs.observe(el));
+}
+
+// ══ MAGNETIC BUTTON HOVER ══
+document.querySelectorAll('.btn-pk, .btn-lime, .btn-outline').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+    });
+});
+
+// ══ TILT EFFECT ON SERVICE CARDS ══
+document.querySelectorAll('.svc-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-7px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+    });
+});
+
+// ══ SMOOTH NAV LINK SCROLL ══
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
