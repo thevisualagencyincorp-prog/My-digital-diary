@@ -70,18 +70,18 @@ if (statsBand) {
     const statsObs = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
             statsBand.classList.add('on-view');
-            // Count-up for each stat number
-            [
-                { selector: '.stat:nth-child(1) .stat-n', target: 19, suffix: '+' },
-                { selector: '.stat:nth-child(2) .stat-n', target: 3, suffix: '' },
-                { selector: '.stat:nth-child(4) .stat-n', target: 100, suffix: '%' },
-            ].forEach(({ selector, target, suffix }) => {
-                const el = document.querySelector(selector);
-                if (el) animateCount(el, target, suffix);
-            });
-            // Handle "2×" manually
-            const twoX = document.querySelector('.stat:nth-child(3) .stat-n');
-            if (twoX) setTimeout(() => { twoX.textContent = '2×'; }, 600);
+            // Stat 1: 100+ Brands Launched
+            const s1 = document.querySelector('.stat:nth-child(1) .stat-n');
+            if (s1) animateCount(s1, 100, '+');
+            // Stat 2: 400% Organic Traffic Lift
+            const s2 = document.querySelector('.stat:nth-child(2) .stat-n');
+            if (s2) animateCount(s2, 400, '%');
+            // Stat 3: 5K+ Monthly Leads — display as 5K+
+            const s3 = document.querySelector('.stat:nth-child(3) .stat-n');
+            if (s3) setTimeout(() => { s3.innerHTML = '5K<sup>+</sup>'; }, 200);
+            // Stat 4: 19+ Years in Business
+            const s4 = document.querySelector('.stat:nth-child(4) .stat-n');
+            if (s4) animateCount(s4, 19, '+');
             statsObs.disconnect();
         }
     }, { threshold: 0.3 });
@@ -158,14 +158,14 @@ window.submitQuiz = submitQuiz;
     if (!feed) return;
 
     const photos = [
-        { src: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=320&h=320&fit=crop', alt: 'Brand design session' },
-        { src: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=320&h=320&fit=crop', alt: 'Photography setup' },
-        { src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=320&fit=crop', alt: 'Website analytics' },
-        { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=320&h=320&fit=crop', alt: 'Team collaboration' },
+        { src: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=320&h=320&fit=crop', alt: 'Brand identity design' },
+        { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=320&h=320&fit=crop&crop=faces', alt: 'Creative director at work' },
+        { src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=320&h=320&fit=crop&crop=faces', alt: 'Strategy session' },
+        { src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=320&h=320&fit=crop&crop=top', alt: 'Behind the scenes' },
         { src: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=320&h=320&fit=crop', alt: 'Color palette creation' },
+        { src: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=320&h=320&fit=crop', alt: 'Social media content' },
+        { src: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=320&h=320&fit=crop', alt: 'Brand photography shoot' },
         { src: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=320&h=320&fit=crop', alt: 'Web design in progress' },
-        { src: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=320&h=320&fit=crop', alt: 'Video editing' },
-        { src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=320&h=320&fit=crop', alt: 'Coding session' },
     ];
 
     function createSlide(p) {
@@ -294,6 +294,55 @@ if (backToTopBtn) {
 }
 
 console.log('✦ THE AGENCY: System Online.');
+
+// ══ FOMO SOCIAL PROOF TOAST ══
+(function fomoPulse() {
+    if (sessionStorage.getItem('fomo_shown')) return;
+    const signals = [
+        'A salon owner in Bakersfield just applied.',
+        'A real estate team in Kern County just claimed a spot.',
+        'A wellness brand in Tehachapi just submitted a brief.',
+        'A boutique owner in Bakersfield just applied.',
+        'A law firm in Los Angeles just reached out.',
+        'A restaurant brand in Kern County just submitted.',
+        'A creative studio in Bakersfield just claimed a spot.',
+        'A gov contractor in California just sent a brief.',
+    ];
+    const spotsLeft = 2;
+    setTimeout(() => {
+        const msg = signals[Math.floor(Math.random() * signals.length)];
+        const toast = document.createElement('div');
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+        toast.style.cssText = [
+            'position:fixed', 'bottom:28px', 'left:24px', 'z-index:9997',
+            'background:#111111', 'color:#ffffff', 'padding:16px 20px',
+            'border-left:3px solid #FC185B', 'border-radius:6px',
+            'font-family:\'Barlow Condensed\',sans-serif',
+            'max-width:300px', 'box-shadow:0 10px 40px rgba(0,0,0,.4)',
+            'opacity:0', 'transform:translateY(14px)',
+            'transition:opacity .45s ease,transform .45s ease',
+            'cursor:default', 'user-select:none'
+        ].join(';');
+        toast.innerHTML =
+            '<div style="font-size:10px;letter-spacing:.16em;color:#FC185B;margin-bottom:6px;font-weight:700;">LIVE · KERN COUNTY</div>' +
+            '<div style="font-size:13px;letter-spacing:.04em;line-height:1.5;">' + msg + '</div>' +
+            '<div style="font-size:10px;letter-spacing:.12em;color:#EEFF60;margin-top:8px;font-weight:700;">' + spotsLeft + ' SPOTS REMAINING THIS QUARTER</div>';
+        document.body.appendChild(toast);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+        }));
+        const dismiss = () => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(14px)';
+            setTimeout(() => toast.remove(), 450);
+        };
+        toast.addEventListener('click', dismiss);
+        setTimeout(dismiss, 7000);
+        sessionStorage.setItem('fomo_shown', '1');
+    }, 14000);
+})();
 
 // ══ CURSOR-FOLLOWING GLOW ══
 const cursorGlow = document.getElementById('cursor-glow');
