@@ -3,456 +3,869 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Agency — Bakersfield's premier branding & marketing studio. Female disabled veteran-owned. Something big is coming.">
-  <meta name="robots" content="noindex, nofollow">
-  <title>The Agency — Coming Soon</title>
+
+  <!-- SEO Core -->
+  <title>The Agency — Branding & Marketing Studio | Bakersfield, CA | Coming Soon</title>
+  <meta name="description" content="The Agency is Bakersfield's elite branding, web design, AI marketing & commercial photography studio. Female disabled veteran-owned. Something extraordinary is coming — get early access.">
+  <meta name="keywords" content="branding agency Bakersfield, marketing agency Bakersfield CA, web design Bakersfield, logo design Kern County, AI marketing California, brand strategy consultant Bakersfield, female veteran owned business California, SDVOSB creative agency, commercial photography Bakersfield, SEO agency Kern County">
+  <meta name="author" content="The Agency Studio">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#FC185B">
+  <meta name="geo.region" content="US-CA">
+  <meta name="geo.placename" content="Bakersfield, California">
+  <meta name="geo.position" content="35.1298;-118.4490">
+  <meta name="ICBM" content="35.1298, -118.4490">
+  <link rel="canonical" href="https://meettheagency.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Agency — Bakersfield's #1 Branding & AI Marketing Studio">
+  <meta property="og:description" content="Elite brand strategy, web design, AI marketing, SEO & commercial photography for Kern County businesses. Female disabled veteran-owned. Coming soon.">
+  <meta property="og:url" content="https://meettheagency.com/">
+  <meta property="og:image" content="https://meettheagency.com/images/social_ad.png">
+  <meta property="og:site_name" content="The Agency">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Agency — Bakersfield's Elite Branding Studio">
+  <meta name="twitter:description" content="Brand strategy, web design, AI marketing & commercial photography. Female disabled veteran-owned in Bakersfield, CA. Coming soon.">
+  <meta name="twitter:image" content="https://meettheagency.com/images/social_ad.png">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "The Agency",
+    "url": "https://meettheagency.com/",
+    "logo": "https://meettheagency.com/images/social_ad.png",
+    "image": "https://meettheagency.com/images/ash_and_brittany_portrait.jpg",
+    "description": "Bakersfield's premier branding and marketing agency. Elite brand strategy, web design, AI content, SEO, commercial photography and video production. Female disabled veteran-owned.",
+    "telephone": "(323)388-5657",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bakersfield",
+      "addressRegion": "CA",
+      "postalCode": "93301",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Kern County","Bakersfield","Tehachapi","Los Angeles","California"],
+    "priceRange": "$$$$",
+    "founder": [
+      {"@type":"Person","name":"Ash","jobTitle":"Co-Founder & Creative Director"},
+      {"@type":"Person","name":"Brittany","jobTitle":"Co-Founder & Strategy Director"}
+    ],
+    "slogan": "Your Business Besties. Absolute Dominance.",
+    "foundingDate": "2006",
+    "hasCredential": ["SDVOSB","WOSB","Disabled Veteran Business Enterprise"],
+    "knowsAbout": ["Brand Identity","Web Design","AI Marketing","SEO","GEO","Commercial Photography","Video Production","Social Media Strategy"],
+    "sameAs": ["https://www.instagram.com/meettheagency/"]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ─── Reset ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
 
+    /* ─── Tokens ─────────────────────────────────────── */
     :root {
-      --pink: #FF00FF;
-      --hot-pink: #FC185B;
-      --lime: #00FF00;
-      --navy: #0A0A2A;
-      --cream: #F8F8F0;
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-sans: 'Space Grotesk', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --pink:     #FF00FF;
+      --hot:      #FC185B;
+      --lime:     #00FF00;
+      --navy:     #06071A;
+      --navy-mid: #0D0F2B;
+      --cream:    #F5F0E8;
+      --muted:    rgba(245,240,232,0.55);
+      --serif:    'Playfair Display', Georgia, serif;
+      --sans:     'Space Grotesk', system-ui, sans-serif;
+      --mono:     'JetBrains Mono', monospace;
     }
 
-    html, body {
-      height: 100%;
+    /* ─── Base ───────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    body {
       background: var(--navy);
       color: var(--cream);
-      font-family: var(--font-sans);
+      font-family: var(--sans);
       overflow-x: hidden;
+      min-height: 100dvh;
     }
 
-    /* ── Starfield ── */
-    .stars {
-      position: fixed;
-      inset: 0;
+    /* ─── Noise overlay ──────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.6;
+    }
+    /* Scanlines */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px, transparent 3px,
+        rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ─── Background blobs ───────────────────────────── */
+    .bg-blobs {
+      position: fixed; inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      mix-blend-mode: screen;
+      will-change: transform;
+    }
+    .blob-1 {
+      width: 600px; height: 600px;
+      top: -200px; left: -150px;
+      background: radial-gradient(circle, rgba(252,24,91,0.18) 0%, transparent 70%);
+      animation: drift1 18s ease-in-out infinite;
+    }
+    .blob-2 {
+      width: 500px; height: 500px;
+      bottom: -100px; right: -100px;
+      background: radial-gradient(circle, rgba(255,0,255,0.15) 0%, transparent 70%);
+      animation: drift2 22s ease-in-out infinite;
+    }
+    .blob-3 {
+      width: 400px; height: 400px;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      background: radial-gradient(circle, rgba(0,255,0,0.06) 0%, transparent 70%);
+      animation: drift3 26s ease-in-out infinite;
+    }
+    @keyframes drift1 {
+      0%,100% { transform: translate(0,0) scale(1); }
+      33%     { transform: translate(60px,-40px) scale(1.08); }
+      66%     { transform: translate(-30px,50px) scale(0.94); }
+    }
+    @keyframes drift2 {
+      0%,100% { transform: translate(0,0) scale(1); }
+      40%     { transform: translate(-70px,30px) scale(1.1); }
+      70%     { transform: translate(40px,-60px) scale(0.9); }
+    }
+    @keyframes drift3 {
+      0%,100% { transform: translate(-50%,-50%) scale(1); }
+      50%     { transform: translate(-50%,-50%) scale(1.3); }
+    }
+
+    /* ─── Stars canvas ───────────────────────────────── */
+    #stars-canvas {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
       pointer-events: none;
       z-index: 0;
     }
-    .star {
-      position: absolute;
+
+    /* ─── Cursor glow ────────────────────────────────── */
+    #cursor-glow {
+      position: fixed;
+      width: 400px; height: 400px;
       border-radius: 50%;
-      background: white;
-      animation: twinkle var(--d, 3s) ease-in-out infinite;
+      background: radial-gradient(circle, rgba(252,24,91,0.12) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 2;
+      transform: translate(-50%,-50%);
+      transition: opacity 0.3s;
       opacity: 0;
     }
-    @keyframes twinkle {
-      0%, 100% { opacity: 0; transform: scale(0.5); }
-      50%       { opacity: var(--o, 0.8); transform: scale(1); }
-    }
 
-    /* ── Scanlines overlay ── */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        transparent 0px,
-        transparent 3px,
-        rgba(0,0,0,0.08) 3px,
-        rgba(0,0,0,0.08) 4px
-      );
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    /* ── Layout ── */
+    /* ─── Page wrapper ───────────────────────────────── */
     .page {
       position: relative;
-      z-index: 1;
+      z-index: 3;
       min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 24px;
-      gap: 0;
+      padding-bottom: 42px; /* ticker height */
     }
 
-    /* ── Masthead bar ── */
+    /* ─── Masthead ───────────────────────────────────── */
     .masthead {
-      width: 100%;
-      max-width: 720px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid var(--pink);
-      padding-bottom: 10px;
-      margin-bottom: 32px;
-    }
-    .masthead-tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      color: var(--pink);
-      text-transform: uppercase;
-    }
-    .masthead-date {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.4);
-    }
-
-    /* ── Magazine header ── */
-    .mag-header {
-      width: 100%;
-      max-width: 720px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .kicker {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      color: var(--lime);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      border: 1px solid var(--lime);
-      padding: 4px 12px;
-    }
-    .logo {
-      font-family: var(--font-serif);
-      font-size: clamp(64px, 16vw, 120px);
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #fff 30%, var(--pink) 70%, var(--lime) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .tagline {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(16px, 3vw, 22px);
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 0;
-    }
-
-    /* ── Divider ── */
-    .divider {
-      width: 100%;
-      max-width: 720px;
-      display: flex;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding: 12px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
       gap: 16px;
-      margin: 32px 0;
+      animation: fade-down 0.8s ease both;
     }
-    .divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.15); }
-    .divider-diamond {
-      width: 8px;
-      height: 8px;
-      background: var(--hot-pink);
-      transform: rotate(45deg);
-      flex-shrink: 0;
+    .mh-left, .mh-right {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
     }
-
-    /* ── Body copy ── */
-    .body-copy {
-      width: 100%;
-      max-width: 480px;
-      text-align: center;
-      font-size: 16px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 40px;
-    }
-    .body-copy strong {
-      color: var(--cream);
-      font-weight: 700;
-    }
-
-    /* ── Email form ── */
-    .form-block {
-      width: 100%;
-      max-width: 440px;
-      margin-bottom: 48px;
-    }
-    .form-label {
-      display: block;
-      font-family: var(--font-mono);
+    .mh-right { text-align: right; }
+    .mh-center {
+      font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 0.18em;
       color: var(--pink);
       text-transform: uppercase;
-      margin-bottom: 10px;
       text-align: center;
+      white-space: nowrap;
+    }
+    /* horizontal rule stripes inside masthead */
+    .mh-left::before  { content: ''; display: block; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.15)); margin-bottom: 6px; }
+    .mh-right::after  { content: ''; display: block; height: 1px; background: linear-gradient(to left,  transparent, rgba(255,255,255,0.15)); margin-top: 6px; }
+
+    /* ─── Hero split ─────────────────────────────────── */
+    .hero {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    /* LEFT */
+    .hero-left {
+      padding: 60px 56px 60px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--lime);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: fade-up 0.9s 0.2s ease both;
+    }
+    .kicker::before {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 1px;
+      background: var(--lime);
+    }
+
+    /* Glitch headline */
+    .headline {
+      font-family: var(--serif);
+      font-weight: 900;
+      line-height: 0.88;
+      letter-spacing: -0.025em;
+      margin-bottom: 28px;
+      animation: fade-up 0.9s 0.35s ease both;
+    }
+    .headline-the {
+      display: block;
+      font-size: clamp(48px, 8vw, 88px);
+      font-style: italic;
+      color: var(--cream);
+      opacity: 0.7;
+    }
+    .headline-agency {
+      display: block;
+      font-size: clamp(72px, 12vw, 136px);
+      background: linear-gradient(135deg, #fff 0%, var(--hot) 55%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fade-up 0.9s 0.35s ease both, glitch 8s 2s ease-in-out infinite;
+      position: relative;
+    }
+
+    @keyframes glitch {
+      0%,85%,100% {
+        text-shadow: none;
+        filter: none;
+      }
+      86% {
+        text-shadow: -4px 0 rgba(255,0,255,0.7), 4px 0 rgba(0,255,0,0.5);
+        filter: blur(0.5px);
+        transform: skewX(-1.5deg);
+      }
+      88% {
+        text-shadow: 4px 0 rgba(255,0,255,0.7), -4px 0 rgba(0,255,0,0.5);
+        filter: none;
+        transform: skewX(1deg);
+      }
+      90% {
+        text-shadow: -2px 0 rgba(255,0,255,0.4);
+        transform: none;
+      }
+      91% { text-shadow: none; }
+    }
+
+    .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(17px, 2.2vw, 24px);
+      color: rgba(255,255,255,0.5);
+      line-height: 1.45;
+      margin-bottom: 32px;
+      animation: fade-up 0.9s 0.5s ease both;
+    }
+
+    /* Editorial rule */
+    .e-rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      animation: fade-up 0.9s 0.6s ease both;
+    }
+    .e-rule-line { flex: 0 0 40px; height: 2px; background: var(--hot); }
+    .e-rule-text {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+    .e-rule-dot { width: 5px; height: 5px; background: var(--pink); transform: rotate(45deg); flex-shrink: 0; }
+
+    .body-copy {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 400px;
+      margin-bottom: 36px;
+      animation: fade-up 0.9s 0.7s ease both;
+    }
+    .body-copy strong { color: var(--cream); font-weight: 600; }
+
+    /* ─── Form ───────────────────────────────────────── */
+    .form-block {
+      max-width: 420px;
+      animation: fade-up 0.9s 0.85s ease both;
+    }
+    .form-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--pink);
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
     .form-row {
       display: flex;
-      gap: 0;
-      border: 2px solid var(--pink);
+      border: 1.5px solid rgba(255,0,255,0.6);
       background: rgba(255,0,255,0.04);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
     .form-row:focus-within {
-      box-shadow: 0 0 0 3px rgba(255,0,255,0.25);
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255,0,255,0.18), 0 0 20px rgba(255,0,255,0.1);
     }
     .form-input {
       flex: 1;
       background: transparent;
       border: none;
       outline: none;
-      padding: 14px 18px;
-      font-family: var(--font-sans);
+      padding: 15px 18px;
+      font-family: var(--sans);
       font-size: 15px;
       color: var(--cream);
       min-width: 0;
     }
-    .form-input::placeholder { color: rgba(255,255,255,0.3); }
+    .form-input::placeholder { color: rgba(255,255,255,0.25); }
     .form-btn {
       flex-shrink: 0;
-      background: var(--hot-pink);
+      background: var(--hot);
       border: none;
-      border-left: 2px solid var(--pink);
-      color: white;
-      font-family: var(--font-mono);
+      border-left: 1.5px solid rgba(255,0,255,0.6);
+      color: #fff;
+      font-family: var(--mono);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding: 14px 20px;
+      padding: 15px 22px;
       cursor: pointer;
-      transition: background 0.15s, color 0.15s;
+      transition: background 0.2s, letter-spacing 0.2s;
     }
-    .form-btn:hover { background: var(--pink); color: var(--navy); }
-    .form-btn:active { transform: scale(0.97); }
+    .form-btn:hover { background: var(--pink); color: var(--navy); letter-spacing: 0.2em; }
     .form-note {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
+      font-family: var(--mono);
+      font-size: 9px;
+      color: rgba(255,255,255,0.25);
       margin-top: 10px;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
-
-    /* ── Success state ── */
     .form-success {
       display: none;
-      text-align: center;
-      padding: 20px;
+      padding: 16px 20px;
       border: 1px solid var(--lime);
       color: var(--lime);
-      font-family: var(--font-mono);
-      font-size: 13px;
-      letter-spacing: 0.08em;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-align: center;
     }
     .form-success.show { display: block; }
     .form-row.hide { display: none; }
 
-    /* ── Footer pills ── */
-    .footer-pills {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .pill {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.4);
-      white-space: nowrap;
-    }
-    .pill.accent {
-      border-color: var(--hot-pink);
-      color: var(--hot-pink);
+    /* RIGHT */
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy-mid);
     }
 
-    /* ── Ticker ── */
+    .photo-wrap {
+      position: absolute;
+      inset: 0;
+    }
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      opacity: 0;
+      animation: photo-reveal 1.4s 0.6s cubic-bezier(0.22,1,0.36,1) both;
+      filter: saturate(0.85) contrast(1.05);
+    }
+    @keyframes photo-reveal {
+      from { opacity: 0; transform: scale(1.06); clip-path: inset(0 100% 0 0); }
+      to   { opacity: 1; transform: scale(1);    clip-path: inset(0 0% 0 0); }
+    }
+
+    /* Gradient overlay on photo */
+    .photo-wrap::after {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to right, var(--navy-mid) 0%, transparent 30%),
+        linear-gradient(to top,   var(--navy) 0%, transparent 40%);
+    }
+
+    /* Editorial annotations on photo */
+    .photo-annotations {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .annotation {
+      position: absolute;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fade-in 0.8s ease both;
+    }
+    .ann-top-right {
+      top: 24px; right: 20px;
+      color: rgba(255,255,255,0.5);
+      text-align: right;
+      animation-delay: 1.2s;
+    }
+    .ann-bottom-left {
+      bottom: 24px; left: 20px;
+      color: var(--hot);
+      animation-delay: 1.4s;
+    }
+    .ann-stamp {
+      bottom: 24px; right: 20px;
+      border: 1px solid rgba(255,0,255,0.5);
+      color: var(--pink);
+      padding: 4px 10px;
+      font-size: 8px;
+      animation-delay: 1.6s;
+    }
+
+    /* Vertical text on right edge */
+    .photo-vol {
+      position: absolute;
+      top: 50%; right: 20px;
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: center;
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.2);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 2;
+      opacity: 0;
+      animation: fade-in 0.8s 1.8s ease both;
+    }
+
+    /* ─── Services strip ─────────────────────────────── */
+    .services-strip {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 56px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      animation: fade-up 0.9s 1.1s ease both;
+    }
+    .strip-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.25);
+      text-transform: uppercase;
+      padding-right: 24px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      margin-right: 24px;
+      white-space: nowrap;
+    }
+    .services-list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+    .service-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 13px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.45);
+      white-space: nowrap;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      cursor: default;
+    }
+    .service-tag:hover       { border-color: var(--hot); color: var(--hot); }
+    .service-tag.accent      { border-color: rgba(252,24,91,0.5); color: var(--hot); }
+    .service-tag.accent-lime { border-color: rgba(0,255,0,0.4); color: var(--lime); }
+
+    /* ─── Ticker ─────────────────────────────────────── */
     .ticker-wrap {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 32px;
-      background: var(--hot-pink);
+      bottom: 0; left: 0; right: 0;
+      height: 42px;
+      background: var(--hot);
       overflow: hidden;
-      z-index: 10;
+      z-index: 100;
     }
     .ticker-track {
       display: flex;
       align-items: center;
       height: 100%;
-      animation: ticker 30s linear infinite;
+      animation: ticker 35s linear infinite;
       white-space: nowrap;
+      will-change: transform;
     }
     .ticker-item {
-      font-family: var(--font-mono);
+      font-family: var(--mono);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: white;
-      padding: 0 32px;
+      color: rgba(255,255,255,0.9);
+      padding: 0 28px;
     }
-    .ticker-item::after { content: ' ✦ '; }
+    .ticker-item .sep { color: rgba(255,255,255,0.4); margin-left: 28px; }
     @keyframes ticker {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 480px) {
-      .form-row { flex-direction: column; }
-      .form-btn { border-left: none; border-top: 2px solid var(--pink); padding: 12px; }
-      .footer-pills { gap: 8px; }
+    /* ─── Keyframe utilities ─────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-down {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
 
+    /* ─── Responsive ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; grid-template-rows: auto 380px; }
+      .hero-left {
+        padding: 48px 32px 40px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .hero-right { min-height: 380px; }
+      .masthead { padding: 12px 24px; grid-template-columns: 1fr 1fr; }
+      .mh-center { display: none; }
+      .services-strip { padding: 24px 32px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-left { padding: 36px 24px 32px; }
+      .masthead { padding: 10px 20px; grid-template-columns: 1fr; gap: 4px; }
+      .mh-right { display: none; }
+      .mh-left::before { display: none; }
+      .form-row { flex-direction: column; }
+      .form-btn { border-left: none; border-top: 1.5px solid rgba(255,0,255,0.6); }
+      .services-strip { padding: 20px 24px; }
+      .hero-right { min-height: 320px; }
+    }
+
+    /* ─── Reduced motion ─────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
-      .star, .ticker-track { animation: none; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      .blob, .ticker-track { animation: none !important; }
+      .photo-wrap img { clip-path: none !important; opacity: 1 !important; transform: none !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Starfield -->
-  <div class="stars" id="stars" aria-hidden="true"></div>
+  <!-- Background -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <canvas id="stars-canvas" aria-hidden="true"></canvas>
+  <div id="cursor-glow" aria-hidden="true"></div>
 
-  <main class="page">
+  <div class="page">
 
     <!-- Masthead -->
-    <div class="masthead">
-      <span class="masthead-tag">Bakersfield, CA &nbsp;·&nbsp; Est. 2006</span>
-      <span class="masthead-date">Female · Disabled Veteran-Owned</span>
-    </div>
-
-    <!-- Logo + headline -->
-    <header class="mag-header">
-      <span class="kicker">Something big is coming</span>
-      <h1 class="logo">The Agency</h1>
-      <p class="tagline">Your Business Besties. Absolute Dominance.</p>
+    <header class="masthead" role="banner">
+      <div class="mh-left">Bakersfield &amp; Kern County, CA</div>
+      <div class="mh-center">The Agency &nbsp;·&nbsp; Vol. 01 &nbsp;·&nbsp; Est. 2006</div>
+      <div class="mh-right">meettheagency.com</div>
     </header>
 
-    <!-- Divider -->
-    <div class="divider" aria-hidden="true">
-      <div class="divider-line"></div>
-      <div class="divider-diamond"></div>
-      <div class="divider-line"></div>
-    </div>
+    <!-- Hero split -->
+    <main class="hero">
 
-    <!-- Body copy -->
-    <p class="body-copy">
-      We're rebuilding from the ground up — <strong>bolder, sharper, and more powerful than ever.</strong>
-      Drop your email below and be the first to know when we're back.
-    </p>
+      <!-- Left: text + form -->
+      <section class="hero-left" aria-label="Coming soon announcement">
+        <div class="kicker" aria-label="Status">Something extraordinary is coming</div>
 
-    <!-- Email signup -->
-    <div class="form-block">
-      <label class="form-label" for="email-input">Get early access</label>
-      <form id="signup-form" action="https://formspree.io/f/mbdawrqy" method="POST">
-        <div class="form-row" id="form-row">
-          <input
-            id="email-input"
-            class="form-input"
-            type="email"
-            name="email"
-            placeholder="your@email.com"
-            autocomplete="email"
-            required
+        <h1 class="headline">
+          <span class="headline-the">The</span>
+          <span class="headline-agency">Agency</span>
+        </h1>
+
+        <p class="tagline">Your Business Besties.<br>Absolute Dominance.</p>
+
+        <div class="e-rule" aria-hidden="true">
+          <div class="e-rule-line"></div>
+          <div class="e-rule-dot"></div>
+          <span class="e-rule-text">Bakersfield's #1 Branding Studio</span>
+        </div>
+
+        <p class="body-copy">
+          We're rebuilding from the ground up — <strong>bolder, sharper, and more powerful than ever.</strong>
+          Elite brand strategy, AI-driven marketing, web design, and commercial production for businesses
+          ready to dominate Kern County and beyond.
+        </p>
+
+        <div class="form-block">
+          <label class="form-label" for="email-input">Get early access &amp; exclusive launch offer</label>
+          <form id="signup-form" action="https://formspree.io/f/mbdawrqy" method="POST" novalidate>
+            <div class="form-row" id="form-row">
+              <input
+                id="email-input"
+                class="form-input"
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+                aria-label="Email address"
+              >
+              <input type="hidden" name="_subject" value="Coming Soon — New Signup">
+              <button type="submit" class="form-btn" aria-label="Subscribe for launch updates">Notify Me</button>
+            </div>
+            <div class="form-success" id="form-success" role="status" aria-live="polite">
+              You're on the list. We'll be in touch.
+            </div>
+            <p class="form-note">No spam. Just the good stuff. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Right: editorial photo -->
+      <aside class="hero-right" aria-label="Founders portrait" role="img">
+        <div class="photo-wrap">
+          <img
+            src="images/ash_and_brittany_portrait.jpg"
+            alt="Ash and Brittany, co-founders of The Agency branding studio in Bakersfield California"
+            width="420"
+            height="600"
+            fetchpriority="high"
           >
-          <input type="hidden" name="_subject" value="New Coming Soon Signup">
-          <button type="submit" class="form-btn">Notify Me</button>
         </div>
-        <div class="form-success" id="form-success">
-          You're on the list. We'll be in touch.
+        <div class="photo-annotations" aria-hidden="true">
+          <div class="annotation ann-top-right">
+            Ash &amp; Brittany<br>Co-Founders
+          </div>
+          <div class="annotation ann-bottom-left">
+            Female · Disabled Veteran-Owned
+          </div>
+          <div class="annotation ann-stamp">SDVOSB · WOSB</div>
         </div>
-        <p class="form-note">No spam. Just the good stuff.</p>
-      </form>
-    </div>
+        <div class="photo-vol" aria-hidden="true">The Agency Studio — Bakersfield CA — Est. 2006</div>
+      </aside>
 
-    <!-- Pills -->
-    <div class="footer-pills">
-      <span class="pill accent">Brand Strategy</span>
-      <span class="pill">Web Design</span>
-      <span class="pill">AI Marketing</span>
-      <span class="pill">Commercial Photography</span>
-      <span class="pill accent">SEO · GEO</span>
-      <span class="pill">Video Production</span>
-    </div>
+    </main>
 
-  </main>
+    <!-- Services strip -->
+    <nav class="services-strip" aria-label="Services">
+      <span class="strip-label">Services</span>
+      <ul class="services-list" role="list">
+        <li class="service-tag accent">Brand Strategy</li>
+        <li class="service-tag">Web Design</li>
+        <li class="service-tag accent-lime">AI Marketing</li>
+        <li class="service-tag">SEO &amp; GEO</li>
+        <li class="service-tag">Commercial Photography</li>
+        <li class="service-tag accent">Video Production</li>
+        <li class="service-tag">Social Media</li>
+        <li class="service-tag">App Development</li>
+      </ul>
+    </nav>
 
-  <!-- Bottom ticker -->
-  <div class="ticker-wrap" aria-hidden="true">
+  </div><!-- .page -->
+
+  <!-- Ticker -->
+  <div class="ticker-wrap" aria-hidden="true" role="presentation">
     <div class="ticker-track">
-      <span class="ticker-item">The Agency</span>
-      <span class="ticker-item">Bakersfield CA</span>
-      <span class="ticker-item">Brand Strategy</span>
-      <span class="ticker-item">Web Design</span>
-      <span class="ticker-item">AI Marketing</span>
-      <span class="ticker-item">Coming Soon</span>
-      <span class="ticker-item">The Agency</span>
-      <span class="ticker-item">Bakersfield CA</span>
-      <span class="ticker-item">Brand Strategy</span>
-      <span class="ticker-item">Web Design</span>
-      <span class="ticker-item">AI Marketing</span>
-      <span class="ticker-item">Coming Soon</span>
+      <span class="ticker-item">The Agency<span class="sep">✦</span></span>
+      <span class="ticker-item">Bakersfield, CA<span class="sep">✦</span></span>
+      <span class="ticker-item">Brand Strategy<span class="sep">✦</span></span>
+      <span class="ticker-item">Web Design<span class="sep">✦</span></span>
+      <span class="ticker-item">AI Marketing<span class="sep">✦</span></span>
+      <span class="ticker-item">Commercial Photography<span class="sep">✦</span></span>
+      <span class="ticker-item">Coming Soon<span class="sep">✦</span></span>
+      <span class="ticker-item">Kern County<span class="sep">✦</span></span>
+      <span class="ticker-item">Female Veteran-Owned<span class="sep">✦</span></span>
+      <span class="ticker-item">SDVOSB · WOSB<span class="sep">✦</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">The Agency<span class="sep">✦</span></span>
+      <span class="ticker-item">Bakersfield, CA<span class="sep">✦</span></span>
+      <span class="ticker-item">Brand Strategy<span class="sep">✦</span></span>
+      <span class="ticker-item">Web Design<span class="sep">✦</span></span>
+      <span class="ticker-item">AI Marketing<span class="sep">✦</span></span>
+      <span class="ticker-item">Commercial Photography<span class="sep">✦</span></span>
+      <span class="ticker-item">Coming Soon<span class="sep">✦</span></span>
+      <span class="ticker-item">Kern County<span class="sep">✦</span></span>
+      <span class="ticker-item">Female Veteran-Owned<span class="sep">✦</span></span>
+      <span class="ticker-item">SDVOSB · WOSB<span class="sep">✦</span></span>
     </div>
   </div>
 
   <script>
-    // Starfield
+    /* ── Starfield ──────────────────────────────────── */
     (function () {
-      var container = document.getElementById('stars');
-      var count = 120;
-      for (var i = 0; i < count; i++) {
-        var s = document.createElement('div');
-        s.className = 'star';
-        var size = Math.random() * 2.5 + 0.5;
-        s.style.cssText = [
-          'width:' + size + 'px',
-          'height:' + size + 'px',
-          'top:' + Math.random() * 100 + '%',
-          'left:' + Math.random() * 100 + '%',
-          '--d:' + (Math.random() * 4 + 2) + 's',
-          '--o:' + (Math.random() * 0.5 + 0.3),
-          'animation-delay:' + (Math.random() * 5) + 's'
-        ].join(';');
-        container.appendChild(s);
+      var canvas = document.getElementById('stars-canvas');
+      var ctx    = canvas.getContext('2d');
+      var stars  = [];
+      var W, H;
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
       }
+      resize();
+      window.addEventListener('resize', resize);
+
+      for (var i = 0; i < 160; i++) {
+        stars.push({
+          x:    Math.random(),
+          y:    Math.random(),
+          r:    Math.random() * 1.4 + 0.2,
+          o:    Math.random(),
+          speed: Math.random() * 0.008 + 0.003,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+
+      var t = 0;
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        t += 0.016;
+        for (var i = 0; i < stars.length; i++) {
+          var s = stars[i];
+          var alpha = s.o * (0.4 + 0.6 * Math.sin(t * s.speed * 60 + s.phase));
+          ctx.beginPath();
+          ctx.arc(s.x * W, s.y * H, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,' + alpha + ')';
+          ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
     })();
 
-    // Form async submit
-    var form = document.getElementById('signup-form');
-    var formRow = document.getElementById('form-row');
-    var success = document.getElementById('form-success');
+    /* ── Cursor glow ────────────────────────────────── */
+    (function () {
+      var glow = document.getElementById('cursor-glow');
+      var hasMouse = window.matchMedia('(hover: hover)').matches;
+      if (!hasMouse) return;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function (res) {
-        if (res.ok) {
-          formRow.classList.add('hide');
-          success.classList.add('show');
-        }
-      }).catch(function () {
-        // fallback: let native submit happen
-        form.submit();
+      document.addEventListener('mousemove', function (e) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top  = e.clientY + 'px';
+        glow.style.opacity = '1';
       });
-    });
+      document.addEventListener('mouseleave', function () {
+        glow.style.opacity = '0';
+      });
+    })();
+
+    /* ── Form async submit ──────────────────────────── */
+    (function () {
+      var form    = document.getElementById('signup-form');
+      var formRow = document.getElementById('form-row');
+      var success = document.getElementById('form-success');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn  = form.querySelector('.form-btn');
+        btn.textContent = '...';
+        btn.disabled = true;
+
+        fetch(form.action, {
+          method:  'POST',
+          body:    new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            formRow.classList.add('hide');
+            success.classList.add('show');
+          } else {
+            btn.textContent = 'Try Again';
+            btn.disabled = false;
+          }
+        }).catch(function () {
+          form.submit();
+        });
+      });
+    })();
   </script>
+
 </body>
 </html>
