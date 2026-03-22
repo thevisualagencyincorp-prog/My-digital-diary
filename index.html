@@ -107,7 +107,7 @@
   -->
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="images/ash_and_brittany_portrait.jpg">
+  <link rel="preload" as="image" href="images/ash_and_brittany_portrait.jpg" fetchpriority="high">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -491,7 +491,7 @@
       width: 100%; height: 100%;
       max-width: none;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center center;
       opacity: 0;
       filter: saturate(0.85) contrast(1.05);
       animation: photo-in 1.4s 0.5s cubic-bezier(0.22,1,0.36,1) both;
@@ -978,11 +978,11 @@
       </section>
 
       <!-- Right: photo -->
-      <aside class="hero-right" aria-label="Agency studio editorial photo">
+      <aside class="hero-right" aria-label="Ash and Brittany, co-founders of The Agency">
         <div class="photo-wrap">
           <img
-            src="images/ed_studio_shoot.jpg"
-            alt="The Agency branding studio — creative direction and editorial work in Bakersfield California"
+            src="images/ash_and_brittany_portrait.jpg"
+            alt="Ash and Brittany, co-founders of The Agency branding studio in Bakersfield California"
             fetchpriority="high"
           >
         </div>
