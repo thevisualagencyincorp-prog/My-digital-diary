@@ -831,7 +831,7 @@
     .reels-btn svg { flex-shrink: 0; }
     .reels-right {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
     .reel-thumb {
@@ -848,6 +848,12 @@
       transition: filter 0.3s, transform 0.4s;
     }
     .reel-thumb:hover img { filter: saturate(1.1); transform: scale(1.05); }
+    .reel-thumb iframe {
+      width: 100%; height: 100%;
+      border: 0;
+      display: block;
+      pointer-events: auto;
+    }
     .reel-thumb::after {
       content: '▶';
       position: absolute;
@@ -1130,16 +1136,19 @@
           Watch Our Reels
         </a>
       </div>
-      <div class="reels-right" aria-label="Work preview thumbnails">
-        <a class="reel-thumb" href="https://www.instagram.com/meet_the_agency/reels/" target="_blank" rel="noopener noreferrer" aria-label="View reel on Instagram">
-          <img src="images/agency_photo_2.jpg" alt="The Agency brand film preview" loading="lazy">
-        </a>
-        <a class="reel-thumb" href="https://www.instagram.com/meet_the_agency/reels/" target="_blank" rel="noopener noreferrer" aria-label="View reel on Instagram">
-          <img src="images/ed_agency_header.jpg" alt="Agency studio creative work" loading="lazy">
-        </a>
-        <a class="reel-thumb" href="https://www.instagram.com/meet_the_agency/reels/" target="_blank" rel="noopener noreferrer" aria-label="View reel on Instagram">
-          <img src="images/agency_photo_3.jpg" alt="The Agency brand shoot" loading="lazy">
-        </a>
+      <div class="reels-right" aria-label="Instagram reels from @meet_the_agency">
+        <div class="reel-thumb">
+          <iframe src="https://www.instagram.com/reel/DUMfQP1EuId/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+        </div>
+        <div class="reel-thumb">
+          <iframe src="https://www.instagram.com/reel/DVUvqYHjRBn/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+        </div>
+        <div class="reel-thumb">
+          <iframe src="https://www.instagram.com/reel/DVPmuUrEkFe/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+        </div>
+        <div class="reel-thumb">
+          <iframe src="https://www.instagram.com/reel/DVUE95Ykicr/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+        </div>
       </div>
     </section>
 
