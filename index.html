@@ -888,11 +888,12 @@
       transition: filter 0.3s, transform 0.4s;
     }
     .reel-thumb:hover img { filter: saturate(1.1); transform: scale(1.05); }
-    .reel-thumb iframe {
+    .reel-thumb video,
+    .mosaic-item video,
+    .film-frame video {
       width: 100%; height: 100%;
-      border: 0;
+      object-fit: cover;
       display: block;
-      pointer-events: auto;
     }
     .reel-thumb::after {
       content: '▶';
@@ -1105,7 +1106,9 @@
           <div class="film-frames">
             <!-- Frame 01 -->
             <div class="film-frame">
-              <img src="images/agency_photo_2.jpg" alt="The Agency behind the scenes — agency photo" loading="lazy">
+              <video autoplay muted loop playsinline aria-label="Behind the scenes — retro camcorder footage">
+                <source src="images/Retro camcorder travel Instagram video story copy.mp4" type="video/mp4">
+              </video>
               <span class="film-frame-num">01</span>
             </div>
             <!-- Main frame: founders -->
@@ -1123,7 +1126,9 @@
             </div>
             <!-- Frame 02 -->
             <div class="film-frame">
-              <img src="images/agency_photo_3.jpg" alt="The Agency behind the scenes — studio work" loading="lazy">
+              <video autoplay muted loop playsinline aria-label="Behind the scenes — agency studio footage">
+                <source src="images/6430754-hd_1080_1920_30fps copy.mp4" type="video/mp4">
+              </video>
               <span class="film-frame-num">02</span>
             </div>
           </div>
@@ -1153,10 +1158,14 @@
           <img src="images/ed_wellness_spa.jpg" alt="Wellness and spa brand identity" loading="lazy">
         </div>
         <div class="mosaic-item">
-          <img src="images/ed_camera_gear.jpg" alt="Commercial photography gear flatlay" loading="lazy">
+          <video autoplay muted loop playsinline aria-label="Musician brand shoot">
+            <source src="images/musician.mov" type="video/mp4">
+          </video>
         </div>
         <div class="mosaic-item">
-          <img src="images/ed_wax_luxury.jpg" alt="Luxury wax brand identity and photography" loading="lazy">
+          <video autoplay muted loop playsinline aria-label="Woman entrepreneur brand video">
+            <source src="images/woman-business.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
@@ -1178,18 +1187,26 @@
           Watch Our Reels
         </a>
       </div>
-      <div class="reels-right" aria-label="Instagram reels from @meet_the_agency">
+      <div class="reels-right" aria-label="Video work from @meet_the_agency">
         <div class="reel-thumb">
-          <iframe src="https://www.instagram.com/reel/DUMfQP1EuId/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+          <video autoplay muted loop playsinline aria-label="The Agency — Creative Agency Kern County reel">
+            <source src="images/CreativeAgencyKernCounty.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="reel-thumb">
-          <iframe src="https://www.instagram.com/reel/DVUvqYHjRBn/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+          <video autoplay muted loop playsinline aria-label="After working with us — client results reel">
+            <source src="images/after working with us.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="reel-thumb">
-          <iframe src="https://www.instagram.com/reel/DVPmuUrEkFe/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+          <video autoplay muted loop playsinline aria-label="The Agency campaign video reel">
+            <source src="images/campaign_video.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="reel-thumb">
-          <iframe src="https://www.instagram.com/reel/DVUE95Ykicr/embed/" scrolling="no" allowtransparency="true" loading="lazy" title="@meet_the_agency Instagram reel"></iframe>
+          <video autoplay muted loop playsinline aria-label="Anne Rose Ink — Fineline Tattoos brand reel">
+            <source src="images/AnneRoseInk-Fineline Tattoos Central California.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
