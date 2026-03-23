@@ -889,29 +889,14 @@
     }
     .reel-thumb:hover img { filter: saturate(1.1); transform: scale(1.05); }
     .reel-thumb video,
-    .mosaic-item video {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .mosaic-item video,
     .film-frame video {
       position: absolute;
-      inset: 0;
+      top: 0; left: 0;
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
     }
-    .reel-thumb::after {
-      content: '▶';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      font-size: 20px;
-      color: rgba(255,255,255,0.6);
-      pointer-events: none;
-      transition: color 0.2s;
-    }
-    .reel-thumb:hover::after { color: white; }
 
     @media (max-width: 960px) {
       .mosaic-grid { grid-template-columns: repeat(3,1fr); height: 180px; }
@@ -1113,7 +1098,7 @@
             <!-- Frame 01 -->
             <div class="film-frame">
               <video autoplay muted loop playsinline aria-label="Behind the scenes — retro camcorder footage">
-                <source src="images/Retro camcorder travel Instagram video story copy.mp4" type="video/mp4">
+                <source src="images/retro_camcorder_bts.mp4" type="video/mp4">
               </video>
               <span class="film-frame-num">01</span>
             </div>
@@ -1133,7 +1118,7 @@
             <!-- Frame 02 -->
             <div class="film-frame">
               <video autoplay muted loop playsinline aria-label="Behind the scenes — agency studio footage">
-                <source src="images/6430754-hd_1080_1920_30fps copy.mp4" type="video/mp4">
+                <source src="images/bts_studio_footage.mp4" type="video/mp4">
               </video>
               <span class="film-frame-num">02</span>
             </div>
@@ -1165,12 +1150,12 @@
         </div>
         <div class="mosaic-item">
           <video autoplay muted loop playsinline aria-label="Musician brand shoot">
-            <source src="images/musician.mov" type="video/mp4">
+            <source src="images/musician_web.mp4" type="video/mp4">
           </video>
         </div>
         <div class="mosaic-item">
           <video autoplay muted loop playsinline aria-label="Woman entrepreneur brand video">
-            <source src="images/woman-business.mp4" type="video/mp4">
+            <source src="images/woman_business_web.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -1201,7 +1186,7 @@
         </div>
         <div class="reel-thumb">
           <video autoplay muted loop playsinline aria-label="After working with us — client results reel">
-            <source src="images/after working with us.mp4" type="video/mp4">
+            <source src="images/after_working_with_us_web.mp4" type="video/mp4">
           </video>
         </div>
         <div class="reel-thumb">
@@ -1211,7 +1196,7 @@
         </div>
         <div class="reel-thumb">
           <video autoplay muted loop playsinline aria-label="Anne Rose Ink — Fineline Tattoos brand reel">
-            <source src="images/AnneRoseInk-Fineline Tattoos Central California.mp4" type="video/mp4">
+            <source src="images/AnneRoseInk-Fineline-Tattoos.mp4" type="video/mp4">
           </video>
         </div>
       </div>
