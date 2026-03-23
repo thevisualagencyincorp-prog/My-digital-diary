@@ -482,10 +482,11 @@
     .hero-right {
       background: #111;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 28px 18px;
+      align-items: stretch;
+      justify-content: stretch;
+      padding: 0;
       position: relative;
+      overflow: hidden;
     }
     /* Left-edge gradient bleeds into left column */
     .hero-right::before {
@@ -499,10 +500,10 @@
     .photo-wrap {
       position: relative;
       width: 100%;
-      max-width: 420px;
-      aspect-ratio: 1 / 1;
+      flex: 1;
+      min-height: 0;
       overflow: hidden;
-      flex-shrink: 0;
+      flex-shrink: 1;
     }
     .photo-wrap img {
       width: 100%; height: 100%;
@@ -591,8 +592,8 @@
       align-items: stretch;
       position: relative;
       z-index: 1;
-      outline: 1.5px solid rgba(255,255,255,0.08);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.6), 0 0 0 1px #000;
+      width: 100%;
+      align-self: stretch;
     }
     .film-sprocket {
       width: 22px;
@@ -606,11 +607,11 @@
     .film-frames {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      width: 100%;
-      max-width: 420px;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
       background: #080808;
-      padding: 5px 0;
+      padding: 4px 0;
     }
     .film-frame {
       width: 100%;
@@ -659,7 +660,7 @@
     }
     .bts-label {
       position: absolute;
-      top: 18px; left: 50%;
+      top: 12px; left: 50%;
       transform: translateX(-50%);
       font-family: var(--display);
       font-size: 9px;
@@ -990,8 +991,6 @@
     @media (max-width: 960px) {
       .hero { grid-template-columns: 1fr; }
       .hero-left { padding: 48px 32px 40px; border-right: none; border-bottom: 2px solid rgba(255,255,255,0.06); }
-      .hero-right { padding: 24px 16px; }
-      .film-frames { max-width: 320px; }
       .film-frame { height: 100px; }
       .masthead { padding: 12px 24px; }
       .stats-bar { grid-template-columns: 1fr 1fr; }
@@ -1000,8 +999,6 @@
     }
     @media (max-width: 600px) {
       .hero-left { padding: 36px 20px 32px; }
-      .hero-right { padding: 20px 12px; }
-      .film-frames { max-width: 260px; }
       .film-frame { height: 80px; }
       .masthead { padding: 10px 20px; }
       .mh-meta { gap: 10px; }
