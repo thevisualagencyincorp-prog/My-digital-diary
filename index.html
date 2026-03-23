@@ -889,8 +889,14 @@
     }
     .reel-thumb:hover img { filter: saturate(1.1); transform: scale(1.05); }
     .reel-thumb video,
-    .mosaic-item video,
+    .mosaic-item video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .film-frame video {
+      position: absolute;
+      inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
